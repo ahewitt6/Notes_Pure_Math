@@ -1,0 +1,3348 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{enumerate,amsmath,amssymb,amsthm,comment}
+
+\usepackage{arydshln}
+\usepackage{dashrule}
+\usepackage{amsmath}
+
+%for Griffiths curly r
+\usepackage{calligra}
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scripty}[1]{\ensuremath{\mathcalligra{#1}}}
+
+\newcommand{\capk}{\frac{1}{4 \pi \epsilon_0}}
+
+\begin{document}
+\title{\underline{Pure Math}}
+\author{Alec Hewitt}
+\maketitle
+
+
+
+
+       
+
+\setlength{\parindent}{0mm}
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\section*{\underline{Discrete Mathematics}}
+
+\begin{enumerate}
+\item
+
+$\bar{A} = U-A$ (complement)\\
+$A - B$ (relative complement of $B$)\\
+\underline{Partition}\\
+$(1) x \neq \varnothing$ for each $x \in S\\$
+(2) for every two sets, $x,y \in S X=Y or X \bigcap Y = \varnothing\\
+(3) U_{X \in S} X = A\\$
+$A \times B = \{ (a,b): a \in A, b \in B \}$ (cartesian product)\\
+\underline{Theorem 2.17} $P \implies Q$ and $( \sim P) \lor Q$ are logically equivalent\\
+\underline{Theorem 2.18}$P,Q,R \sim$ statements\\
+(1) commutative Laws\\
+$(a) P \lor Q \equiv Q \lor P\\
+(b) P \land Q \equiv Q \land P\\$
+(2) associative laws\\
+$(a) P \lor ( Q \lor R) \equiv ( P \lor Q ) \lor R\\
+(b) P \land ( Q \land R) \equiv ( P l\and Q) \land R\\$
+(3) Distributive laws\\
+$(a) P \lor ( Q \land R) \equiv ( P \lor Q) \land (P \lor R)\\
+(b) P \land (Q \lor R) \equiv (P \land Q ) \lor (P \land R)\\$
+(4) Demorgan's Laws\\
+$(a) \sim ( P \lor Q) \equiv \sim P \land \sim Q\\
+(b) \sim( P \land Q) \equiv ( \sim P) \lor ( \sim Q)\\$
+\underline{Theorem 2.21} (good exercise)\\
+$(a) \sim( P \implies Q) \equiv P \land ( \sim Q)\\
+(b) \sim( P \iff Q) \equiv ( P \land ( \sim Q)) \lor ( Q \land ( \sim P))$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+If $P(x)$ is false for all $x$ then $P \implies Q$ is true, this is a \underline{vacuous proof}.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Choose a value for $x$ s.t. $P(x)$ is true and show $Q(x)$ is true, this is a \underline{direct proof}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$P \implies Q \equiv ( \sim Q ) \implies ( \sim P)$ (contrapositive)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.16}\\
+($\implies$ )\\
+\underline{case 1:} $x$ and y even $x = 2a, y = 2b,\,\, a,b \in \mathbb{Z}\\
+\implies x + y = 2 a + 2 b = 2(a+b).\,\, a + b \in \mathbb{Z} \implies x + y$ even\\
+\underline{case 2:} $x$ and $y$ are odd $x=2 a + 1,\,\, y = 2 b + 1\\
+\implies x + y = 2 ( a + b + 1) \implies x + y$ even\\
+$(\impliedby)$ contrapositive\\
+\underline{case:} $x$ is even $y$ is odd. $x=2a,\,\, y = 2 b + 1\\$
+$\implies x + y = 2 a + ( 2 b + 1) = 2 ( a + b) + 1\\$
+\underline{case 2:} $x$ odd $y$ even (WLOG)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.17} $a, b \in \mathbb{Z}. ab$ even $ \iff a$ even or $b$ even\\
+\underline{proof:} \\
+$(\impliedby)\\$
+WLOG assume $a$ even $\implies a = 2 x\\$
+$\implies ab = 2( xb) \implies a b$ even\\
+$(\implies$ contrapositive\\
+$a$ odd $b$ odd $a=2 n + 1,\,\, b = 2 m + 1\\
+\implies ( 2n + 1) ( 2 m + 1) = 4 n m + 2 n + 2 m + 1\\
+= 2( 2n m + n + m ) + 1\\
+\implies a b$ odd.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 4.13} $x, y \in \mathbb{R}. xy=0 \implies x=0 or y=0\\$
+\underline{Proof:}\\
+\underline{case 1:} $x = 0 \implies xy =0\\$
+\underline{case 2:} $x \neq 0 \implies x y = 0 \implies y = \frac{0}{x} =0 \implies y =0\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$A \bigcup B = \{ x : x \in A or x \in B \}$ ( union)\\
+$A \bigcap B = \{ x : x \in A and x \in B \}$ ( intersection)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 4.22}\\
+\underline{Proof 4.22 (1 a)}\\
+$x \in A \bigcup B \implies x \in A$ or $x \in B \implies x \in B$ or $x \in A\\
+\implies x \in B \bigcup A\\
+x \in B \bigcup A$ ( similar argument)\\
+$\implies x \in A \bigcup B \implies A \bigcup B = B \bigcup A\\$
+\underline{Proof 4.22 (3a)}\\
+$x \in A \bigcup( B \bigcap C) \implies x \in A or x \in B \bigcap C\\
+if x \in A \implies x \in A or B and x \in A or C\\
+\implies x \in ( A \bigcup B ) \bigcap ( A \bigcup C)\\
+if x \in B \bigcap C \implies x \in B and x \in C\\
+\implies x \in A \bigcup B and x \in A \bigcup C\\
+\implies x \in ( A \bigcup B) \bigcap ( A \bigcup C)\\$
+converse similar
+
+\section{Later Chapters}
+\item \underline{Theorem 8.6}\\
+Let $n \in \mathbb{Z}$, where $n \geq 2$. Then congruence modulo n (that is, the relation R defined on $\mathbb{Z}$ by $ a R b $ if $a \equiv b$ (mod n)) is an equivalence relation on $\mathbb{Z}$\\
+\underline{Proof:}\\
+\underline{Reflexive:}\\
+$a \in \mathbb{Z};\,\, n | 0 \implies n|(a-a) \implies  a \equiv a$ (mod n) $\implies a R a\\$
+\underline{Symmetric:}\\
+$a R b,\,\, a, b \in \mathbb{Z} \implies a \equiv b$ (mod n) $\implies n|(a-b)\\
+\implies a-b = n k,\,\, k \in \mathbb{Z} \implies b-a = -(a-b) = n(-k)\\
+\implies n | (b-a) \implies b \equiv a$ ( mod n) $\implies b R a\\$
+\underline{Transitive:}\\
+$a R b,\,\, b R c \implies a \equiv b$ (mod n),\,\, $b \equiv c$ (mod n)\\
+$\implies n | ( a-b),\,\, n | (b-c) \\
+\implies a-b = nk,\,\, b-c = n \ell\\$
+add\\
+$\implies (a-b) + (b-c) = nk + n \ell = n( k+ \ell)\\
+\therefore a-c = n(k+ \ell) \implies n|(a-c) \implies a \equiv c$ (mod n)\\
+$\implies a R c$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$\mathbb{Z}_n = \{ [0],[1], \dots , [n-1] \} \\$ where $[a]=\{x : x R a \}$ here, $aRb$ iff $a \equiv b$ (mod $n$)
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$[a] + [b] =[a+b];\,\, [a] \cdot [b]=[ab]\\$
+using $a R b$ if $a \equiv b (mod n)\\$
+Consider $\mathbb{Z}_6 = \{[0], \dots , [5] \}\\$
+and note $[2] \cdot [3 ] = [6 ] = [0]$ since $6 R 0$\\
+$\implies 6 \equiv 0$ (mod 6) which is true and\\
+$6 R0 \implies [6]=[0]$ (theorem)
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$\mathbb{Z}_n$ contains $[i]$ which uses relation $a R b$ if $a \equiv b (mod n)$.\\
+spose $[a],[b],[c],[d] \in \mathbb{Z}_n,$\,\, \\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem:} $[a]=[b]$ and $[c]=[d],\,\, \implies [a + c ] = [b + d].\\$
+\underline{Proof:}\\
+$[a]=[b] \implies a R b$ (Thm 8.2)\\
+$\implies a \equiv b (mod n);\,\, c \equiv d (mod n)\\
+\implies n |(a-b);\,\, n | (c-d)\\
+\implies a-b = n x;\,\, c-d = ny;\,\,$ add\\
+$\implies (a-b) + (c-d) = nx + ny = n(x+y)\\
+\implies (a+c)-(b+d)=n(x+y) \implies n | [ (a+c) - (b+d)]\\
+\implies (a+c) \equiv (b + d) (mod n) \rightarrow (a+c) R (b+d)\\
+\therefore [a+c]=[b+d]\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+elements ($[a]$) of $\mathbb{Z}_n$ satisfy:\\
+commutivity\\
+associativity\\
+distributivity\\
+\section*{Discrete: 9.1}
+\underline{function} written $f: A \rightarrow B$, a function is a relation from A to B with the property that every element a in A is the first coordinate of exactly one ordered pair in f.\\
+b=f(a) is referred to as the image of a\\
+for a set the image $f(C)$ is given by $f(C) = \{ f(x): x \in C \} \implies f(C) \subset B\\$
+$f$ is a map of a into $b$\\
+\underline{domain}- $A$ is the domain, $dom(A)=f$\\
+\underline{codomain}- $B$ is the codomain of $f$\\
+$range(f)=\{ b \in B : b$ is an image under $f$ to some element of $A \} = \{f(x): x \in A \}\\$
+Let $f: A \rightarrow B$ and $D \subset B \implies f^{-1}(D) = \{a \in A: f(a) \in D \}\\$
+A function $f : A \rightarrow B$ is one-to-one if whenever $f(x) = f(y),\,\,$ where $x,y \in A$, then $x=y$.\\
+\underline{onto or surjective}- a function is surjective if every element of the codomain B is the image of some element of A, i.e., if $f(A)=B$\\
+set of functions from $A \rightarrow B$\\
+$B^A = \{ f: f: \rightarrow B \} \\
+|B^A| = |B|^{|A|}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.7} \\ 
+If A and B are finite sets with $|A| = |B|=n$, then there are n! bijective functions from A to B.\\
+\underline{Proof:}\\
+any bijective function $f: A \rightarrow B$ looks like\\
+$f=\{(a_1,-),(a_2,-), \dots , (a_n,-) \}\\$
+'-' belongs to B\\
+we can choose from n elements of B for $(a_1,-), (n-1) for (a_2,-), \dots\\$
+so there is a total of $n (n-1) (n-2) \dots 2 \cdot 1\\$
+$\implies n!$ bijective functions.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.8}\\
+Let A and B be finite nonempty sets such that $|A| = |B|$ and let f be a function from A to B. Then f is one-to-one if and only if f is onto.\\
+
+\underline{Proof:}\\
+Let $|A| = |B| = n\\$
+f one-to-one $\implies$ the $n$ elements of $A$ have n distinct images $\implies range(f) = B \implies f$ is onto\\
+f onto means that each element in B is the image of an element in A, n elements of A have n distinct images\\
+$\implies$ no two distinct elements in A have the same image $\implies f$ one-to-one.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.11}\\
+Let $f: A \rightarrow B$ and $g: B \rightarrow C$ be two functions.\\
+(a) If $f$ and $g$ are injective, then so is $g \circ f$\\
+(b) If $f$ and $g$ are surjective, then so is $g \circ f$\\
+
+\underline{Proof}\\
+assume $f: A \rightarrow B,\,\, g: B \rightarrow C$ injective\\
+assume $(g \circ f)(a_2) = (g \circ f)(a_1)\\
+\implies g(f(a_2))=g(f(a_1));\,\, g$ injective\\
+$\implies f(a_2)=f(a_1);\,\, f$ injective\\
+$\implies a_2 = a_1 \implies g \circ f$ injective\\
+Assume $f: A \rightarrow B;\,\, g: B \rightarrow C$ surjective\\
+let $c \in C,\,\, g$ surjective $\implies \exists b \in B s.t. g(b) = c\\
+f$ surjective $\implies \exists a \in A s.t. f(a)=b\\
+\implies (g \circ f)(a) = g(f(a)) = g(b) = c \implies g \circ f$ surjective\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Corollary 9.12}\\
+If $ f: A \rightarrow B$ and $ g: B \rightarrow C$ are bijective functions, then $g \circ f$ is bijective\\
+\underline{Proof:}\\
+Since $f$ and $g$ are both injective and surjective then $g \circ f$ is too by the last theorem \\
+$\therefore g \circ f$ is bijective\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.13}\\
+$A,B,C,$ and $D$ nonempty\\
+$f: A \rightarrow B,\,\, g: B \rightarrow C$ and $h: C \rightarrow D\\
+\implies (h \circ g) \circ f = h \circ ( g \circ f)\\$
+\underline{Proof:}\\
+$a \in A,\,\, F(a)=b,\,\, g(b) = c,\,\,$ and $h(c) = d\\
+\implies ((h \circ g) \circ f)(a) = (h \circ g)(f(a)) = (h \circ g)(b) = h(g(b))\\
+=h(c)=d\\
+(h \circ (g \circ f))(a) = h((g \circ f)(a)) = h(g(f(a)))\\
+= h(g(b)) = h(c)=d\\
+\therefore ( h \circ g) \circ f = h \circ (g \circ f)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$R^{-1}=\{(b,a):(a,b) \in R \}$ (inverse relation)
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.15}\\
+Let $f: A \rightarrow B$ be a function. Then the inverse relation $f^{-1}$ is a function from $B$ to $A$ if and only if f is bijective. Furthermore, if $f$ is bijective, then $f^{-1}$ is also bijective.\\
+\underline{Proof:}\\
+$(\implies ) f^{-1}$ is a function\\
+\underline{one-to-one}\\
+Spose $f(a_1) = f(a_2) = y,\,\, y \in B \implies (a_1,y),\,\, (a_2,y) \in f\\
+\implies (y,a_1),\,\,(y,a_2) \in f^{-1}. f^{-1}$ is a function so $f^{-1}(y) = a_1,\,\, f^{-1}(y) = a_2 \implies a_1 = a_2\\
+\implies f$ one - to - one\\
+\underline{onto}\\
+Let $b \in B,\,\, f^{-1}$ a function $\implies \exists a \in A s.t. f^{-1}(b) = a\\
+\implies (b,a) \in f^{-1} \implies (a,b) \in f \implies f(a) = b\\
+\implies f$ onto\\
+$\therefore f$ is bijective\\
+($\impliedby$) $f$ bijective, let $b \in B$. $f$ onto $\implies \exists a \in A$ s.t. $(a,b) \in f$\\
+Lets show $\nexists (b,a') \in f^{-1}, a' \neq \\$
+Spose $(b,a'),(b,a) \in f^{-1} \implies (a',b),(a,b) \in f\\$
+$f$ one-to-one $\implies a' = a$, contradiction\
+
+$\therefore f^{-1}$ is a function\\
+$f$ bijective $\implies f^{-1}$ bijective\\
+$f$ bijective $\implies f^{-1}$ function from $B$ to $A$\\
+\underline{one-to-one:} $f^{-1} (b_1) = f^{-1} (b_2) = a\\
+\implies (b_1,a),(b_2,a) \in f^{-1} \implies (a,b_1),(a,b_2) \in f\\
+f$ function $\implies b_1 = b_2 \implies f^{-1}$ one-to-one\\
+\underline{onto:} if $a \in A$ and $f$ function $\implies \exists b$ s.t. $(a,b) \in f\\
+\implies (b,a) \in f^{-1} \implies f^{-1}(b) = a \implies f^{-1}$ onto\\
+$\therefore f^{-1}$ bijective\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$f^{-1}$ is the inverse function, it has the property that $f ^{-1} \circ f = i_A,\,\, f \circ f^{-1} = i_B$, these are the identity functions on A, B.\\
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star$
+\item \underline{Theorem 9.16}\\
+If $f: A \rightarrow B$ and $g: B \rightarrow A$ are two functions such that $g \circ f = i_A$ and $f \circ g = i_B$, then $f$ and $g$ are bijective and $g = f^{-1}$ \\
+\underline{proof}\\
+Show $f$ is bijective:\\
+\underline{one-to-one} assume $f(a_1) = f(a_2),\,\, a_1, a_2 \in A\\
+\implies g(f(a_1)) = g(f(a_2))$ since $g \circ f = i_A\\
+\implies a_1 = (g \circ f)(a_1) = g(f(a_1)) = fg(f(a_2)) = (g \circ f)(a_2) = a_2\\
+\therefore f$ one-to - one\\
+\underline{onto}\\
+Let $b \in B$ and $g(b) = a_1$ (b is in the domain so this is still general),$\, f \circ g = i_B\\
+\implies (f \circ g) (b) = b \implies (f \circ g)(b) = f(g(b)) = f(a) = b\\
+\implies f$ onto $\implies f^{-1} exists. proof for g is similar\\
+\underline{g= f^{-1}}\\$
+Let $a \in A,\,\, f(a) = b \in B \implies f^{-1}(b) = a_1\\
+g \circ f = i_A \implies a = (g \circ f)(a) = g(f(a)) = g(b)\\
+\therefore g = f^{-1}$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\item \underline{Theorem 10.1}\\
+$ARB$ (where $R$ is an equivalence relation) if there is a bijective Function from $A$ to $B$\\
+\underline{Proof:}\\
+\underline{Reflexive}\\
+Let $A \in S, i_A: A \rightarrow A$ is bijective so $A R A$\\
+$\implies R$ reflexive\\
+\underline{symmetric}\\
+$A R B;\,\, A,B \in S \implies \exists$ bijective function $f: A \rightarrow B$\\
+Theorem 9.15 $\implies f$ has inverse $f^{-1}: B \rightarrow and f^{-1}$ is bijective $\implies BRA$\\
+$\implies R$ symmetric\\
+\underline{transitive}\\
+$ARB,\,\, BRC;\,\, A,B,C \in S \implies f: A \rightarrow B,\,\, g: B \rightarrow C\\
+f, g$ bijective Corollary 9.12\\
+$\implies g \circ f : A \rightarrow C$ bijective $\implies ARC\\
+\implies R$ transitive\\
+$\therefore R$ is an equivalence relation.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 10.4}\\
+Let $A \sim$ denumerable,$\,\, B \sim$ infinite\\
+Let $A = \{ a_1, a_2, \dots \};\,\, S = \{ i \in \mathbb{N}: a_i \in B \}$\\
+Lets show $B' \subset B,\,\, B' \sim$ denumerable\\
+$B \sim$ infinite $\implies S \sim$ infinite\\
+$S \neq \varnothing$ and $ S \subset \mathbb{N} \implies S$ has a least element (well ordering principle) $i_1$ \\
+Let $b_1 = a_{i_1}$ and $S_1 = S- \{ i_1 \} S_1$ infinite, Lets repeat\\
+$S_1$ has least element $i_2$, and let $b_2 = a_{i_2}$\\
+$S_2 = S_1- \{ i_1, i_2 \}\\$
+assume for $k \geq 2 b_j = a_{i_j}\\
+for 1 \leq j \leq k,\,\, i_j$ is the smallest element in $S_{j-1} = S- \{i_1, i_2 , \dots , i_{j-1} \} for 2 \leq j \leq k\\
+S_{k-1}$ nonempty $\implies$ Least element $i_k$\\
+$\implies S_k = S- \{ i_1, \dots , i_k \} and b_{k+1} = a_{i_{k+1}}\\
+\implies \forall n \geq 2$ an element $b_n \in B$ is distinct from $b_1, b_2 , \dots , b_{n-1} \implies b_1, b_2, \dots \in B\\$
+or $B' = \{  b_1, \dots \} \subset B\\$
+next lets show $B \subset B'$\\
+Let $b \in B,\,\, B \subset A \implies b = a_n for some n \in \mathbb{N}\\
+\implies n \in S. n = i_1 \implies b=b_1 = a_n \implies b \in B'\\$
+so assume $n > i_1$. $S'$ consists of int$<m$ that belongs to $S$. $n>i_1$ and $i_1 \in S \implies S' \neq \varnothing\\
+\implies 1 \leq | S' | \leq n-1\\$
+$\implies S'$ is finite $\implies |S' | = m$ for some $m \in \mathbb{N}\\$
+$S'$ consists of $m$ smallest integers of $S \implies S' = \{ i_1, i_2,\dots, i_m \}$. smallest int $\in S$ and $> i_m$ is $i_{m+1} \implies i_{m+1} \geq n$. but $n \in S$ so $n = i_{m+1}$ and $b=a_n = a_{i_{m+1}} \in B'\\
+\therefore B=B'$ is denumerable\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+(redo)\\
+$B \subset A$ infinite $A=\{ a_1, a_2, \dots \}\\$
+$B$ contains denumerable set\\
+$B$ infinite $\implies S$ infinite nonempty subset of $\mathbb{N}\\$
+$\implies S$ has least element $i_1$ let $b_1 = a_{i_1}$.\\
+Let $S_1 = S - \{ i_1\} S_1 \neq \varnothing S_1$ least element $i_2\\$
+Let $b_2 = a_{i_2}$ assume for arbitrary $k \geq 2$ elements $b_1, b_2, \dots , b_k$ defined by $b_j = a_{i_j}\\$
+for each $j 1 \leq j \leq k i_j$ is the min elment in $S_{j-1} = S- \{ i_1, i_2, \dots, i_{j-1} \}\\$
+for $2 \leq j \leq k$ now let $i_{k+1},\,\, S_k = S - \{ i_1, i_2, \dots, i_k \}\\$
+Let $b_{k+1} = a_{i_{k+1}}$ hence for each integer $n \geq 2$ an element $b_n$ belongs to $B$ distinct from $b_1, b_2, \dots , b_{n-1} \implies b_1, b_2, \dots \in B, i.e. B$ contains a denumerable subset.\\
+Set $B'= \{ b_1, b_2, b_3, \dots \} B' \subset B$ Lets show $B \subset B'\\$
+Spose $b \in B, B \subset A \implies b= a_n$ for some $n \implies n \in S\\$
+$n=i_1 \implies b= b_1 = a_n \implies b \in B'$ Assume $n>i_1\\$
+Set $S' = \{ i \in \mathbb{N}: i < n$ and $i \in S \}. i_1 \in S' \implies S' \neq \varnothing \\
+\implies 1 \leq |S' | \leq n-1 \implies S'$ finite\\
+$\implies | S' | = m m \in \mathbb{N} \implies S' = \{ i_1, i_2, \dots, i_m \}\\$
+Smallest int belonging to $S$ and greater than $i_m$ is $ii_{m+1} \implies i_{m+1} \geq n\\
+n \in S \implies n = i_{m+1}$ and $b=a_n = a_{i_{m+1}} \in B'\\
+\implies B = B' = \{ b_1, b_2, b_3, \dots \}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+consider $x \in S, P(x) \implies Q(x)\\$
+If $Q(x)$ is true $\implies P(x) \implies Q(x)$ is true proving $Q(x)$ is true is a trivial proof
+
+
+
+
+
+\section*{\underline{Analysis I}}
+
+
+\underline{Peano's Axioms}\\
+\underline{N1.} There is an element $1 \in \mathbb{N}$\\
+\underline{N2.} For each $n \in \mathbb{N}$ there is a successor element $s(n) \in \mathbb{N}$\\
+\underline{N3.} 1 is not the successor of an element of $\mathbb{N}$\\
+\underline{N4.} If two elements of $\mathbb{N}$ have the same successor, then they are equal.\\
+\underline{N5.} If a subset $A$ of $\mathbb{N}$ contains 1 and is closed under succession ( meaning $s(n) \in A $ whenever $n \in A$), then $A= \mathbb{N}$.
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 1.2.1} Suppose $\{ P_n\}$ is a sequence of statements, one for each $n \in \mathbb{N}$.\\
+These statements are all true provided\\
+\begin{enumerate}
+\item $P_1$ is true (base case);\\
+\item whenever $P_n$ is true for some $n \in \mathbb{N}$, then $P_{s(n)}$ is also true, then $P_n$ is true $\forall n \in \mathbb{N}$\\
+\end{enumerate}
+
+\underline{Proof}\\
+Let $A \subset \mathbb{N}$ s.t. $n \in A$ and ($P_n$ is true)\\
+pt (1) $\implies 1 \in A$\\
+pt (2) $\implies s(n) \in A$ when $n \in A$\\
+by N5 $A= \mathbb{N} \implies P_n$ true $\forall n$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Note:} a subset E is closed under S if S sends elements of E to elements of E\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star \star$
+\item \underline{Thm 1.2.3}\\
+Given a set $X$, an element $ x_1 \in X$, and a sequence $\{f_n \}$ of functions from $X$ to $X$, there is a unique sequence $\{x_n \}$ in $X$, beginning with $x_1$, which satisfies $x_{s(n)} = f_n (x_n)$ for all $n \in \mathbb{N}$.\\
+\underline{Proof:} (existence)\\
+consider $\mathbb{N} \times X, i.e., (n,x);\,\, n \in \mathbb{N}, x \in X\\$
+define $S: \mathbb{N} \times X \rightarrow \mathbb{N} \times X$ by\\
+$S(n,x)=(s(n),f_n(x))\\$
+The intersection of all subsets of $\mathbb{N} \times X$ that are closed under S and contain $(1,x_1)$ is also closed under $S$ and contains $(1,x_1).\\$
+The intersection is the smallest of such sets, call it $A$.\\
+\underline{Note:} $(1,x_1)$ is the only element of A that is not in the range of S. If there were another then we could take it out and our set would still contain $(1,x_1)$ and be closed under S, i.e., such a set cannot be A.\\
+\\
+Want to show that each $n \in \mathbb{N}$ is the first element of exactly one pair $(n,x) \in A$, i.e., A is the graph of a function from $\mathbb{N}$ to $X\\$
+
+\underline{Induction}\\
+(it is true for $(1,x_1) \in A$ by construction if $\exists x \in X s.t. (1,x) \in A$, not equal to $(1,x_1)$ which is not the successor of any element.) $(1,x_1) \in A$ by construction, if $(1,x) \in A$ It would be in range (see Note) but it cannot be in range by N3.\\
+\\
+Assume a unique element $(n,x_n) \in A$\\
+$\implies S(n,x_n) = (s(n), f_n(x_n)) \in A$ (by closure property)\\
+Spose $(s(n),x) \in A,\,\, x \neq f_n(x)$ and spose\\
+its in the image of S\\
+$\implies (s(n),x) = S(m,y) = (s(m),f_m (y)) \implies n = m\\$
+and $y = x_n$ (does S map to a unique element?)\\
+$\implies (s(n),x)$ cannot be in image\\
+since $(1,x_1)$ is the only element not in the image $(s(n),x) \neq A$\\
+$\therefore A$ is the graph of a function $n \rightarrow x_n$ from $\mathbb{N} \rightarrow X$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Def 1.2.4} (Dont understand)\\
+We fix $m \in \mathbb{N}$ and define a sequence $\{ m + n \}_{n \in \mathbb{N}}$ inductively as follows:\\
+$m+1 = s(m)$,\\
+and \\
+$m+ s(n) = s(m+n)$
+These conditions determine a unique sequence $\{ m+ n \}_{n \in \mathbb{N}}$\\
+\underline{Def 1.2.7}\\
+If a number $n \in \mathbb{N}$ can be written as $n = mk$ with both $m \in \mathbb{N}$ and $k \in \mathbb{N}$, then k and m are called factors of n and are said to divide n. If $n \neq 1$ and the only factors of $n$ are 1 and n, then n is said to be prime.
+\underline{Def 1.2.8}\\
+If $n,\,\, m \in \mathbb{N}$, we will say that n ins less tan m, denoted $n <m$, if there is a $k \in \mathbb{N}$ such that $m = n + k$. We say n is less than or equal to m and write $n \leq m$ if $n < m$ or $n=m$.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm (1.2.12)} \\
+If $x$ and $y$ are real numbers and $n \in \mathbb{N}$, then\\
+$(x+y)^n = \sum_{k=0}^n \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k}$
+\underline{recall: } $\begin{pmatrix} n\\ k \end{pmatrix} = \frac{n!}{k!(n-k)!}$ (Binomial coefficients)\\
+\underline{proof: } (Induction)\\
+\underline{Base case: } $(n=1): x+y = \sum_{k=0}^1 \begin{pmatrix} n\\ k \end{pmatrix} x^k y^{n-k}\\
+=\begin{pmatrix} 1\\ 0 \end{pmatrix} y + \begin{pmatrix} 1\\1 \end{pmatrix} x = x+ y\\$
+\underline{Induction step: } assume $(x+y)^n =\sum_{k=0}^n \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k}\\$
+want $(x+y)^{n+1} = \sum_{k=0}^{n+1} \begin{pmatrix} n+1 \\ k \end{pmatrix} x^k y^{n+1-k}\\$
+$(x+y^{n+1} = (x+y)^n(x+y) =(\sum_k\begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k} )(x+y)\\
+=x \sum_k \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k} + \sum_k \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k+1}\\$
+first sum above $k \rightarrow k-1\\
+x \sum_{k=1}^{n+1} \begin{pmatrix} n \\ k-1 \end{pmatrix} x^{k-1} y^{n-k-1} + \sum_{k=0} ^n \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k+1}\\
+=x \begin{pmatrix} n \\ n \end{pmatrix} x^n + \sum_{k=1}^n \begin{pmatrix} n \\ k-1 \end{pmatrix} x^k y^{n-k+1} + \sum_{k=1}^n \begin{pmatrix} n\\ k \end{pmatrix} x^k y^{n-k+1} + \begin{pmatrix} n \\ 0 \end{pmatrix} y^{n+1}\\
+=x^{n+1} + \sum_{k=1} ^n \begin{pmatrix} n \\ k-1 \end{pmatrix} x^k y^{n-k+1} + \sum_{k=1}^n \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k+1}\\$
+\underline{recall:} $\{ \begin{pmatrix} n \\ k-1 \end{pmatrix} + \begin{pmatrix} n \\ k \end{pmatrix} = \begin{pmatrix} n+1 \\ k \end{pmatrix}\}\\
+=x^{n+1} + \sum_{k=1}^n [ \begin{pmatrix} n \\ k-1 \end{pmatrix} + \begin{pmatrix} n \\ k \end{pmatrix} ] x^k y^{n+1-k} + y^{n+1}\\
+=x^{n+1} + \sum_{k=1}^n \begin{pmatrix} n+1 \\ k \end{pmatrix} x^k y^{n+1-k} +y^{n+1}\\
+\begin{pmatrix} n+1 \\ nn+1 \end{pmatrix} x^{n+1} + \sum_{k=1}^n \begin{pmatrix} n+1 \\ k \end{pmatrix} x^k y^{n+1-k} + \begin{pmatrix} n+1 \\ 0 \end{pmatrix} y^{n+1} x^0\\
+=\sum_{k=0}^{n+1} \begin{pmatrix} n+1 \\ k \end{pmatrix} x^k y^{n+1-k}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.3.1}\\
+A1. (Commutative Law of Addition) $x+y = y + x$ for all $x,y \in R$.\\
+A2. (Associative Law of Addition) $x+(y+z)=(x+y)+z$ for all $x,y,z \in R$.\\
+A3. (Additive Identity) There is an element $0 \in R$ such that $0 + x = x for all x \in R$.\\
+A4. (Additive Inverse) for each $x \in R$, there is an element $-x$ such that $x+(-x)=0$\\
+M1. (Commutative Law of Multiplication) $xy=yx$ for all $x,y \in R\\$
+M2. (Associative Law of Multiplication $x(yz)=(xy)z$ for all $x,y,z \in R\\$
+M3. (Multiplicative Identity) There is an element $1 \in R$ such that $1 \neq 0$ and $1 x = x$ for all $x \in R$
+D. (Distributive Law) $x(y+z) = xy + xz$ for all $x,y,z \in R$.\\
+\underline{Definition 1.3.3} A field is a commutative ring satisfying the additional axiom:\\
+M4. (Multiplicative Inverses) For each non-zero element x there is an element $x^{-1}$ such that $x^{-1} x=1.\\$
+
+\underline{Definition 1.3.6} A field F is called an ordered field if it has an order relation "$\leq$" such that the following are satisfied for all $x,y,z \in F$:\\
+O1. Either $x \leq y$ or $y \leq x$.\\
+O2. If $x \leq y$ and $y \leq x$, then $x=y$.\\
+O3. If $x \leq y$ and $y \leq z$, then $x \leq z$.\\
+O4. If $x \leq y$, then $x + z \leq y + z$.\\
+O5. If $x \leq y$ and $0 \leq z$, then $x z \leq y z.\\$
+\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$\star$
+\item \underline{Theorem 1.3.9} If k is an integer and the equation $r^2 = k$ has a rational solution, then that solution is actually an integer.\\
+
+\underline{Proof:}\\
+
+$r \in \mathbb{Q}$ s.t. $r^2 = k,\,\, r=\frac{n}{m},\,\, m,n\,\,$ no common factors\\
+$\implies (\frac{n}{m})^2 = k \implies n^2 = m^2 k \implies m | n^2.\\
+m \neq 1 \implies m$ expressible as product of primes $\implies$ each prime divides n. Contradiction $\implies m=1;\,\, r=n.$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.4.1} A subset L of $\mathbb{Q}$ is called a Dedekind cut, or simply a cut in the rationals, if it satisfies the following three conditions:\\
+(a) $L \neq \varnothing$ and $L \neq \mathbb{Q}\\$
+(b) $L$ has no largest element;\\
+(c) if $x \in L$, then so is every $y \in Q$ with $y < x$.\\
+They look like\\
+$L_r = \{ x \in \mathbb{Q}: x < r \}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+Define $\mathbb{R}$ to be the set of all $x$ corresponding to $L_x\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{order relation of $\mathbb{R}$:} $x \leq y$ if $L_x \subset L_y\\$
+\underline{addition on $\mathbb{R}$:}\\
+$L_{(x+y)} \equiv L_x + L_y = \{ r + s: r \in L_x,\,\, s \in L_y \}\\$
+this is a dedekind cut $\implies x + y \in \mathbb{R}\\$
+\underline{product (non-negative) on $\mathbb{R}$:}\\
+$k = \{ r s : r \in L_x,\,\, r \geq 0,\,\, s \in L_y,\,\, s \geq 0 \} \bigcup \{ t \in \mathbb{Q}: t<0 \}\\$
+this is Dedekind cut, define $xy$ to be the corresponding element of $\mathbb{R}$.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.4.3}\\
+An ordered field F is said to be complete if it satisfies:\\
+C. Each non-empty subset of F which is bounded above has a least upper bound. (completeness axiom)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+
+
+
+
+
+\item \underline{Theorem 1.4.4}\\
+If $\mathbb{R}$ is defined using Dedekind cuts of $\mathbb{Q}$, as above, then every non-empty subset of $\mathbb{R}$ which is bounded above has a least upper bound.
+\underline{Proof:}\\
+Spose A bounded; $m \sim$ upper bound\\
+for $x \in A$ consider $L_x \implies x \leq m \forall x \in A$\\
+$\implies L_x \subset L_m \forall x \in A\\$
+Set $L = \bigcup_{x \in A} L_x,$ Lets prove this is a Dedekind cut.\\
+$L \subset L_m \implies L \subset \mathbb{Q}.\\
+r \in L,\,\, s \in \mathbb{Q}$ with $s<r \implies r \in L_x$ for some $x \in A\\$
+$\implies s \in L_x$ because $s<r \implies s \in L.$\\
+Spose $t$ is a largest element of L\\
+$\implies t \in L_x$ but $L_x$ is Dedekind cut and has no largest element $\implies$ contradiction\\
+$\implies L$ is a dedekind cut\\
+Spose $L=L_y \implies \forall x \in A,\,\, L_x \subset L_y \implies x \leq y\\
+\implies y$ upper bound for $A$\\
+$L = L_y \subset L_m \implies y \leq m,\,\, i.e. y$ is an upper bound for $A$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 1.4.5}\\
+The real number system $\mathbb{R}$ is a complete ordered field.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.4.7}\\
+An ordered field is said to have the Archimedean property if, for every $x \in \mathbb{R}$, there is a natural number $n$ such that $x < n$. An ordered field with the Archimedean property is called an Archimedean ordered field.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 1.4.8}\\
+The field of real numbers has the Archimedean property.\\
+
+\underline{Proof:}\\
+Assume not $\implies \exists x$ s.t. $n \leq x,\,\, \forall n \in \mathbb{N}$\\
+$\implies \mathbb{N}$ non-empty subset of $\mathbb{R}$ which is bounded above by $x \implies$ there is a least upper bound for $\mathbb{N},b,$ by the completeness property of $\mathbb{R}$\\
+since $b$ is the least upper bound $b-1$ is not an upper bound.\\
+$\implies \exists n \in \mathbb{N} s.t. b-1<n \implies b < n+1\\
+\implies b$ is not an upper bound for $\mathbb{N}\\
+\therefore$ every $x \in \mathbb{R}$ is less than some natural number\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+
+\item \underline{Thm 1.5.1}\\
+Every non-empty subset of $\mathbb{R}$ that is bounded below has a greatest lower bound.\\
+\underline{Proof:}\\
+$\varnothing \neq A \subset \mathbb{R}$ bounded below\\
+$m \sim$ lower bound $\implies -m \sim$ upper bound for $- A = \{ - a : a \in A \} \implies \exists r \sim$ least upper bound for $- A$ (completeness)\\
+$\implies -a \leq r \,\, \forall a \in A$ and $r \leq -m\\
+\implies -r \leq a \,\, \forall a \in A$ and $m \leq - r\\
+\therefore - r$ is the greatest lower bound for $A$.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 1.5.4}\\
+Let $A$ be a non-empty subset of $\mathbb{R}$ and let $x$ be an element of $\mathbb{R}$.,\\
+Then\\
+(a) $\sup A \leq x$ if and only if  $a \leq x$ for every $a \in A$;\\
+(b) $x < \sup A$ if and only if $x < a$ for some $a \in A$.\\
+
+\underline{Proof:}\\
+(a) $\impliedby\\
+a \leq x\,\, \forall a \in A \iff x$ upper bound for $A$\\
+$\implies A$ bounded above $\implies $ least uppper bound $=\sup(A)$\\
+(completeness) $\implies \sup(A) \leq x$\\
+(a) $\implies\\$
+$\sup(a) \leq x \implies \sup A < \infty \implies \sup(A)$ least upper bound $\implies x $ upper bound\\
+$\implies a \in A \implies a \leq \sup(A) \leq x \implies a \leq x$\\
+(b) $\implies\\$
+$x< \sup(A) \implies x$ not upper bound $\implies x<a$ for some $a \in A$\\
+(b) $\impliedby$\\
+$x<a$ for some $a \in A \implies x< \sup A$\\
+since $x<a<\sup A$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\item \underline{Theorem 1.5.7}\\
+Let $A$ and $B$ be non-empty subsets of $\mathbb{R}$. Then\\
+(a) $\inf A \leq \sup A;$\\
+(b) $\sup(-A) = - \inf A$ and $\inf(-A) = - \sup A;\\$
+(c) $\sup(A+B) = \sup A + \sup B$ and $\inf(A+B) \inf A + \inf B;\\$
+(d) $\sup(A-B) = \sup A - \inf B;\\$
+(e) if $A \subset B$, then $\sup A \leq \sup B$ and $\inf B \leq \inf A$\\
+\underline{Proof}\\
+(a) $A \neq \varnothing \implies \exists a \in A \implies \inf A$ lower bound\\
+$\sup A$ upper bound $\implies \inf A \leq a \leq \sup A\\$
+(b) $x$ lower bound for $A (x \leq a\,\, \forall a \in A)\\$
+$L$ is the set of all lower bounds for $A \implies - L$ is the set of all upper bounds for $-A$\\
+$\implies$ largest element of $L$ say $\inf A \implies$ smallest element of $-L$ is $\sup(-A)$\\
+these are negatives of each-other\\
+$\implies - \inf A = \sup(-A)$\\
+(c) $a \leq \sup A,\,\, b < \sup B,\,\, \forall a,b \in A,B\\
+\implies a + b \leq \sup A + \sup B\\$
+since this holds $\forall a,b \in A, B$ then in particular if $a + b = \sup(A+B)$ (assuming $\sup(A+B) \in A+B) ?\\
+\implies \sup(A+B) \leq \sup(A) + \sup (B)\\$
+spose $x < \sup A + \sup B$ lets show $\exists a,b \in A, B s.t. x < a+b\\$
+spose $\sup B < \infty \implies x- \sup B < \sup A\\$
+\underline{recall:} Thm 1.5.4 (b) $x< \sup A \implies x < a \implies x- \sup B < \sup A \implies x - \sup B < \infty\\
+\implies x-a < \sup B$ (again!) $\implies x-a < b\\
+\implies x< a+b \implies$ any number $< \sup A + \sup B$ cannot be an upper bound for $A + B\\$
+Spose $\sup B = \infty, a \in A \implies x-a < \sup B = \infty\\$
+Thm 1.5.4 (b)  $\implies x-a<b for b \in B \\
+\therefore x < a+b\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.5.8}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 1.5.10} (no proof)
+
+
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}\\
+
+
+\underline{Definition 1.5.2}
+Let A be an arbitrary non-empty subset of $\mathbb{R}$. We define the supremum of $A$, denoted $\sup A$, to be the smallest extended real number $M$ such that $a\leq M \forall a \in A$\\
+
+
+\item \underline{Theorem 2.1.1}\\
+If $x,y,a,$ and $\epsilon$ are real numbers with $\epsilon>0$, then\\
+(a) $|y| < \epsilon$ if and only if $- \epsilon < y < \epsilon$;\\
+(b) $|x-a| < \epsilon$ if and only if $a- \epsilon < x < a + \epsilon$\\
+These statements remain true if " $<$" is replaced by " $\leq$ "\\
+\underline{Proof:}\\
+(a) (1) $y \geq 0 \implies |y| = y \implies |y| < \epsilon \iff y < \epsilon$\\
+also $- \epsilon < y \implies - \epsilon < y < \epsilon \\
+(2) y< 0 \implies |y | = - y,\,\, |y| < \epsilon \iff -y < \epsilon\\
+- \epsilon < y \implies - \epsilon < y < \epsilon\\$
+(b) use $(a) y = x-a \implies - \epsilon < x-a < \epsilon\\
+\therefore a- \epsilon < x < \epsilon + a\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.1.2 (Triangle Inequality)}\\
+If a and b are real numbers, then\\
+(a) $| a+ b| \leq |a | + |b|$ and\\
+(b) $||a | - |b|| \leq |a-b|$\\
+\underline{Proof:}
+(a) $-|a| \leq a \leq |a|;\,\, -|b| \leq b \leq |b|\\
+\implies -(|a| + |b|) \leq a + b \leq |a| + |b|\\
+\implies |a+b| \leq |a| + |b|$ (by prev theorem)\\
+(b) $|a| = |b+(a-b)| \leq |b| + |a-b|\\
+\implies |a| - |b| \leq |a-b|\\
+|b=|a+(b-a)| \leq |a| + |b-a|\\
+\implies -|a-b| \leq |a| - |b|\\
+\therefore - | a-b| \leq |a| - |b| \leq |a-b|\\
+\implies ||a|-|b|| \leq |a-b|\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 2.1.4}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star$
+\item \underline{Theorem 2.1.6} If $a_n \rightarrow a$ and $a_n \rightarrow b$, then $a=b$\\
+\underline{Proof:}\\
+$a_n \rightarrow a,\,\, a_n \rightarrow b \implies \forall \epsilon >0 \exists N_1,N_2 s.t.\\
+n> N_1 \implies |a_n - a| < \frac{\epsilon}{2}\\
+n>N_2 \implies |a_n -b < \frac{\epsilon}{2}\\
+n> max \{ N_1, N_2\}\\
+\implies |b-a| = |(a_n-a)+(b-a_n)| \leq |a_n -a| + | b-a_n|\\
+<\frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies a=b\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.2.3}\\
+If $\lim a_n = a$ and $a < c$, then there exists an $N$ such that\\
+$a_n < c$  for all $n>N$.\\
+Similarly, if $b<a$, then there is an $N$ such that\\
+$b< a_n$ for all $n>N$.\\
+\underline{Proof:}\\
+$a<c \implies c-a>0. \lim a_n = a \implies \forall \epsilon>0,\,\, \exists N s.t.\\
+|a_n - a| < \epsilon,\,\, n>N\\$
+Let $\epsilon = c-a \implies \exists N s.t.\\
+|a_n - a | < c-a,\,\, n>N\\
+\implies a-c + a = 2a < a_n < a+c -a =c$ for $n>N\\
+\therefore a_n < a,\,\, \forall n>N\\$
+2nd proof is the same\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Corollary 2.2.4}\\
+If a sequence $\{ a_n \}$ converges, then it is bounded.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\item \underline{Theorem 2.2.5}\\
+If $\{ a_n \}$ is a sequence and $\lim a_n = a$, then $\lim |a_n | = |a|$\\
+\underline{Proof:}
+$||a_n| - |a|| \leq |a_n - a|\\
+\lim a_n = a \implies \forall \epsilon >0, \exists N s.t.\\
+|a_n - a | < \epsilon,\,\, n>N\\
+\implies ||a_n| - |a|| < \epsilon,\,\, n> N\\
+\therefore \lim |a_n| = |a|\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.2.7}\\
+A sequence $\{ a_n \}$ converges to a if and only if, for each $\epsilon > 0$, there are only finitely many $n$ for which $|a_n -a| \geq \epsilon$.\\
+\underline{Proof}\\
+$(\implies) \epsilon>0$ set \\
+$A_{\epsilon} = \{ n \in \mathbb{N}: | a_n - a| \geq \epsilon \}\\
+\lim a_n = a,\,\, \epsilon>0 \implies \exists N s.t. |a_n - a | < \epsilon,\,\, n>N\\
+\implies A_{\epsilon} \subset \{ 1,2,\dots,N\} \implies A_{\epsilon}$ finite\\
+$(\impliedby) \forall \epsilon >0 A_{\epsilon} finite \implies A_{\epsilon}$ has a largest element $N \implies n \nexists A_{\epsilon} if n>N\\$
+$\implies |a_n - a| < \epsilon if n> N \implies \lim a_n = a$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star$
+\item \underline{Thm 2.3.1}\\
+Let $\{a_n |\}$ and $\{ b_n \}$ be sequences of real numbers and suppose $\lim b_n = 0$. If $a \in \mathbb{r}$ and if there is an $N_1$ such that\\
+$|a_n - a| \leq b_n$ for all $n> N_1,\\$
+then $\lim a_n = a$\\
+\underline{Proof:}\\
+$\lim b_n \implies \forall \epsilon>0,\,\, \exists N_2$ s.t.\\
+$b_n \neq |b_n|$ (necessarily)\\
+$b_n \leq |b_n|< \epsilon$ whenever $n>N_2\\$
+\underline{Note:} $b_n = |b_n|$ if $n \geq N_1$ since $|a_n-a| \leq b_n,\,\, n> N_1\\
+\implies |a_n - a | \leq b_n < \epsilon$ whenever $n>N = max \{ N_1, N_2 \}\\
+\therefore \lim a_n = a\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.3.3} (squeeze)\\
+If $\{ a_n \}, \{ b_n \}$, and $\{ c_n \}$ are sequences for which there is a number $K$ such that\\
+$b_n \leq a_n \leq c_n$ for all $ n>K $\\
+and if $b_n \rightarrow a$ annd $c_n \rightarrow a,$ then $a_n \rightarrow a$.\\
+\underline{Proof}\\
+$b_n \rightarrow a, c_n \rightarrow a$ given $\epsilon >0$,\,\, exists $N_1, N_2$ s.t.\\
+$a- \epsilon < b_n < a + \epsilon \,\, \forall n> N_1\\
+a- \epsilon < c_n < a + \epsilon \,\, \forall n > N_2\\$
+for $n>N = max \{ N_1, N_2, k \}\\
+a- \epsilon < b_n \leq a_n \leq c_n < a + \epsilon\\
+\implies a- \epsilon < b_n \leq a_n \leq c_n < a + \epsilon\\
+\implies a- \epsilon < a_n < a+ \epsilon\\
+\therefore | a_n - a | < \epsilon \,\, \forall n > N\\
+\therefore \lim a_n = a\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.3.6}\\
+Suppose $a_n \rightarrow a, b_n \rightarrow b, c$ is a real number, and $k$ is a natural number. Then\\
+(a) $c a_n \rightarrow ca\\$
+(b) $a_n + b_n \rightarrow a+b\\$
+(c) $a_n b_n \rightarrow ab\\$
+(d) $a_n/b_n \rightarrow a/b$ if $b \neq 0$ and $b_n \neq 0$ for all $n$\\
+(e) $a^k_n \rightarrow a^k\\$
+(f) $a_n^{1/k} \rightarrow a^{1/k}$ if $a_n \geq 0$ for all $n$.\\
+\underline{Proof}\\
+(c) $|a_n b_n - ab| = | a_n b_n - a b_n + a b_n - a b |\\
+= |(b_n) (a_n - a) + a(b_n - b) | \leq |b_n | | a_n - a | + | a | | b_n - b|\\
+b_n$ converges $\implies b_n$ bounded $\,\, \forall n > N by M\\
+\implies |a_n b_n - a b | \leq M \epsilon + \epsilon |a| \rightarrow 0$\\
+(e) $a^k_n - a^k = (a_n - a ) (a_n^{k-1} + a_n^{k-1} + a_n^{k-2} a + a_n^{k-3} a^2 + \dots + a^{k-1})\\
+= (a_n-a) b_n\\
+\{ a_n \}$ cvgs $\implies a_n$ bounded $\implies \{ |a_n | \}$ bounded above\\
+$\implies | a_n | < m \forall n \in \mathbb{N}$ choose $m$ s.t. $|a| \leq m\\
+|b_n| = | a_n^{k-1} + a_n^{k-2} a + a_n^{k-3} a^2 + \dots + a^{k-1}| \leq |a_n|^{k-1} + |a_n|^{k-2} a + |a_n|^{k-3} a^2 + \dots + |a|^{k-1}\\$
+$\leq m^{k-1} + m^{k-1} + m^{k-1} + \dots + m^{k-1} = (k-1) m^{k-1} \leq k m^k
+\implies |b_n | \leq k m^k \\$
+$\implies \{ | b_n | \}$ bounded above\\
+$\implies |a_n - a | | b_n | \rightarrow 0 (Thm 2.3.2) \implies a_n^k \rightarrow a^k$ (Thm 2.3.1)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 2.3.8}\\
+\underline{Proof:}\\
+$c_n = b_n - a_n \rightarrow b-a,\,\, c_n \geq 0 \forall n > k\\$
+spose $b-a < 0$ (Thm 2.2.3) $\rightarrow b_n-a_n < 0 for n \approx$ (large)\\
+(contradiction)\\
+$\therefore a \leq b\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.4.1}\\
+every non-decreasing sequence that is bounded above is automatically bounded below by $a_1$. We will show such a sequence must converge, other case is similar. $\implies A= \{ a_n: n \in \mathbb{N}\} \neq \varnothing\\$
+and bounded above. Completeness $\implies \exists a$ s.t.\\
+$\sup_n(a_n) = \sup(A) = a$ (least upper bound)\\
+w/ $\epsilon >0 a- \epsilon < a \implies$ not upper bound\\
+$\implies \exists N si.t. a - \epsilon < a_N and \forall n > N\\$
+$a_N \leq a_n$\\
+$a_N \leq a_n$ since $\{ a_n \}$ non-decreasing\\
+$\implies a-\epsilon < a_N \leq a_n \implies a- \epsilon < a_n \leq a < a + \epsilon\\
+\implies a - \epsilon < a_n < a + \epsilon \,\, \forall n > N\\
+\therefore |a_n - a | < \epsilon,\,\, \forall n> N\\
+\therefore \lim a_n = a\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 2.4.4}\\
+\item \underline{Theorem 2.4.6}\\
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.4.7}\\
+\underline{Proof:}\\
+(a) If we are given $\epsilon \implies M = \frac{1}{\epsilon}\\$
+conversely, given $M \implies \epsilon = \frac{1}{M}\\$
+$\implies | \frac{1}{a_n} < \epsilon and a_n > M$ mean the same thing\\
+If $\exists N$ s.t. one of these statements are true $\forall n> N$ then the other is automatically true.\\
+(b) $\exists K s.t. K< b_n \forall n$ assume $\lim a_n = \infty\\$
+given $M \in \mathbb{R} (M-K) \in \mathbb{R}$ since $\lim a_n = \infty\\$
+exists $N s.t. a_n> M-K \forall n>N\\$
+$\implies a_n + b_n > M-K + K = M \forall n>N\\
+\therefore \lim (a_n + b_n) = \infty\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+a nested sequence of closed bounded intervals $I_1 \supset I_2 \supset I_3 \supset \cdots$
+Where each $I_n$ is closed bounded interval $I_n$ has the form $[a_n, b_n];\,\, I_n \supset I_{n+1}$ and $a_n \leq a_{n+1} < b_{n+1} \leq b_n$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.5.1} (Nested Interval Property)\\
+If $I_1 \supset I_2 \supset I_3 \supset \cdots$ is a nested sequence of closed bounded intervals, then $\bigcap_n I_n \neq \varnothing$. That is, there is at least one point $x$ that is in all the intervals $I_n$.
+
+
+\underline{Proof}\\
+$I_n = [a_n, b_n] \implies \{ a_n \} $ non-dec and bounded above by $b_1$. $\{b_n\}$ non-increasing and bounded below by $a_1$\\
+Monotone convergence theorem $\implies$ both sequences converge\\
+$a=\lim a_n, b= \lim b_n \implies a\leq b$ (Theorem 2.3.8)\\
+$\implies a_n \leq a \leq b \leq b_n$ (Note: $a<b \implies a\leq b\\$
+$\forall n \implies [a,b] \subset I_n \forall n \implies [a,b] \subset \bigcap_n I_n\\$
+$[a,b]$ closed if $a< b$ and a point if $a=b$ but regardless it is nonempty\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 2.5.2}\\
+A sequence $\{ b_k \}$ is a subsequence of the sequence $\{a_n \}$ if there is a strictly increasing sequence of natural numbers $\{ n_k \}$ such that $b_k = a_{n_k}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.5.4}\\
+If $\{ a_n \}$ has a limit (possibly infinite), then each of its subsequences has the same limit.
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.5.4}\\
+finite case\\
+$\{ a_{n_k} \}$ subsequence of $\{ a_n \}, \{ n_k \}$ increasing sequence\\
+$\implies n_k \geq k \forall k\\$
+spose $\lim ja_n = a \epsilon > 0 \implies \exists N$ st.\\
+$|a_n -a| < \epsilon$ when $n> N.\\
+\implies k>N \implies n_k > N$ since $n_k \geq K\\
+\implies |a_{n_k} - a| < \epsilon$ when $k> N\\
+\therefore \lim a_{n_k} = a$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 2.5.5}\\
+\underline{Proof:}\\
+$\{ a_n \}$ bounded $\implies$ upper bound $M$ lower bound $m$\\
+all $a_n$ contained in $I_1 = [ M, m]$\\
+Lets construct $I_1 \supset I_2 \supset I_3 \supset \cdots$\\
+s.t. $I_k$ contains infinitely many $a_n$ and length $(M-m)/2^{k-1}\\
+I_1$ contains all $a_n$ and has length $M-m$\\
+assume $I_k$ has been chosen so it contains infinitely many $a_n$ and length $\frac{M-m}{2^{k-1}}$\\
+take $I_k$ and split it at its midpoint, if the left half has infinitely many $a_n$ choose that otherwise choose right half. this interval contains infinitely many $a_n$ and has length $(\frac{M-m}{2^{k-1}})/2 = \frac{M-m}{2^k}$ and call this $I_{k+1}$\\
+Nested interval theorem $\implies a \in I_k \forall k \in \mathbb{N}\\$
+Lets construct $a_{n_k} set n_1 = 1$ since $a_{n_1} \in I_1\\$
+\underline{Note:} each $I_k$ contains infinitely many $a_n n_{k+1}$ is the first integer greater than $n_k$ s.t. $a_{n_{k+1}} \in I_{k+1}\\
+\implies \{ a_{n_k} \}$ is a subsequence of $\{ a_n \}\\$
+Lets show $a_{n_k} \rightarrow a.\,\, \forall k, a, a_{n_k} \in I_k\\
+\implies |a_{n_k} -a| \leq \frac{M-m}{2^{k-1}} \rightarrow 0\\
+\therefore \lim a_{n_k}=a$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 2.5.7}
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 2.5.8}\\
+$(\impliedby)\\
+\forall \epsilon>0 \exists N$ s.t.\\
+$|a_n -a|< \epsilon/2 \forall n>N\\$
+If $n, m > N,\\
+\implies |a_n - a_m | = |a_n - a + a - a_m| \leq | a_n - a | + | a_m - a| < \epsilon/2 + \epsilon/2 = \epsilon\\
+\therefore \{ a_n \}$ cauchy\\
+$(\implies)\\
+\{ a_n \} $ Cauchy $\implies \exists N$ s.t. $ |a_n - a_m | < 1 $ when $ n > N\\
+\implies \max \{ a_1, \dots, a_N , a_{N+1} + 1\} upper bound for \{ a_n\}\\
+$ and $ \min \{ a_1, \dots, a_N, a_{N+1} 01\} $ lower bound for $\{a_n\}\\$
+$\implies \{ a_n \} $ bounded\\
+$ \implies \{ a_n \} $ has a convergent subsequence\\
+$\implies \forall \epsilon > 0,\,\, \exists N_1, N_2 $ s.t.\\
+$|a_n - a_m| < \epsilon/2$ when $n>N_1\\
+|a_{n_k} - a| < \epsilon/2$ when $k>N_2\\$
+If $n > N_1$ and $k> \max \{ N_1, N_2 \}\\
+\implies |a_n - a | = |a_n - a_{n_k} + a_{n_k} - a | \leq | a_n - a_{n_k}| + | a_{n_k} - a |\\
+< \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{definition:} $i_n = \inf \{ a_k : k \geq n \};\,\, s_n = \sup \{ a_k : k \geq n \}$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 2.6.1}\\
+\underline{Proof}\\
+$A_n = \{ a_k : k \geq n \},$ then $A_{n+1} \subset A_n$ for each $n$.\\
+Thm 1.5.7 (c) $\forall n\\$
+$\implies s_{n+1} = sup A_{n+1} \leq sup A_n = s_n\\
+i_{n+1} = inf A_{n+1} \geq \inf A_n = i_n\\
+a_n \in A_n \implies i_n = \inf A_n \leq a_n \leq \sup A_n = s_n\\$
+Def 2.6.2\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 2.6.4}\\
+\underline{Proof}\\
+assume $\{ a_{n_k} \}$ is a convergent subsequence of $\{ a_n \}\\$
+Theorem 2.6.1 (c)\\
+$\implies i_{n_k} \leq a_{n_k} \leq s_{n_k}\\
+\{ i_{n_k} \}$ subsequence of $\{ i_n \};\,\, \{ s_{n_k} \}$ subsequence of $\{ s_n \}\\
+\implies$ have the same limits which are $\lim \inf a_n$ and $\lim \sup a_n$ by Theorem 2.5.4\\
+theorem 2.3.8 $\implies \lim \inf a_n \leq \lim a_{n_k} \leq \lim \sup a_n\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\underline{Sub seq. limit definition}
+\underline{Theorem 2.6.5}\\
+\underline{Proof}\\
+$s_n.= \sup \{ a_k : k \geq n \} \forall \epsilon>0,\,\, s_n - \epsilon < s_n\\
+\implies$ not upper bound for $\{ a_k: k \geq n \}\\
+\implies \exists a_i \in \{ a_k : k \geq n \}$ s.t. $s_n - \epsilon < a_i \leq s_n\\$
+choose $n_1$ s.t. $s_1 - 1 < a_{n_1} \leq s_1\\$
+assume $n_1 < n_2 < \cdots < n_m$ chosen\\
+s.t. $s_j - \frac{1}{j} < a_{n_j}| \leq s_j for j= 1, \dots, m\\$
+choose $n_{m+1} > n_m$ s.t. $s_{n_{m+1}} - \frac{1}{m+1} < a_{n_{m+1}} < s_{n_{m+1}}\\$
+but $n_{m+1} \geq m+1 \implies s_{n_{m+1}} \leq s_{m+1}\\
+\implies s_j - \frac{1}{j} < a_{n_j} \leq s_j$ holds $\forall j\\
+\implies a_{n_j} \rightarrow s$ by squeeze\\
+
+
+\underline{Theorem 2.6.6}\\
+\underline{Proof:}\\
+($\impliedby$)\\
+Theorem 2.6.1 (c) $\implies i_n \leq a_n \leq s_n\\$
+but $\lim i_n = \lim s_n = a \implies \lim a_n = a$ by squeeze\\
+$( \implies ) \lim a_n = 1$ Theorem 2.5.4 each subsequence of $\{a_n \}$ has limit $a. \lim \sup a_n$ and $\lim \inf a_n$ are sub-sequential limits of $\{ a_n \}$, they have limit $a$.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\section{Chapter 3}
+\underline{Definition 3.1.1}\\
+\underline{Definition 3.1.3}\\
+\underline{Theorem 3.1.6}\\
+$( \implies ) f$ cts and $\{ x_n \}$ sequence in $D$ and $x_n \rightarrow a \forall \epsilon > 0 \exists \delta >0$ s.t.\\
+$| f(x) - f(a) | < \epsilon$ whenever $x \in D$ and $| x-a | < \delta$ for this $\delta \exists N$ s.t.\\
+$|x_n - a | < \delta$ when $n > N\\
+\implies | f(x_n) - f(a) | < \epsilon when n> N\\
+( \impliedby)$ contrapositive $\implies f$ not cts at $a \implies \exists \epsilon > 0$ for which no $\delta$  exists for continuity. that is $\forall \delta \exists x \in D$ s.t.\\
+$|x-a | < \delta$ but $| f(x) - f(a) | \geq \epsilon\\$
+for each number $\frac{1}{n}, n \in \mathbb{N} \exists x_n \in D\\$
+s.t. $| x_n - a | < \frac{1}{n}$ but $| f(x_n) - f(a) | \geq \epsilon\\
+\implies \{ f(x_n) \}$ does not converge to $f(a)$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{3.1.7}\\
+\underline{Proof}\\
+domain of $x^r$ is either $\mathbb{R}$ or non-negative $\mathbb{R}$.\\
+spose $a \in D w/\{ x_n \} \rightarrow \{ a \}\\
+\implies \{ x_n^r \} \rightarrow a^r$ ( Theorem 2.3.6) $\implies x^r$ cts by Theorem 3.1.6\\
+\underline{Theorem 3.1.9}\\
+\underline{Proof}\\
+$f, g$ cts at $a$ and $\{ x_n \} \rightarrow a$ theorem 3.1.6\\
+$\implies \{ f(x _n ) \} \rightarrow f(a),\,\, \{ g(x_n ) \} \rightarrow g(a)\\
+\implies \{ c ff(x _n) \} \rightarrow c f(a) \{ f(x_n) + g(x_n) \} \rightarrow f(a) + g(a)\\
+\{ f(x_n ) g(x_n) \} \rightarrow f(a) g(a)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.1.11}\\
+\underline{Proof}\\
+$x \in \bar{A}$ each neighborhood of x contains a pt of A Theorem 7.3.7 (b) in particular $B_{\frac{1}{n}}(x) \forall n \in \mathbb{N}$ contains a point. choose one and call it $x_n$\\
+$\implies || x - x_n || < \frac{1}{n} \implies \{x_n \} \rightarrow x \implies$ each point in $\bar{A}$ is a limit of a sequence in $A$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.2.1}\\
+\underline{Proof}\\
+prove $M = \sup_{x \in I} f(x)$ is finite and f takes it on somewhere in I\\
+construct $\{ x_n \}$ s.t. $\lim f(x_n) = M$ if $M$ finite \\
+choose $x_n \in I$ s.t. M $- \frac{1}{n} < f(x_n) \leq M < M + \frac{1}{n}\\$
+$M$ is the least upper bound.\\
+$M= \infty$ choose $x_n \in I$ s.t. $n< f(x_n)$ in either case $\lim f(x_n) = M\\
+I$ bdd $\implies \{ x_n \}$ bdd $\implies$ Bolzano $\implies$ cvg subseq $\{ x_{n_k} \}\\$
+$I$ closed implies cvgs to $c \in I f$ cts at $x$\\
+$\lim x_{n_k} = c \implies \lim f(x_{n_k}) = f(c)\\$
+but $\lim f(x_{n_k}) = M \implies M$ finite $w/\,\, M = f(c)$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.2.3} (Intermediate Value Theorem)\\
+\underline{Proof}\\
+$a_1 = a;\,\, b_1 = b;\,\, I_1 = [a_1, b_1];\,\, y \in [f(a_1),\,\, f(b_1)]\\$
+construct $I_k$ with this property\\
+i.e. $I_k = [a_k, b_k]$ s.t. $\forall k >1\\$
+(1) $b_k - a_k = \frac{b-a}{2^{k-1}}\\$
+(2) $y \in [f(a_k), f(b_k)]\\$
+spose we chose $\{ I_1 \supset I_2 \supset \dots \supset I_n \}$ (1),(2) hold for $k \leq n$ cut $I_n$ into two halves both containing midpoint $c_n$\\
+$y \in [ f(a_n), f(b_n) ] \implies y \in [ f(a_n), f(c_n)]$ or\\
+$y \in [ f(c_n), f(b_n) ]$. If one is true choose $I_{n+1}$ to be theat half. if both are true choose it to be the right half. This constructs a seq. $I_k$\\
+Nested Interval property $\implies \exists c \in \bigcap_n I_n\\
+f$ continuous $\implies \epsilon >0 \exists \delta >0\\$
+$f(c) - \epsilon < f(x) < f(c) + \epsilon$ when $x \in I,\,\, |x-c | <\delta\\$
+Length of $I_n$ is $\frac{L}{2^{n-1}} \implies \lim \frac {L}{2^{n-1}} = 0\\$
+Length $\implies |x-c | < \delta,\,\, \forall x \in I_n$ when $n>N$ and since $c \in I_n$\\
+$\implies f(c) - \epsilon < f(a_n) < f(c) + \epsilon$ and $f(c) - \epsilon < f(b_n) < f(c) + \epsilon\\$
+since $y \in [ f(a_n), f(b_n)]\\
+\implies f(c) - \epsilon < y < f(c) + \epsilon or |f(c) - y | < \epsilon\\
+\implies f(c) = y$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.2.4}\\
+\underline{Proof}\\
+Theorem 3.2.1 \implies f has max M and min m on I.\\
+Theorem 3.2.3 f takes all values between m and M on I \\
+\implies image of I is [m, M ]. Closed if m \neq M and a point otherwise.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 7.4.7} (Heine-Borel Theorem)\\
+\underline{Proof}\\
+(\implies) already proved\\
+(\impliedby)\\
+K closed, bdd \subset \mathbb{R}^d,\,\ \mathcal{V} open cover of K\\
+Spose \mathcal{V} has no finite subcover, we showw congtradiction\\
+K bdd \implies K subest some d- cube C_1. L edge length of C_1. Partition C_1 into 2^d d- cubes of length \frac{L}{2}.\\
+Intersect each with K, this partitions K insto finitely hany subsets. If each is covered by finitely many of sets in \mathcal{V} \im-plies K is also. Since it is not\\
+\implies at least one intersefction is not. Call it C_2\\
+Continue by induction\\
+C_1 \supseet C_2 \supset \codts \supset C_n \supset C_{n+1} \supset \cdots\\
+\forall n C_n is closed d- cube w/ L_n = L/2^{n-1} and C_n \bigcap K cannot be covered by finitely many sets in \mathcal{V}\\
+C_n \bigcap K form sequences of closed, bounded sets, nested downward\\
+Theorem 7.4.6 \implies \bigcap_n (C_n \bigcap K) \neq \varnothing. Let x \in \bigcap_n ( C_n \bigcap K)\\
+\implies x \in K and \mathcal{V} open cover of K\\
+\implies \exists V \in \mathcal{V} s.t. x \in V. V open \implies \exists B_2(x) \subset V\\
+diameter of C_n (max dist) < \frac{dL}{2^{n-1}}\\
+\implies large n \implies diameter of C_n < r \implies C_n \subset B_r(x)\\
+\implies C_n \subset V. Contradiction
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 3.2.5}\\
+\underline{Proof}\\
+Spose f monotone increasing. f(I) = [s,t],\,\, c \in I\\
+we show f cts at c. Spose c \notin \{s,t \}\\
+\epsilon >0, u \equiv max \{ s, f(c) - \epsilon \},\,\, v = min\{t, f(c) + \epsilon \}\\
+Note f(c) \neq u, v but u,v \in [s,t]\\
+\implies f(c) - \epsilon \leq u < f(c) < v \leq f(c) + \epsilon\\
+\exists p,q \in I s.t. f(p) = u and f(q) = v since f(I) = [s,t]\\
+f monotone increasing \implies p< c < q\\
+choose \delta = min\{q-c, c-p\} \implies | x-c | < \delta\\
+\implies c- \delta < x< \delta + c\\
+\implies c-c + p < x < q-c + c \implies p < x < q\\
+\implies f(c) = \epsilon \leq u < f(x) < v \leq f(c) + \epsilon \implies | f(x) - f(c)| < \epsilon\\
+\implies f cts at c,\,\, c not endpoint.\\
+Spose c is endpoint of I. Same steps but we only concern ourselvees with points lying to one side of c and f(c)\\
+Spose f monotone decreasing\\
+\implies g=-f monotone increasing \implies g(I) cts\\
+\implies -g = f is also cts.
+
+
+
+
+
+
+
+
+
+
+
+\section*{\underline{Analysis II}}
+
+\item \underline{Theorem 7.1.4} If $u,v,w \in \mathbb{R}^d$ and $a \in \mathbb{R}$, then\\
+(a) $u \cdot v = v \cdot u;\\$
+(b) $(u + v) \cdot w = u \cdot w + v \cdot w;\\$
+(c) $(a u ) \cdot v = a( u \cdot v);\\$
+(d) $u \cdot u > 0$ unless $u =0$ in which case $u \cdot u = 0$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 7.1.7} In an inner product space, we define the norm $|| x||$ of a vector x to be the number \\
+$||x || = \sqrt{x \cdot x}\\$
+The distance between two vectors x and y is defined to be $||x-y||$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 7.1.8} (Cauchy-Schwarz Inequality). If $X$ is an inner product space, then\\
+$| u \cdot v | \leq ||u || || v ||\\$
+for all $u, v \in X.\\$
+\underline{Proof:}\\
+$u,v \in X,\,\, t \in \mathbb{R}\\
+\implies 0 \leq (tu+v) \cdot (tu+v) = t^2 u \cdot u + 2 t u \cdot v + v \cdot v = a t^2 + b t + c\\
+a=u \cdot u = ||u||^2,\,\, b = u \cdot v,\,\, c = v \cdot v = ||v||^2\\
+0 \leq a t^2 + b t + c \implies a t^2 + bt + c = 0$ has one root at most $\implies t= - b \pm \sqrt{b^2 - ac } \implies b^2 \leq ac\\
+\implies |b| \leq \sqrt{ac} \implies |u \cdot v | \leq || u ||  || v ||$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+\underline{Definition 7.1.9} With $u, v$ and $\theta$ as above, we will call $\theta$ the angle between $u$ and $v$. This angle is $\pi/2$ if and only if $u \cdot v = 0$. In this case we will say that $u$ and $v$ are mutually orthogonal and write $u \perp v.$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 7.1.10} If $X$ is an inner product space, $x, y \in X$, and $a \in \mathbb{R}$, then\\
+(a) $||x + y || \leq ||x || + || y ||;\\$
+(b) $||ax|| = |a| ||x||;\\$
+(c) $||x || = 0 \implies x = 0.\\$
+
+
+\underline{Proof}\\
+$||x+y||^2 = (x+y) \cdot (x + y) = ||x ||^2 + 2 x \cdot y + ||y ||^2\leq ||x ||^2 + 2 ||x|| ||y || + ||y ||^2 = (||x || + ||y ||)^2\\$
+(a) follows from sqrt\\
+(b) recall $(a u ) \cdot v = a(u \cdot v) \implies ||a x||^2 = (ax) (ax) = a (x \cdot (a x)) = a^2 ||x||^2\\
+\implies ||ax|| = | a | ||x ||\\$
+(c) $||x || = 0 \implies x \cdot x = 0 \implies x= 0$ by theorem 7.1.4 (d)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 7.1.11.} If. $x = (x_1, x_2, \dots, x_d) \in \mathbb{R}^d$, we set\\
+(1) $|| x ||_1 = |x_1| + |x_2 | + \dots + |x_d|;\\$
+(2) $||x||_{\infty} = \max \{ |x_1 |, |x_2 |, \dots , |x_d| \}\\$
+
+
+\item \underline{Theorem 7.1.13} The three norms we have defined on $\mathbb{R}^d$ are related as follows:\\
+$d^{-1} ||x||_1 \leq || x ||_{\infty} \leq ||x|| \leq ||x ||_1\\$
+for each $x \in \mathbb{R}^d\\$
+
+\underline{Proof?}\\
+$(\sum_i |x_i|)^2 = \sum_i \sum_k |x_i| | x_k | \leq \sum |x_i|^2 = x \cdot x\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 7.2.1} Let $X$ be a set and let $\delta$ be a function which assigns to each pair $(x,y)$ of elements of $X$ a non-negative real number $\delta(x,y)$. Then $\delta$ is called a metric on $X$ if, for all $x,y,z \in X$, the following conditions hold:\\
+(a) $\delta(x,y) = \delta(y,x);\\$
+(b) $\delta(x,y) = 0$ if and only if $x=y$; and\\
+(c) $\delta (x,z) \leq \delta(x,y) + \delta(y,z)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star$
+\item \underline{Theoreem 7.2.2} If $X$ is a normed vector space, then $X$ is a metric space if its metric $\delta$ is defined by\\
+$\delta(x,y) = ||x-y||.$\\
+In particular, $\mathbb{R}^d$ is a metric space in the Euclidean norm, as is $C (I)$ in the sup norm.\\
+
+\underline{Proof:}\\
+Theorem 8.1.10 $\implies (a), (b), (c)$\\
+\underline{(a)}\\
+8.1.10 (b) $\implies a=-1 \implies ||x-y|| = ||y-x||$\\
+\underline{(b)}\\
+8.1.10 (c) $\implies || x-y || = 0 iff x=y$\\
+\underline{(c)}\\
+8.1.10 (a) $\implies ||x-y||$ satisfies triangle inequality\\
+$\therefore \delta$ is a metric on $x$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 7.2.13}\\
+\underline{Proof:} ($\implies$)\\
+$\lim_{n \rightarrow \infty} x_n = x \implies \lim_{n \rightarrow \infty} x_n \cdot e_j = x \cdot e_j \forall j$ by theorem 7.2.12s (c)\\
+$(\impliedby)\\$
+Spose $\lim_{n \rightarrow \infty} x_n \cdot e_j = x \cdot e_j for each j\\
+\implies \lim_{n \rightarrow \infty} | (x_n - x) \cdot e_j | = 0 \forall j,\,\,\\
+\implies || x_n -x || = (\sum_{j=1}^d |(x_n -x) \cdot e_j |^2)^{1/2} \rightarrow 0\\
+\therefore \lim x_n = x\\
+$
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+\item \underline{Theorem 7.2.14}\\
+\underline{Induction}\\
+true for $d=1$ (single variable theorem)\\
+spose $d>1$ and true for $d-1$.\\
+Spose $\{ x_n \}$ bounded in $\mathbb{R}^d \implies \exists M \in \mathbb{R}$ s.t. $||x_n || \leq M\\
+\forall n\\$
+$\mathbb{R}^d = \mathbb{R}^{d-1} \times \mathbb{R} \implies x=(y,z) w/ y \in \mathbb{R}^{d-1}, z \in \mathbb{R}, x \in \mathbb{R}^d\\
+\implies || y || \leq || x ||,\,\, | z | \leq || x ||\\$
+so $x_n = (y_n, z_n) \implies ||y_n || \leq || x_n || \leq M and | z_n | \leq || x_n || \leq M\\
+\implies \{ y_n \}, \{ z_n \}$ bounded\\
+$\{ y_n \}$ has cvg subsequence $\{ y_{n_i} \}$ which has a corresponding sequence $\{ z_{n_i} \}$ ( not necessarily convergent)\\
+$\{z_{n_i} \}$ is bounded so it has a corresponding convergent subsequence, the corresponding subsequence of $\{ y_{n_i} \}$ ( which converges) the subsequence of this subsequence converges\\
+$\implies \{ y_{n_{i_k}} \}$ and $\{ z_{n_{i_k}} \}$ converge $\implies \{ x_{n_{i_k}} \}$ converges
+
+
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Open cover definition}\\
+\underline{Definition 7.4.3}\\
+\underline{Theorem 7.4.4} Every compact subset $K$ of $\mathbb{R}^d$ is bounded\\
+\underline{Proof}\\
+$K \subset \mathbb{R}^d = \bigcup_n B_n (0) \implies B_n(0) n = 1, 2 , \dots$ form open cover. $K cpt \implies $ finitely many cover $K \implies K$ contained in $1$ say $K \subset B_m(0)\\$
+since they form a sequence nested upward $K \subset B_m(0) \subset \bar{B}_m(0)\\
+\implies k$ bounded.\\
+\underline{Theorem 7.4.5} Every compact subset $K$ of $\mathbb{R}^d$ is closed\\
+\underline{Proof}\\
+Show $K = \bar{K}. U_n$ commplement of $\bar{B}_\frac{1}{n} (x) in \mathbb{R}^d\\
+\bigcup_n U_n = \mathbb{R}^d \ \{ x \}\\$
+spose $x \in \bar{K}$ and if $\{ U_n \}$ covers $K$ then one set contains $K$, say $U_m\\$
+$\implies B_{\frac{1}{m} }(x) \bigcap K = \varnothing$ which is impossible since $x \in \bar{K} \implies \{ U_n \\$ is not an open cover of $K$\\
+since x is the only point not covered by $\{ U_n \}$ then $x. \in K \implies K = \bar{K}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 7.4.6}\\
+\underline{Proof}\\
+$A_n \neq \varnothing \implies$ can choose $x_n \in A_n \forall n\\$
+each $ x_n \in A_1 and A_1$ is bounded $\implies \{ x_n \}$ bounded\\
+Bolzano $\implies \{ x_{n_k} \}$ cvgs to $x$\\
+$A_1$ closed $x_{n_k} \in A_1 \forall k,\,\, x \in A_1 \forall n n_k \geq n if k \geq n\\
+\implies \{ x_{n_k} \} \in A_n for n_k \geq n A_n$ closed $\implies x \in A_n\\
+\implies x \in \bigcap_n A_n \implies \bigcap_n A_n \neq \varnothing$
+
+\item \underline{Lemma 9.5.9}\\
+If $A$ is positive definite $p \times p$ matrix, then there is a positive number m such that if B is any $p \times p$ matrix with $||B-A||<m/2$, then $u \cdot B u \geq m/2$ for all unit vectors $u \in \mathbb{R}^p$ and, hence, B is also positive definite.
+
+\underline{Proof}\\
+\underline{Note:} u closed, bounded $\implies g(u) = u \cdot A u$ cts real-valued function\\
+(Corollary 8.2.5) $\implies g$ takes min value $m;\,\, u \cdot A u >0$ (assumption)\\
+$\implies m>0\\$
+$\implies u \cdot(A-B) u \leq ||u|| ||(A-B) u|| \leq ||u ||^2 ||A-B|| = ||A-B||\\$
+Cauchy Schwartz Inequality\\
+$\implies u \cdot B u = u \cdot A u - u \cdot (A-B) u \geq m- ||A-B||\\$
+$\therefore ||A-B|| < \frac{m}{2}$ (assumption) $\implies u \cdot B u > \frac{m}{2},\,\, \forall u\\
+\therefore B$ positive definite.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 9.5.10}\\
+Let f be a real-valued function defined on a neighborhood of $a \in \mathbb{R}^p$. Suppose the second-order partial derivatives of f exist in this neighborhood and are continuous at a. If $df(a)=0$ and $d^2 f(a)$ is positive definite, then f has a local minimum at a. If $df(a)=0$ and $d^2 f(a)$ is negative definite, then f has a local maximum at a.\\
+\underline{Proof}\\
+\underline{recall:} $f(x)=\sum_{n=0}^n \frac{d^n f(a) h^n}{n!} + R_n;\,\, R_n= \frac{1}{(n+1)!} d^{n+1} f(c) h^{n+1}\\
+df(a)=0, n=1\\
+\implies f(x) = f(a) + \frac{1}{2} h d^2 f(c) h;\,\, x=a+h$\\
+\{$\exists m>0$ s.t. if $||d^2f(a)-d^2 f(c)|| < \frac{m}{2}$\\
+$\implies d^2 f(c)$ pos def \} (previous theorem)\\
+$2^{nd}$ order partial derivative is continuous at a and \\
+$||c-a|| \leq || \implies || d^2 f(a) - d^2 f(c) ||< \frac{m}{2}$ if $||h || \sim$ small
+$\implies d^2f(c)$ pos def $\implies f(a+h)=f(a) + \frac{1}{2} h \cdot d^2 f(c) h> f(a)\\
+\implies f$ has local min at $a$\\
+\item \underline{Thm 9.5.11}\\
+\underline{Corollary 9.5.12}\\
+\item \underline{Thm 9.5.15}\\
+\underline{Defn 9.6.1}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem:} positive definite $\implies$ invertible\\
+\underline{Proof:}\\
+$u \cdot A u >0 \implies A u \neq 0 \implies rank(A) + nullity(A) = n \implies rank(A) = n \implies Ax=0$ has only the trivial solution $\implies A$ invertible (equivalent statements of linear algebra)\\
+
+
+
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+$F:V \rightarrow W$ one-to-one and onto\\
+\underline{Definition 9.6.1} \\
+F has a smooth local inverse near a if there are neighborhoods V of a and W of $F(a)$ such that F is a one-to-one function from V onto W and the function $F^{-1} : W \rightarrow V,$ defined by $F^{-1}(u) = x$ if $F(x)=u$, is smooth on W.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 9.6.2}\\
+If $a \in U$ and $dF(a)$ is non-singular, then there is an open ball $B_r(a)$, centered at a, and a positive number M such that:\\
+(a) the matrix $dF(x)$ is non-singular for all $x \in B_r(a);\\$
+(b) $||x-y|| \leq M || F(x) - F(y) ||$ for all $x,y \in B_r(a)$;\\
+(c) the function F is none-to -one on $B_r(a).$\\
+
+
+
+\underline{Proof:}\\
+(a)\\
+$B$ inverse for $d F(a)$ at $a$ (constant matrix)\\
+$\implies d(BF)(a) = dB \cdot F(a) + B \cdot dF(a) = B \cdot d F(a) = I\\
+\implies G(x) = B F(x)$ w/ $d G(a) = I,\,\, u \cdot dG(a) \cdot u = u \cdot I u\\
+=||u||^2 = 1 \implies$ positive definite\\
+\underline{recall:} Lemma 9.5.9 $\implies \exists m>0$ s.t. $|| dG(x) - dG(a)||<\frac{m}{2}\\
+\implies \frac{m}{2} \leq u \cdot d G(x) u$ (pos def)\\
+Partial derivatives of the coordinate functions of F are all continuous and so the same thing is true of G.
+Thm 8.4.11 $\implies$ given $m>0 \exists$ r s.t. $B_r(a) \subset U$ and
+$||dG(x) - dG(a)||<\frac{m}{2}$ whenever $|| x - a || < r\\
+\therefore u \cdot d G(x) u \geq \frac{m}{2} \forall x \in B_r(a)$ and $u \in \mathbb{R}^p$ by Lemma 9.5.9.\\
+positive definite $\implies$ non-singular $\implies dF(x)=B^{-1} dG(x)$ is non-singular.\\
+(b)\\
+Let $x,y \in B_r (a).$ set $k=||y-x|| \neq 0$ and $(u=(y-x)/k \implies y=x+ku)\\$
+define $\phi(t)=u \cdot G(x+tu)\\$
+this is real-valued differentiable function on an open interval containing $[0,k].$\\
+$\exists s \in [0,k]$ at which $k \phi'(s)=\phi(k)-\phi(0)$ (mean value theorem)\\
+Chain rule $\implies k \phi'(s) = k u \cdot d G(x+su) u\\$
+$\implies \phi(k) - \phi(0) = u \cdot d G(x+k u) u - u \cdot d G(x) u\\
+= u \cdot (G(y) - G(x)) u\\
+\implies k \phi'(s) = k u \cdot d G(x+su) u = \phi (k) - \phi(0) = u \cdot(G(y) - G(x))\\
+\implies k u \cdot d G(c) u = u \cdot(G(y) - G(x))\\
+c \equiv x+su\\$
+then $u \cdot d G(x) u \geq \frac{m}{2}$ like before\\
+$\implies \frac{mk}{2} \leq k u \cdot d G(c) u = u \cdot (G(y) - G(x)) \leq ||u || || G(y) - G(x) || = ||B(F(y) - F(x))|| \leq ||B|| || F(y) - F(x)||\\
+recall: k= ||y-x||\\
+\implies \frac{m k}{2} \leq ||B|| ||F(y) - F(x)||\\
+\implies k = ||y-x || \leq \frac{2 ||B||}{m} ||F(y) - F(x)||\\
+\therefore$ Let $M= \frac{2 ||B||}{m} \implies$ proves part (b)\\
+\underline{part (c)}\\
+Spose $F(x) = F(y)$ part (b) $\implies ||x-y|| \leq 0\\
+\implies x=y \forall x,y \in B_r (a)$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{open map} a function F such that F(V) is open whenever V is open\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.6.3}\\
+With F as above, if $dF$ is non-singular at every point of an open subset V of U, then $F: V \rightarrow \mathbb{R}^p$ is an open map.\\
+\\
+We will show that $F(V)$ contains an open ball centered at b, doing this $\forall a \in V \rightarrow F(V)$ open\\
+\\
+\underline{Proof:}\\
+assume $ a \in V $ and $ b = F(a)\\$
+$dF(a)$ non-singular $\implies \exists B_r(a) \subset V$ for which Thm 9.6.2 holds.\\
+\underline{Note:} If it holds for $B_r(a)$ then it holds for $B_{r_1}(a)$ w/ $r_1<r$, in particular $\bar{B}_{r_1}(a) \subset B_r(a)$.\\
+Lets show the image contains $B_{\delta}(b)$\\
+Spose $r_1<r \implies$ Thm 9.6.2 (b) $\implies \exists M$ s.t.\\
+$||x-y|| \leq M || F(x)-F(y)||,\,\, \forall x,y \in \bar{B}_{r_1}(a)\\
+b=F(a)\\
+\implies ||F(x)-b|| \geq \frac{r_1}{M}$ w/ $r_1=||x-a||$ i.e. x is on the boundary\\
+Set $\delta = \frac{r_1}{2 M},\,\,v$ any element of $B_{\delta}(b)$\\
+Let $g(x) = ||F(x) - v||$ for $ x \in \bar{B}_{r_1}(a)$\\
+\underline{Note:} \{If we can show g(u)=0 for $u \in \bar{B}_{r_1}(a)$ then each $v \in B_{\delta}(b)$ is the image of some $u \in B_r (u) \}$\\
+\underline{Claim:} $g$ takes minimum on interior of $\bar{B}_{r_1}(a)\\$
+\underline{Justify:} $g$ cts on compact $\bar{B}_{r_1}$(a) (corollary 8.2.5) (shows g must take max and min value on the set)\\
+\underline{Claim:} $g$ does not take min on boundary $B_{r_1}$\\
+\underline{Justify:} \{$x$ on boundary $\implies ||x-a||=r_1;\,\, v \in B_{\delta}(b) \implies ||b-v|| < \delta = \frac{r_1}{2M}\\
+\implies g(x) = ||F(x) - v|| = || F(x) +b - b -v || \geq ||F(x) -b || - ||b-v|| \geq \frac{r_1}{M} - \frac{r_1}{2M} = \frac{r_1}{2M} = \delta$ (on boundary)\\
+but $g(a) = || F(a)-v||=||b-v|| < \delta,$ i.e. it has a smaller value inside\\
+$\therefore g(x)$ does not attain a minimum value on the boundary $\bar{B}_{r_1}(a)$ \}\\
+$\implies$ min at $ u \in B_{r_1}(a) \implies g^2(x)=(F(x)-v) \cdot(F(x)-v)\\$
+min at $u \implies d g^2(x) =2(F(x)-v)dF(x)=0\\
+\implies F(u)-v$ orthogonal to all columns of $dF(u)$ but $dF(u)$ not singular $\implies (F(u)-v) dF(u) dF(u)^{-1}=(F(u)-v)=0 \implies F(u)=v\\$
+$\therefore$ each $ v \in B_{\delta}(b)$ is image under $F$ of some $u \in B_r(a)$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 9.6.3}\\
+\underline{proof:}\\
+Spose $a \in V,\,\, b=F(a)$, must show $F(V)$ contains open ball centered at b\\
+$dF(a)$ non-singular $\implies \exists$ open ball $B_r(a) \subset V$ for which we can use Thm 9.6.2\\
+must show image contains open ball $B_{\delta}(b)\\$
+$0<r_1<r$ (Thm 9.6.2 (b)) $\implies \exists M>0\\$
+$||x-y || \leq M ||F(x)-F(y)||,\,\, \forall x,y \in \hat{B}_{r_1}(a)\\$
+Let $b=F(y),\,\, y=a\\
+\implies ||F(x) - b || \geq \frac{r_1}{M} whenever ||x-a|| = r_1$
+
+\underline{Shortened:}\\
+given $B_r(a) \subset V$ (a arbitrary) show that the image contains an open ball $B_{\delta}(b)$. Let v be any element of $B_{\delta}(b)\\$
+\underline{Note:} \{ really we would like to prove that if $x \in B_r(a) s.t. F(x) \in F(V)$ then $F(x) \in B_{\delta}(F(a))$, however if we can show that $v \in B_{\delta}(F(a)) \implies \exists x \in B_r(a) s.t. F(x) = v$. Notice that this tells us that $x \in B_r(a)$ and $F(x)=v$ where $v \in B_{\delta}(F(a))$ so this shows that $F(x)$ is in $B_{\delta}(F(a))$
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.6.4}\\
+\underline{Proof:}\\
+$b \in W,\,\, a= F^{-1}(a)$ choose $r$ s.t. $B_r(a) \subset V$\\
+$\implies F(B_r(a))$ open by Thm 9.6.3\\
+$y \in F(B_r(a)),\,\, x=F^{-1}(y) \implies x \in B_r(a)\\$
+Thm 9.6.2 (b) $\implies ||F^{-1}(y) - F^{-1}(b)|| = ||x-a|| \leq M || y -b ||\\
+\implies F^{-1}$ cts at $b$\\
+$F$ diff'ble at $a \implies \lim_{x \rightarrow a} \frac{\epsilon(x)}{||x-a||} = 0\\$
+with $\epsilon (x) = F(x) - F(a) - dF(a)(x-a)\\$
+Let $a = F^{-1}(b),\,\, x = F^{-1}(y)\\$
+$\implies dF(a)^{-1} \epsilon(y) = (d F(a))^{-1}(y-b) - (F^{-1}(y) - F^{-1}(b))$\\
+$\implies F^{-1}(y) - F^{-1}(b) - d F(a)^{-1}(y-b) = - d F(a)^{-1} \epsilon(x)\\
+k \equiv ||d F(a)^{-1}||\\
+\implies \frac{||F^{-1}(y) - F^{-1}(b) - (dF(a))^{-1}(y-b)||}{||y-b||}\\
+= - \frac{dF(a)^{-1} \epsilon(x)}{||y-b||} \leq \frac{k || \epsilon (x)||}{||y-b||} \leq \frac{k M || \epsilon(x) ||}{||x-a||}\\$
+\underline{recall:} $\lim_{x \rightarrow a} \frac{ \epsilon(x)}{||x-a||} = 0\\
+\implies dF^{-1}(b) = (d F(a))^{-1} = (d F(F^{-1}(b)))^{-1}$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.6.5}\\
+\underline{Proof:}\\
+Theorem 9.6.2 $\implies$ $F$ is one-to-one with non-singular differential in an open ball $B_r(a)$\\
+Theorem 9.6.3 image of $B_r(a)$ under $F$\\
+(onto, every element in $W$ gets mapped to)\\
+$\implies F$ has inverse $F^{-1} : W \rightarrow B_r(a)$\\
+Theorem 9.6.4 $\implies$ inverse function is smooth with corresponding differential\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 9.7.2}\\
+\underline{Proof:}\\
+$H(x,y) = (x,F(x,y)),\,\, (x,y) \in U\\
+dH = \begin{pmatrix} 
+	1 &  \dots & 0 &0 & \dots & 0 \\ 
+	0 & \dots & 0 & 0 & \dots & 0 \\ 
+	\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+	0 & \dots & 1 & 0 & \dots & 0 \\
+	\frac{\partial f_1}{\partial x_1} & \dots & \frac{\partial f_1}{\partial x_p} & \frac{\partial f_1}{\partial y_1} & \dots & \frac{\partial f_1}{\partial y_2} \\
+	\vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+	\frac{\partial f_q}{\partial x_1} & \dots & \frac{\partial f_q}{\partial x_p} & \frac{\partial f_q}{\partial x_1} & \dots \frac{\partial f_q}{\partial y_q} 
+\end{pmatrix}$\\
+$H C^1$ since $F C^1$\\
+Note: $|dH| = \frac{\partial (f_1, \dots, f_q)}{\partial (y_1, \dots, y_q)} \neq 0$ at $(a,b)$ (hypothesis)\\
+$\implies d H(a,b)$ non-singular\\
+(Thm 9.6.5) $\implies \exists V \subset U$ of $(a,b) W$ of $H(a,b)$ s.t. $\exists H^{-1}: W \rightarrow V w/ H^{-1} C^1$\\
+$\implies H^{-1}(x,0) = (K(x), G(x))\\
+K, G$ defined on $A = \{ x \in \mathbb{R}^p: (x,t) \in W \}\\$
+$K, G$ take values in $\mathbb{R}^q$\\
+$A$ open since it is the inverse image of $W$ where $x \rightarrow (x,0) : \mathbb{R}^p \rightarrow \mathbb{R}^p \times \mathbb{R}^q$ cts\\
+$\implies (x,0) = H \circ H^{-1}(x,0) = (K(x), F(K(x),G(x))) for x \in A$
+$\implies K(x) = x F(x, G(x)) = 0 \forall x\in A\\
+(x,y) \in V$ and $F(x,y) = 0 \implies H(x,y) = (x,0)\\
+\implies (x,y) = H^{-1} \circ H(x,y) = H^{-1} (x,0) = (x, G(x))\\
+\implies y= G(x),$ if $(x,y) \in V \implies F(x,y) = 0 \iff y= G(x)\\$
+in particular $(x,y) = (a,b) \implies G(a) = b\\
+G(x,G(x)) = 0 \implies d F(x,G(x))\\
+= \frac{\partial (f_1, \dots, f_1)}{\partial (x_1, \dots x_p)} + \frac{\partial (f_1, \dots, f_q)}{\partial (y_1, \dots , y_q)} \frac{\partial (g_1, \dots g_q)}{\partial (x_1, \dots , x_p)} =0 \\$
+solve for $\frac{\partial (g_1, \dots , g_q)}{\partial (x_1, \dots , x_p)}$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Def 7.2.5}\\
+\underline{Def 7.2.6}\\
+\item \underline{Theorem 7.2.8}\\
+\item \underline{Theorem 7.2.10}\\
+\item \underline{Theorem 7.2.11}\\
+\underline{Proof:} $| ||x || - || x_n || | \leq || x- x_n || \rightarrow 0\\
+\therefore | || x || - || x_n || | \rightarrow 0\\
+\therefore \lim ||x_n || = || x ||\\$
+\item \underline{Theorem 7.2.12}\\
+\underline{Proof:}\\
+\underline{(a)}\\
+$|| x + y - ( x_n + y_n) || \leq || x- x_n || + || y- y_n ||\\
+|| x- x_n || \rightarrow 0,\,\, || y- y_n || \rightarrow 0\\
+\implies || x- x_n || + || y- y_n || \rightarrow 0\\
+\implies x_n + y_n \rightarrow x + y\\$
+\underline{(b)}\\
+$|| a x - a_n x_n || = || a x - a_n x_n + a x_n - a x_n ||\\
+= || a(x-x_n) + (a - a_n ) x_n || \leq | a | || x- x_n || + | a- a_n | || x_n ||\\
+|| x - x_n || \rightarrow 0 | a - a_n | \rightarrow 0,\,\, || x_n || \rightarrow || x || i.e. bounded for large n \implies \lim a_n x_n = ax\\$
+\underline{(c)}\\
+similar to (b)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 7.2.15}\\
+\underline{Theorem 7.2.16} (completeness)\\
+\underline{Definition 7.3.1}\\
+\underline{Theorem 7.3.2}\\
+\underline{Proof:}\\
+$\varnothing$ has no points so condition is vacuously satisfied $\mathbb{R}^d$ is open, contains an open ball centered at any point, since $\varnothing$ and $\mathbb{R}^d$ are complements of eachother they are also closed.\\
+$B_r(x_0) \sim$ open ball $y \in B_r(x_0)\\$
+$\implies || y- x_0 || < r s \equiv r- || y- x_0 ||, \,\, s>0\\
+x \in B_s (y) \implies || x-y|| < s\\
+\implies ||x-x_0|| \leq || x-y || + || y - x_0 || < s + || y- x_0 || = r - || y- x_0 || + || y - x_0 || = r\\
+\implies x \in B_r(x_0)\\
+(d) \bar{B}_r(x_0)$ spose $y \in \mathbb{R}^d/ \bar{B}_r(x_0)\\
+\implies y \in \mathbb{R}^d$ but $y \notin \bar{B}_r(x_0)\\
+\implies || y-x_0 || > r,\,\, s \equiv || y -x_0 || - r\\$
+must show $B_s(y) \subset \mathbb{R}^d / \bar{B}_r(x_0)\\
+x \in B_s (y ) \implies || x-y || < s\\
+\implies || x- x_0 || \geq || y - x_0 || - || x-y || > || u - x_0 || - || y - x_0 || + r = r\\
+\implies x \in \mathbb{R}^d/ \bar{B}_r(x_0)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+did we finish 7.3.2?\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 7.3.3}\\
+\underline{Proof}\\
+(a) $\mathcal{V}$ collection of open sets $U = \bigcup \mathcal{V}, x \in U \iff x \in V_i \in \mathcal{V}$. Spose $x \in V_i \implies V_i$ open $\exists B _r(x) \subset V_i,\,\, V_i \subset U \implies B_r(x) \subset U\\$
+(b) spose $x \in U = V_1 \bigcap V_2 \bigcap \dots \bigcap V_n\\$
+$V_k$ open $\implies \exists r_k$ s.t. $B_{r_k} (x) \subset V_k\\$
+$r= \min \{r_1, r_2, \dots, r_n \} \implies B_r(x) \subset V_k \forall k\\
+\implies B_r(x) \subset U \implies U$ open.\\
+(c) and (d) follow from taking complements
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Defiintion 7.3.6}\\
+\underline{Theorem 7.3.9}\\
+\underline{Proof} $( \impliedby)\\$
+$\forall open U$ of $x$( neighborhood) $\exists N$ s.t. $x-n \in U$ when $n \geq N$ this is true for each neighborhood $B_{\epsilon}(x) w/ \epsilon>0 \implies \forall \epsilon > 0 \exists N$ s.t. $| |x_n - x|| < \epsilon\\$
+when $n \geq N \implies \lim x_n = x\\
+( \implies ) \lim x_n = x U $any neighborhood of $x\\$
+choose $\epsilon > 0$ s.t. $B_{\epsilon}(x) \subset U$ for this $\epsilon \exists N s.t. || x- x_n || < \epsilon$ when $n \geq N \implies x_n \in B_{\epsilon}(x) \subset$ when $n \geq N\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{7.3.10}
+
+
+
+
+\section*{\underline{Complex Analysis}}
+\section{Chapter 1}
+\underline{Proposition 1.2.2 (De Moivre's Formula)}\\
+If $z=r(\cos \theta + i \sin \theta)$ and $n$ is a positive integer, then\\
+$z^n = r^n (\cos n \theta + i \sin n \theta)$
+
+\underline{Proof:}
+prop 1.2.1 $\implies z^2 = |z| |z| (\cos (\theta + \theta) + i \sin (\theta + \theta))=r^2 (\cos 2 \theta + i \sin 2 \theta)\\
+z^3 = z \cdot z^2 = r^3 (\cos 3 \theta + i \sin 3 \theta)\\$
+use induction done\\
+$\therefore z^n = r^n (\cos n \theta + i \sin n \theta)\\$
+or $z= r e^{i \theta} \implies z^n = r^n e^{in \theta} = r^n (\cos n \theta + i \sin n \theta)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{corollary:} $z= \rho (\cos \psi + i \sin \psi) w= r (\cos \theta + i \sin \theta)\\
+z^n = w \implies z= ^n\sqrt{r} [ \cos (\frac{\theta}{n} +  \frac{k}{n} 2 \pi) + i \sin (\frac{\theta}{n} + \frac{k}{n} 2 \pi) ]\\$
+\underline{proof:} known: $w\\
+z^n = \rho^n  e^{in \psi} = r e^{i \theta}\\
+\implies \rho^n = r,\,\,  n \psi = \theta + 2 \pi k \implies \psi = \frac{\theta}{n} + 2 \pi \frac{k}{n}\\
+\therefore z = ^n \sqrt{r} [ \cos ( \frac{\theta}{n} + \frac{k}{n} 2 \pi) + i \sin (\frac{\theta}{n} + \frac{k}{n} 2 \pi)]$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 1.2.4}\\
+(i) $\bar{z + z'} = \bar{z} + \bar{z'}\\$
+(ii) $\bar{z z'} = \bar{z} \bar{z'}\\$
+(iii) $\bar{z/z'} = \bar{z}/\bar{z'} for z' \neq 0\\$
+(iv) $z \bar{z} = | z |^2 if z' \neq 0 \implies z^{-1} = \frac{\bar{z}}{|z|^2}\\$
+(v) $z= \bar{z} \iff z \in \mathbb{R} \\$
+(vi) $Re(z) = (z + \bar{z})/2,\,\, Im z = (z- \bar{z})/2i\\$
+(vii) $\bar{\bar{z}}=z\\$
+\underline{Proof}\\
+(i) $z= a + i b ,\,\, z' = a' + i b' \implies z + z' = (a + a') + i (b + b')\\
+\implies \bar{z + z'} = (a + a') - i (b + b') = a- i b + a' - i b'\\$
+all are trivial
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 1.2.5}\\
+(i) easy\\
+(ii) $|z'| |z/z' | = | z' \cdot z/z'| = |z | \implies |z/z' | = \frac{|z|}{|z'|}\\$
+(iii) $z= a + i b,\,\, - \sqrt{a^2 + b^2 } \leq a \leq \sqrt{a^2 + b^2}\\$
+(iv) easy\\
+(v) $|z + z'|^2 = (z+z') \bar{(z + z')} = (z + z')(\bar{z} + \bar{z}')\\
+= z \bar{z} + z' \bar{z}' + z' \bar{z} + z \bar{z}' = z \bar{z} + z' \bar{z}' + z' \bar{z} + \bar{(\bar{z} z')}\\
+= z \bar{z} + z' \bar{z}' + 2 Re (z' \bar{z})\\
+= |z|^2 + |z'|^2 + 2 Re(z' \bar{z})\\
+\leq |z|^2 + 2 (z' \bar{z}) + |z'|^2 = (|z| + |z'|)^2$
+(vi) apply (v) to $z'$ and $z-z'\\$
+$\implies |z| = |z' + (z-z') | \leq |z' | + | z-z'|\\
+\implies |z-z'| \geq |z| - |z'|\\
+|z'| = |z + (z'-z)| \leq |z | + | z' - z|\\
+\implies |z' | - |z| = - (|z| - |z'|) \leq |z' -z|\\
+- | z' - z| \leq |z| - |z'| \leq | z-z'|\\
+\implies || z | - |z'|| \leq |z-z'|\\$
+(vii) skip\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.3.1}\\
+If $z=x + i y$, then $e^z$ is defined by $e^x (\cos y + i \sin y)$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 1.3.2}\\
+(i) $e^{z+w} = e^z e^w$ for all $z$, $w \in \mathbb{C}$\\
+(ii) $e^z$ is never zero\\
+(iii) If $x$ is real, then $e^x>1$ when $x>0$ and $0 < e^x <1$ when $x<0$\\
+(iv) $|e^{x+iy}|=e^x$\\
+(v) $e^{\pi i/2} = i,\,\, e^{\pi i} = -1,\,\, e^{3 \pi i/2} = -i,\,\, e^{2 \pi i} =1$\\
+(vi) $e^z$ is periodic; each period for $e^z$ has the form $2 \pi n i$, for some integer $n$.\\
+(vii) $e^z=1$ iff $z=2 n \pi i$ for some integer $n$ (positive, negative, or zero).\\
+\underline{Proof:}\\
+(ii) Note $e^z \cdot e^{-z} = e^0 = 1$ so if $e^z = 0\\$
+$\implies e^z \cdot e^{-z} = 0 \cdot e^{-z} = 0$ which is not possible so $e^z \neq 0 \forall z\\$
+(iii) obvious\\
+(iv) $|e^{x+iy}| = |e^x| |e^{iy}| = |e^x | | \cos y + i \sin y |\\
+= |e^x| = e^x\\$
+(v) easy\\
+(vi) $e^{z+w} = e^z = 1 = e^{2 \pi n i}\\
+\implies e^s = 1,\,\, e^{it} = e^{2 \pi n i}\\
+s=0,\,\, t= 2 \pi n\\
+\implies w=s + i t= 2 \pi n i \\$
+(vii) easy\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 1.3.4}\\
+\underline{Proof:}
+(i) use defn\\
+(ii) use $\exp(z)$ def\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 1.3.5}|\\
+\underline{Proof}\\
+\underline{one-to-one}\\
+$e^{z_1} = e^{z_2} \implies e^{z_1-z_2} = 1 \implies z_1 - z_2 = 2 \pi i n\\$
+but we know $Im(z_1-z_2) < 2 \pi \implies z_1 -z_2 = 0 \implies z_1 = z_2\\
+\implies e^z$ one-to-one\\
+\underline{onto}\\
+$w \in \mathbb{C} w \neq 0$ lets show $e^z=w,\,\, z \in A y_0\\$
+$e^{x+iy} = e^x e^{iy} = w = |w| e^{i arg(w)} = |w|( \frac{w}{|w|})\\
+\implies e^x = |w|,\,\, e^{iy} = \frac{w}{|w|} \implies x= \log |w|, y= \arg(w) + 2 \pi n\\$
+exactly one y corresponds to $[y_0,y_0+2 \pi)\\
+\implies$  onto.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 1.3.6}\\
+\underline{Prop 1.3.7}\\
+\underline{Proof}\\
+$\log z = \log | z| _+ i \arg(z)\\
+\implies e^{\log z} = e^{log |z|} e^{i arg z} = | z | e^{i arg z} = z\\$
+conversely, $z = x+i y,\,\, y_0 \leq y \leq y_0 + 2 \pi\\
+\implies \log e^z = \log |e^z| + i arg e^z = \log e^x + i y = x + i y = z\\$
+\underline{Proposition 1.3.8}\\
+\underline{Proof}\\
+$\log(z_1 z_2) = \log | z_1 z_2 | + i arg(z _1 z_2)\\$
+where $y_0 \leq arg \leq y_0 + 2 \pi\\
+\log | z_1 || z_2 | = \log | z_1 | + \log | x_2 |,\,\, arg(z_1 z_2) = arg z_1 + arg z_2\\$
+(up to multiple of $2 \pi$) $\implies \log (z_1 z_2) = \log z_1 + \log z_2$
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star$
+\underline{Proposition 3.3.4}\\
+Let $f$ be analytic on a region $A$ and have an isolated singularity at $z_0$.\\
+1. $z_0$ is a removable singularity iff any one of the following conditions holds:\\
+(a) $f$ is bounded in a deleted neighborhood of $z_0$.\\
+(b) $\lim_{z \rightarrow z_0} f(z)$ exists.\\
+(c) $\lim_{z \rightarrow z_0}(z-z_0) f(z) = 0.$ (otherwise non-zero constant\\
+2. $z_0$ is a simple pole iff $\lim_{z \rightarrow z_0} (z-z_0) f(z)$ exists and is unequal to zero. This limit equals the residue of $f$ at $z_0$.\\
+3. $z_0$ is a pole of order $\leq k$ (or possibly a removable singularity) iff any one of the following conditions holds:\\
+(a) There are a constant $M > 0$ and an integer $K \geq 1$ suchthat\\
+$|f(z)| \leq \frac{M}{|z-z_0|^k}\\$
+in a deleted neighborhood of $z_0$.\\
+(b) $\lim_{z \rightarrow z_0} (z-z_0)^{k+1} f(z) = 0.\\$
+
+(c) $\lim_{z \rightarrow z_0}(z-z_0)^k f(z)$ exists.\\
+4. $z_0$ is a pole of order $k \geq 1$ iff there is an analytic function $\phi$ defined on a neighborhood $U$ of $z_0$ such that $U\ \{z_0 \} \subset A, \phi(z_0) \neq 0,$ and\\
+$f(z) = \frac{\phi(z)}{(z-z_0)^k}\\$
+for all $z \in U, z \neq z_0.\\$
+
+\underline{Proof:}\\
+1. $z_0$ removable $\implies f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n,\,\,$ in deleted neighborhood of $z_0\\
+f$ bounded and analytic $\implies \lim f(z)$ exists\\
+$\implies \lim(z-z_0) f(z)$ exists (obvious)\\
+
+\item \underline{Thm 3.3.7 (Casorati-Weierstrass Theorem)}\\
+Let f have an (isolated) essential singularity at $z_0$ and let $w \in \mathbb{C}$. Then there is a sequence $z_1, z_2, z_3,... in \mathbb{C}$ such that $z_n \rightarrow z$ and $f(z_n) \rightarrow w$.\\
+\underline{Proof}
+Assume no such sequence\\
+$\implies \exists \epsilon >0$ and $\delta>0$ s.t. $|f(z)-W| > \epsilon,\,\, \forall z \in U$\\
+$=\{z \in \mathbb{C} |\,\, 0 < |z-z_0| < \delta \}.$ Since $f(z) \neq w$ in $U$\\
+$g(z) \equiv \frac{1}{f(z)-w}$ analytic on $U,\,\, 1/ |g(z)|< \frac{1}{\epsilon}$\\
+\underline{recall:} 3.3.4 (1) a) $f$ bounded in deleted neighborhood of $z_0 \implies z_0$ removable discontinuity.\\
+$g \neq 0$ constantly since $f$ is not constantly infinite\\
+Corollary 3.2.8, any zero of g at $z_0$ is isolated with finite order k. $\implies f(z)=w+1/g(z)$ is either analytic $(k=0)$ or has a pole of order k at $z_0$ by prop 3.3.5.\\
+This contradicts the assumption that f has an essential singularity at $z_0$.\\
+\underline{Shortened:} if there is no such sequence then $|f(z)-w|>\epsilon \implies f(z) \neq w \implies g(z) =\frac{1}{f(z)-w}$ is analytic; $\frac{1}{|g(z)|} < \frac{1}{\epsilon} \implies g$ bounded $\implies z_0$ removable, $g \neq 0$ constantly $\implies g$ has isolated zero with order k (k can be 0) $\implies$ f has pole of order k which contradicts essential singularity
+
+
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 3.3.7 (Casorati-Weierstrass Theorem)}\\
+Let f have an (isolated) essential singularity at $z_0$ and let $w \in \mathbb{C}$. Then there is a sequence  $z_1,z_2,z_3, \dots $ in $ \mathbb{C}$ such that $z_n \rightarrow z$ and $ f(z_n) \rightarrow w$.\\
+This means given any number $w \in \mathbb{C}$ we can find a sequence that converges to an arbitrary number z such that $f(z_n) \rightarrow w$
+
+\underline{Proof}\\
+Spose $\nexists$ such sequence $\implies \exists \epsilon >0$,\,\, $\delta >0\\$
+s.t. $|f(z)-w| > \epsilon,\,\, \forall z \in U = \{ z \in \mathbb{C} | 0< |z-z_0| < \delta \}\\$
+$\implies f(z) \neq w \implies g(z)=\frac{1}{f(z)-w}$ analytic\\
+$\implies |g(z)| < \frac{1}{\epsilon} \implies z_0$ removable by Thm 3.3.4 (a) $g$ not constantly zero since $f$ is not constantly infinite (isolated singularity) by Corollary 3.2.8 $g$ has a convergent power series and if $g$ is $0$ at $z_0$ then $g(z)=(z-z_0)^k \phi(z)\\$, i.e., zero of $g$ at $z_0$ is isolated and has finite order $k$
+$\implies f(z)=w+\frac{1}{g(z)}=w+ \frac{1}{(z-z_0)^k \phi(z)}$ is analytic if $k=0$ (since $\phi(z) \neq 0$ or pole of order $k \implies z_0$ is not essential\\
+$\implies$ contradiction
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.1.1} If $g(z)$ and $h(z)$ are analytic and have zeros at $z_0$ of the same order, then $f(z)=g(z)/h(z)$ has a removable singularity at $z_0$.\\
+
+\underline{Proof} Prop 3.3.4 $\implies g(z)=(z-z_0)^k \tilde{g}(z),\,\, \tilde{g}(z_0) \neq 0 h(z)=(z-z_0)^k \tilde{h}(z), \tilde{h}(z_0) \neq 0.\,\, \tilde{g}$ and $\tilde{h}$ analytic and nonzero at $z_0. \implies f(z) =\tilde{g}(z)/\tilde{h}(z) $analytic at $z_0.\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.1.2} Let $g$ and $h$ be analytic at $z_0$ and assume $g(z_0 \neq 0$, $h(z_0) = 0$ and $h'(z_0) \neq 0$. then $f(z)=g(z)/h(z)$ has a simple pole at $z_0$ and Res$(f;z_0)=\frac{g(z_0)}{h'(z_0)}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.1.2} $g$ and $h$ analytic at $z_0; g(z_0) \neq 0, h(z_0) = 0, h'(z_0) \neq 0. \implies f(z)=\frac{g(z)}{h(z)}$ has simple pole at $z_0$ and $Res(f;z_0) = \frac{g(z_0)}{h'(z_0)}\\$
+\underline{Proof} $h(z_0)=0; h'(z_0) \neq 0 \implies h'(z_0)=\lim_{z \rightarrow z_0} \frac{h(z)-h(z_0)}{z-z_0} 
+\\= \lim_{z \rightarrow z_0} \frac{h(z)}{z-z_0} \neq 0\\$
+\underline{recall Prop 3.3.4:} $\lim_{z \rightarrow z_0} ( z-z_0) f(z) = Res(f; z_0) if \lim \neq 0\\
+\therefore \lim_{z \rightarrow z_0} (z-z_0) \frac{g(z)}{h(z)} = \frac{g(z_0)}{h'(z_0)} = Res (\frac{g(z)}{h(z)};z_0)$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+$\star$
+\underline{Prop 4.1.3} $g(z)$ zero of order $k$ at $z_0$, $h(z)$ zero order $k+1.\,\, \implies g(z)/h(z)$ simple pole and
+$Res(\frac{g}{h};z_0) = (k+1) \frac{g^{(k)}(z_0)}{h^{(k+1)}(z_0)}$
+
+\underline{Proof}\\
+zero of order $k \implies g(z_0),...,g^{k-1}(z_0)=0$ (by definition)\\
+$\implies g(z) = \sum_{n=k}^{\infty} \frac{(z-z_0)^k}{k!} g^{(k)}(z_0)=\frac{(z-z_0)^k}{k!} g^{(k)}(z_0) + (z-z_0)^{k+1} \tilde{g}(z);\,\, \tilde{g}(z)$ analytic\\
+similarly $h(z)=\frac{(z-z_0)^{k+1}}{(k+1)!} h^{(k+1)}(z_0)+(z-z_0)^{k+2}\tilde{h}(z)\\
+\implies \frac{(z-z_0)g(z)}{h(z)}=\frac{\frac{(z-z_0)^{k+1} g^{(k)}(z_0) + (z-z_0)^{k+2} \tilde{g}(z)}{k!}}{\frac{(z-z_0)^{k+1}}{(k+1)!}h^{(k+1)}(z_0) + (z-z_0)^{k+2} \tilde{h}(z)}=\frac{[g^{(k)}(z_0)/k!]+(z-z_0) \tilde{g}(z)}{[h^{(k+1)}(z_0)/(k+1)!]+(z-z_0) \tilde{h}(z)}\\
+z \rightarrow z_0\\
+\implies \lim_{z\rightarrow z_0}(z-z_0) \frac{g(z)}{h(z)} = (k+1) \frac{g^{(k)}(z_0)}{h^{(k+1)}(z_0)}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.1.4} Let g and h be analytic at $z_0$ and let $g(z_0) \neq 0,\,\, h(z_0) = 0,\,\, g'(z_0)=0,\,\,$ and $h''(z_0) \neq 0. $ Then $g(z)/h(z)$ has a second-order pole at $z_0$ and the residue is \\
+$Res(\frac{g}{h};\,\,z_0) = 2 \frac{g'(z_0)}{h''(z_0)}-\frac{2}{3} \frac{g(z_0) h'''(z_0)}{[h''(z_0)]^2}\\$
+\underline{Proof}\\
+$g(z_0) \neq 0;\,\, h\,\, 2^{nd}$ order zero\\
+(i.e. $h(z_0)=0,\,\,h'(z_0)=0,\,\, h'''(z_0) \neq 0 )\\$
+$\implies \frac{g}{h}$ pole of $2^{nd}$ order\\
+$\frac{g}{h} = \frac{b_2}{(z-z_0)^2} + \frac{b_1}{z-z_0} + a_0 + a_1 (z-z_0) + a_2 (z-z_0)^2 + \dots\\
+g(z)=g(z_0) + g'(z_0) (z-z_0) + \frac{g''(z_0)}{2} (z-z_0)^2 + \dots\\
+h(z) = \frac{h''(z_0)}{2}(z-z_0)^2 + \frac{h'''(z_0)}{6} (z-z_0)^3+ \dots\\
+\frac{g(z)}{h(z)} \implies h(z) \frac{g(z)} {h(z)} = h(z) [ \frac{b_2}{(z-z_0)^2} + \frac{b_1}{z-z_0} + a_0 + a_1 (z-z_0)+ \dots]\\
+=[\frac{h''(z_0)}{2} + \frac{h'''(z_0)}{6} (z-z_0) + \dots ] \cdot [ b_2 + b_1(z-z_0) +a_0 (z-z_0)^2 + \dots]\\
+=\frac{h''(z_0)}{2} b_2 + \frac{h''(z_0)}{2} b_1 (z-z_0) + \frac{h'''(z_0)}{6} b_2 (z-z_0) + \dots\\
+=\frac{h''(z_0)}{2} b_2 + (\frac{h''(z_0)}{2} b_1 + \frac{h'''(z_0)}{6} b_2) (z-z_0) + \dots\\
+=g(z_0) + g'(z_0)(z-z_0) + \dots\\
+\implies g(z_0) = \frac{h''(z_0)}{2} b_2;\,\, g'(z_0)= \frac{h''(z_0)}{2} b_1 + \frac{h'''(z_0)}{6} b_2\\
+\therefore b_1 = Res(\frac{g}{h};\,\, z_0) = 2 \frac {g'(z_0)}{h''(z_0)}-\frac{2}{3} \frac{g(z_0) h'''(z_0)}{[h''(z_0)]^2}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.1.6}\\
+$\lim_{z \rightarrow z_0} (z-z_0)^k f(z) \rightarrow \phi(z) = (z-z_0)^k f(z)\\$
+has removable singularity (prop 3.3.4)\\
+$\implies \phi(z) = (z-z_0)^k f(z) = z_0 + c_1(z-z_0)+ \dots + c_{k-1} (z-z_0)^{k-1} + c_k (z-z_0)^k + \dots\\
+\implies f(z) = \frac{c_0}{(z-z_0)^k} + \frac{c_1}{(z-z_0)^{k-1}} + \dots + \frac{c_{k-1}}{z-z_0} + c_k + c_{k+1} (z-z_0)\\$
+but from previous notation $c_0=b_k$, etc.\\
+$\implies c_0 = b_k,\,\, c_{k-1} = b_1,\,\, c_k = a_0, etc.\\
+\phi(z) = b_k + b_{k-1} (z-z_0) + \dots + b_1 (z-z_0)^{k-1} + a_0(z-z_0)^k + \dots\\
+f(z) = \frac{b_k}{(z-z_0)^k} + \frac{b_{k-1}}{(z-z_0)^{k-1}} + \dots + \frac{b_1}{z-z_0} + a_0 + a_1(z-z_0) + \dots\\$
+Suppose $b_k = 0 \implies \lim_{z \rightarrow z_0} (z-z_0)^{k-1} f(z)$ exists\\
+which contradicts hypothesis $\implies z_0$ pole of order $k$. Finally, take $\phi(z)$ differentiate $k-1$ times $\implies \phi^{(k-1)}(z_0) = [(k-1)!] b_1$
+
+
+\underline{Prop 4.1.5}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Thm 4.2.1 (Residue Theorem)}\\
+\underline{Proof:} (intuitive) (simple closed curves)\\
+$\gamma$ contractible in A to a point in A inside of $\gamma$ in A, draw a circle around each $z_i$ in $\gamma\\$
+$\implies \int_{\gamma} f = \sum_{i=1}^n \int_{\gamma_i}f,\,\, \gamma_i$ clockwise\\
+$\int_{\gamma_i} f = 2 \pi i Res(f;z_i)$ (prop 3.3.3)\\
+$\implies \int_{\gamma} f = 2 \pi i \sum_{i=1}^n Res(f;z_i)$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 4.2.3:}\\
+Suppose there is an $R_0 >0$ such that f is analytic on the set $\{ z \in \mathbb{C} such that |z| > R_0 \}$. If $R> R_0$, and $\Gamma$ denotes the circle of radius R centered at 0 traversed once counterclockwise, then $\int_{\Gamma} f = - 2 \pi i Res(f; \infty)\\$
+
+\underline{Proof:}\\
+$r= \frac{1}{R};\,\, \gamma(t) = r e^{it}\\$
+$\sim$ clockwise.\\
+$z$ in $\gamma \implies z<r \implies \frac{1}{z} > \frac{1}{r} = R \implies \frac{1}{z}$ out of $\Gamma\\
+\implies g(z) = f(\frac{1}{z}) \frac{1}{z^2} analytic in \gamma$ except at 0.\\
+Since $f$ is analytic t by assumption\\
+$\implies 2 \pi i Res(g;0) = \int_{\gamma} f(\frac{1}{zz}) \frac{1}{z^2} dz\\
+=\int_{0}^{2 \pi} r^{-2} f(r^{-1} e^{-it}) e^{-2it} r e^{it} dt\\
+= \int_0 ^{2 \pi} f(R e^{-it}) R e^{-it} dt = \int_{-2 \pi}^0 f(R e^{is}) Re^{is} ds\\$
+$\int_{-2 \pi}^0 f( R e^{is} ) R e^{is} ds = \int_0^{2 \pi} f(R e^{is}) R e^{is} ds\\
+\int_{-2 \pi}^0 F(s) ds = \int_{-2 \pi}^0 F(s+ 4 \pi) ds\\
+U = s+ 2 \pi \implies dU = ds \implies \int_0^{2 \pi}\\$
+Let $F(s) = f(R e^{is}) R e^{is},\,\,$ Note $F(s+2 \pi) = F(s)\\
+\implies \int_{-2 \pi}^0 F(s) ds = \int_{-2 \pi}^0 F(s+ 2 \pi) ds = \int_0^{2 \pi} F(s) ds\\$
+\underline{Note:} 2nd to Last step U sub $v= s+2\pi\\
+\therefore 2 \pi i Res(g;0)= \int_{\Gamma} f$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.2.4}\\
+Let $\gamma$ be a simple closed curve in $\mathbb{C}$ traversed once counterclockwise. Let f be analytic along $\gamma$ and have only finitely many singularities outside $\gamma.\\$
+Then\\
+$\int_{\gamma} f = - 2 \pi i \sum \{$ residues of $f$ outside $\gamma$ including at $\infty \} \\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 4.3.2} Let $R(x,y)$ be a rational function of x and y whose denominator does not vanish on the unit circle. Then\\
+$\int_0^{2 \pi} R(\cos \theta, \sin \theta) d \theta = 2 \pi i \sum [$ residues of $f(z)$ inside the unit circle],\\
+where\\
+$f(z) = \frac{1}{i z} R(\frac{1}{2} (z + \frac{1}{z}), \frac{1}{2 \pi} (z- \frac{1}{z}))\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem (Residue Theorem Precise)}\\
+$z_i$ isolated singularity\\
+$\implies f(z) = \sum_{n=0}^{\infty} a_n (z-z_i)^n + \sum_{m=1}^{\infty} \frac{b_m}{(z-z_i)^m}\\$
+\underline{Claim} $S_i(z) = \sum_{m=1}^{\infty} \frac{b_m}{(z-z_i)^m} cvgs on \mathbb{C} \ z_i$ and uniformly outside circle $|z-z_i| = \epsilon >0\\
+\implies S_i(z)$ analytic on $\mathbb \ \{z_i \}$ Thm 3.1.8, 3.3.2, 3.3.1\\
+consider $g(z) = f(z) - \sum_{i=1}^n S_i(z)\\$
+$f$ analytic on $A\ \{ z_1, \dots, z_n \} S_i(z)$ analytic on $\mathbb{C} \ \{ z_i \} \implies g$ analytic on $A$ \ $\{ z_1,\dots , z_n \}\\$
+$\implies f(z) = \sum_{n=0}^{\infty} a_n (z- z_i)^n + S_i(z)\\
+\implies g(z) = \sum_{n=0}^{\infty} a_n (z- z_i)^n + S_i(z) - \sum_{j=1}^n S_j(z)\\
+= \sum_{n=0}^{\infty} a_n(z-z_i)^n + S_i(z) - \sum_{j=1}^{i-1} S_j(z)\\
+- S_i(z) - \sum_{j=i+1}^{\infty} S_i(z)\\
+= \sum_{n=0}^{\infty} a_n(z-z_i)^n - \sum_{j=1}^{i-1} S_j(z) - \sum_{j=i+1}^{\infty} S_j(z)\\
+S_j$ analytic on $S_j,\,\, j \neq i\\
+\implies \lim_{z \rightarrow z_i} g(z) = a_0 - \sum_{j=1; j \neq i}^n S_j(z_i)$
+Cauchy Theorem (2.3.14) $\implies \int_{\gamma} g = 0\\$
+$\implies \int_{\gamma} g = \int_{\gamma} f - \sum_{i=1}^n \int_{\gamma} S_i = 0\\
+\implies \int_{\gamma} f = \sum_{\i=1}^n \int_{\gamma} S_i\\
+S_i(z) = \sum_{m=1}^{\infty} \frac{b_m}{(z-z_i)^m}\\
+\implies \int_{\gamma} S_i = \sum_{m=1}^{\infty} \int_{\gamma} \frac{b_m}{(z-z_i)^m} dz\\$
+for $m>1 z \neq z_i\\
+\frac{1}{(z-z_i)^m} = \frac{d}{dz}[\frac{(z-z_i)^{1-m}}{1-m}]\\$
+Proposition 2.1.7 $\gamma \sim$ closed all terms $0$ for $m>1\\$
+$\implies \int_{\gamma} S_i = \int_{\gamma} \frac{b_1}{z-z_i} dz = b_1 \int_{\gamma} \frac{1}{z-z_i} dz = b_1 2 \pi i I(\gamma; z_i)\\
+= 2 \pi i [ Res (f; z_i)] I(\gamma; z_i)\\
+\therefore \int_{\gamma} f = \sum_{i=1}^n \int_{\gamma} S_i = \sum_{i=1}^n 2 \pi i[ Res (f; z_i)] I(\gamma; z_i)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Prop 4.3.2}\\
+Let $R(x,y)$ be a rational function of x and y whose denominator does not vanish on the unit circle. Then\\
+$\int_0^{2 \pi} R(\cos \theta, \sin \theta) d \theta = 2 \pi i \sum [$residues of $f(z)$ inside the unit circle$]$.\\
+where $f(z) = \frac{1}{iz} R(\frac{1}{2} ( z +\frac{1}{z}, \frac{1}{2i}(z- \frac{1}{z})).\\$
+\underline{Proof:}\\
+$R$ rational $\implies f$ rational $\implies$ finite number of poles, none of which lie on the unit circle by assumption.\\
+\underline{recall:} $\cos \theta = \frac{e^{i \theta} + e ^{- i \theta}}{2} = \frac{z+ \frac{1}{z}}{2},\,\, \sin \theta = \frac{e^{i \theta} - e ^{-i \theta}}{2i} = \frac{z- \frac{1}{z}}{2i}\\
+\implies \int_0^{2 \pi} R(\cos \theta, \sin \theta) d \theta,\,\, d \theta = \frac{1}{zi} dz\\
+\implies \int_{\gamma} \frac{1}{zi} R( \frac{1}{2} ( z + \frac{1}{z}), \frac{1}{2i} ( z - \frac{1}{z})) dz\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 4.3.3}\\
+\underline{Proof:}\\
+$|\int_a^B f(x) dx | leq \int_a^B |f(x)| dx \leq \int_a^B g(x) dx = G\\
+B \rightarrow \infty\\
+\therefore | \int_a^{\infty} f(x) dx | \leq G\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Proposition 4.3.6}\\
+\underline{Proof}\\
+\underline{(i)}\\
+$\Gamma_R = \gamma_R + \mu_R \implies \int_{\Gamma_R} f = 2 \pi i \sum \{res of f in \mathcal{H} \}\\
+\int_{\Gamma_R} f = \int_{\gamma_R} f + \int_{\mu_R} f\\
+| \int_{\mu_R} f(z) dz| \leq \int_{\mu_R} |f(z)| |dz| \leq \frac{M}{|z|^p|} \int_{\mu_R} |dz|\\
+\leq \frac{M}{R^p} \pi R \rightarrow 0 as R \rightarrow \infty\\
+\implies \int_{\Gamma_{R}} = \int_{\gamma_R} f = \int_{-\infty}^{\infty} f(x) dx\\
+(ii) \Lambda_R = \gamma_R + \nu_R\\
+\implies \int_{\Lambda_R} f = - 2 \pi i \sum \{ res of f in \mathcal{L} \}\\
+| \int_{\nu_R} f | \leq \frac{\pi R}{R^p} \rightarrow 0\\
+\implies \int_{\gamma_{R}} f = \int_{- \infty}^{\infty} f(x) d\\
+(iii) f = \frac{P}{Q}$ we show $|f(z) | \leq \frac{M}{|z|^2}\\
+\implies f$ satisfies hypothesis of (i) and (ii) $P$ deg $n;\,\, Q$ deg $n+p;\,\, p \geq 2$\\
+$\implies \exists M_1, M_2 >0$\\
+$|P(z)| \leq M_1 |z|^n for |z| \geq 1 and R_0>1$ s.t.\\
+$|Q(z)| \geq M_2 |z|^{n+p} for |z| \geq R_0$ (see fundamental theorem of algebra)\\
+$\implies | \frac{P(z)}{Q(z)}| \leq \frac{M_1}{M_2} \frac{1}{|z|^p} \leq \frac{M_1}{M_2} \frac{1}{|z|^2}\\$
+When $|z | \geq R_0 \geq 1,\,\, |z|^p \geq |z|^2$ since $p \geq 2\\$
+Let $M = \frac{M_1}{M_2}$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{residue precise proof:}\\
+consider $g(z) = f(z) - \sum_{i=1}^n S_i(z)$\\
+$f$ analytic on $A \{z_1, \dots , z_n \}$ and $S_i(z)$ analytic on $\mathbb{C} \ \{ z_i \} \implies g$ analytic on $A \ \{ z_1, \dots , z_n \} \\$
+$z_i$ removable since $\{ z | r > |z-z_i| > 0 \}$ doesnt contain singularities\\
+$f(z) = \sum_{n=0}^{\infty} a_n (z-z_i )^n + S_i(z)$\\
+
+
+
+
+
+
+\section*{\underline{Probability}}
+Discrete random variables\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Binomial(n,p) (pg. 57)\\
+$f(\chi) = P \{ X = \chi \} = 
+\begin{cases}
+	\begin{pmatrix} n \\ \chi \end{pmatrix} p^{\chi} ( 1-p)^{n- \chi},\,\, x = 0,..., n\\
+	0, \,\, o.w.
+\end{cases}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Geometric(p) (pg. 61)\\
+$f(\chi) =
+\begin{cases} 
+	p(1-p)^{\chi-1} ,\,\, \chi=1,2,...\\
+	0,\,\, o.w.
+\end{cases}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Poisson($\lambda$) $\lambda$>0 (pg. 63)\\
+$f(\chi) = 
+\begin{cases}
+	\frac{e^{- \lambda} \lambda^{\chi}}{ \chi !},\,\, \chi = 0,1,...\\
+	0,\,\, o.w.
+\end{cases}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\section*{\underline{Continuous random variables}}
+\begin{comment}
+$F(\chi) = P\{ \Chi \leq \chi \} = \int_{- \infty}^{\chi} f(y) dy\\
+F'(\chi) = f(\chi)$
+\end{comment}
+Uniform(a,b)\\
+$f(\chi)= 
+\begin{cases}
+	\frac{1}{b-a} if a \leq \chi \leq b\\
+	0 	o.w.
+\end{cases}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Exponential($\lambda$)(continuous analogue of geometric distribution)\\
+$f(\chi)=
+\begin{cases}
+	\lambda e^{-\lambda \chi} if \chi \geq 0\\
+	0	\chi
+\end{cases}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Gamma($\alpha,\lambda$)\\
+$f(\chi) = 
+\begin{cases}
+	\frac{\lambda^{\alpha}}{\Gamma(\alpha)} \chi^{\alpha-1} e^{-\lambda \chi} if \chi \geq 0\\
+	0	if \chi<0
+\end{cases}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+(Functions of discrete variables)\\
+\item \underline{Theorem 18.3} Let $X$ be a discrete random variable with the set of possible values being $D$. If $Y = G(X)$ for a function $g$, then the set of possible values of $Y$ is $g(D)$ and\\
+$f_Y(y) = 
+\begin{cases} 
+\sum_{x: g(x) = y} f_X (x) if y \in g(D),\\
+0,\,\, otherwise.
+\end{cases}$
+if $g$ has an inverse $x=h(y)$ then $f_Y(y) = f_X(h(y))$
+
+
+\section*{Chapter}
+\underline{Discrete random variable}\\
+X countable $\implies$ Discrete random variable\\
+$f(x)=P \{ X=x\}\\
+P\{x \in A \} = \sum_{x \in A} P \{X=x\}\\
+A=\bigcup{x \in A} \{A \}$ (countable union of disjoint sets) $A \subset \Omega\\
+\underline{properties}\\
+- 0 \leq f(x) \leq 1 \forall x\\
+- \sum_{x \in \Omega} f(x) = 1,\,\, A = \Omega\\$
+\item \underline{$f(x) = p^x (1-p)^{1-x},\,\, x \in \{0,1\}$}\\
+$p \in [0,1] prob of success\\
+\Omega = (succ, fail),\,\, X(succ) = 1,\,\, X(fail)=0\\
+\implies f(x) = P \{ X = x\} = 1-p if x=0,\,\, x=1,\,\, 0 o.w.\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 20.4}\\
+\underline{proof:}\\
+$0 \leq U \leq 1 and (F(u) = 0$ for $u < 0$ (uniform))\\
+and $F(u) = 1 u \geq 1.\\$
+Assume F one-to-one; then for $0 < u < 1$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\Gamma(n) = (n-1)!$}\\
+$\Gamma(\alpha+1) = \int_0^{\infty} y^{\alpha} e^{-y} dy\\
+0 = y^{\alpha},\,\, du = \alpha^{\alpha - 1} dy, \,\,, dv = e^{-y} dy,\,\, v=-e^{-y}\\
+\implies \Gamma(\alpha + 1) = (y^{\alpha} e^{-y})^{\infty}_0 + \alpha \int_0^{\infty} e^{-y} y^{\alpha-1} dy\\
+= \alpha \Gamma(\alpha);\,\, \Gamma(1) = \int_0^{-\infty} y e^{-y} dy = 1\\
+let n \in \mathbb{N},\,\, N \geq 1\\
+\implies \Gamma(N) = (N-1) \Gamma(N-1) = (N-1)\Gamma(n-1) = (n-1)(n2) \dots \Gamma(1)\\
+=(n-1)!\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem:}\\
+$f_Y(y)=
+ \begin{cases} 
+      \sum_{X: g(x)=y} f_X(x) & y \in g(D) \\
+      0 & o.w.
+   \end{cases}
+$
+\\
+\underline{Proof:}\\
+If $g$ is one-to-one and has inv $x=h(y)$ then there is only one $x$ such that $g(x)=y$ i.e. $x=h(y)$ then $g_Y(y)=f_x(h(y))$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 19.2} $x \sim cts;\,\, g: D \rightarrow \mathbb{R}$ one-to-one\\
+inverse $h$ and $y=g(x)$, then\\
+$f_Y(y) =
+\begin{cases} 
+      f_X(h(y)) |h'(y)| & y \in g(D) \\
+      0 & o.w.
+   \end{cases}
+$
+\\
+\underline{Proof:}\\
+\underline{Case 1:} $g$ increasing $ \implies h$ increasing\\
+$F_Y(y) = P \{ Y \leq y \} = P \{ g(X) \leq y\} = P\{ X \leq h(y) \} = F_X(h(y))\\
+f_Y(y)=\frac{d}{dy} F_Y(y) = \frac{d}{dy} F_X(h(y))\\
+=\frac{d}{dy} h(y) F_X'(h(y))=h'(y) f_X(h(y))=f_X(h(y))|h'(y)|\\$
+\underline{case 2:} $g$ decreasing $\implies h$ decreasing\\
+$F_Y(y)=P\{Y \leq y \} = P \{g(X) \leq y \} = P \{X \geq h(y) \}\\
+=1-P \{X \leq h(y) \} = 1- F_X(h(y))\\
+\implies f_Y(y) = \frac{d}{dy} F_Y(y) = -\frac{d}{dy} h(y) F_X'(h(y))=-h'(y) f_X(h(y))\\
+=|h'(y)| f_X(h(y))$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 20.4}\\
+$F_U(u) = P \{ U \leq u \} = P \{ F(X) \leq u \} = P \{ X \leq F^{-1}(u) \} = F(F^{-1}(u)) = u\\$
+(automatically non decreasing due to F CDF)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Note:} $F_U(u) = P \{ U \leq u \} = P \{ U \leq F(x) \} since X = F^{-1}(U) \implies U=F(X)\\
+\therefore F_X(x) = P \{ X \leq x \} = P \{ F^{-1}(U) \leq x \}\\$
+(unfinished; skipped)
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 21.1}
+\underline{Definition:} $f(x,y) = P \{ X=x, Y=y \}$ (Joint Distribution; Discrete)\\
+- $f(x,y) \geq 0,\,\, \forall x,y\\$
+- $\sum_x \sum_y f(x,y) = 1\\$
+- $\sum_{(x,y) \in C} f(x,y) = P \{ (X,Y) \in C \}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 21.4}\\
+for all $x, y:\\$
+(1) $f_X(x) = \sum_b f(x,b)\\$
+(2) $f_Y(y) = \sum_a f(a,y)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\underline{Def 21.5}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 22.2}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 23.1}
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$P \{ (X,Y) \in A \} = \iint_{E \bigcap A} \frac{1}{|E|} dx dy = \frac{|E \bigcap A|}{|E|}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 25.2 } $T$ 'nice ' w/ $T(x,y) =\begin{pmatrix} u(x,y) \\ v(x,y) \end{pmatrix}\\
+f_{U,V}(u,v) = f_{XY} ( x(u,v),y(u,v)) | \frac{\partial (x,y)}{\partial (u,v)}|\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$E[X] = \sum_x x f(x)$ (Expectation value; discrete)\\
+$E[X]=\int_{-\infty}^{\infty} X f( X ) d X$ ( continuous random variable)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 28.5}\\
+\underline{Proof:}\\
+\underline{Note:} $P\{ X > X \} = int_{X}^{\infty} f(y) dy\\$
+$\implies \int_0^{\infty} P \{ X > X \} d X = \int_0^{\infty} \int_{X}^{\infty}  f(y) dy d X\\
+= \iint_A f(y) d X dy = \int_0^{\infty} \int_0^y f(y) d X dy\\
+= \int_0^{\infty} f(y) \int_0^y d X d y = \int_0^{\infty} y f(y) dy = E[X]\\$
+remember $X$ is a positive random variable.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 29.1} If $X$ has mass function $f(\chi) and \sum_{\chi} g(\chi) f(\chi)$ well defined,i.e., $\sum_{\chi: g(\chi) \geq 0} g(\chi) f(\chi) < \infty$ or $\sum_{\chi: g(\chi) \leq0} g(\chi) f(\chi) > - \infty\\$
+then $\sum_{\chi} g(\chi) f(\chi).\\$
+\underline{proof:} Let $Y=g(X)\\
+\implies E[g(\chi)] = E[Y] = \sum_y y P\{ Y = y \}\\
+= \sum_y y \sum_{\chi: g(\chi)=y} P \{ X=\chi \} = \sum_{y} \sum_{\chi: g(\chi)=y} g(\chi) P \{ X=\chi\}\\
+=\sum_{\chi} g(\chi) P \{ X=\chi\}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 29.2}\\
+If $(X,Y)$ have joint mass function $f(x,y)$ and $g(x,y)$ is some function, then\\
+$E[g(X,Y)] = \sum_{x,y} g(x,y) f(x,y)\\$
+provided the sum is well defined\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 29.3}\\
+If $(X,Y)$ have joint density function $f(x,y)$ and $g(x,y)$ is some function, then\\
+$E[g(X,Y)] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x,y) f(x,y) dx,$\\
+provided the integral is well defined. In particular, if $X$ has density $f(x)$ and $g(x)$ is some function, then\\
+$E[g(X)]=\int_{-\infty}^{\infty} g(x) f(x) dx,$\\
+provided the integral is well defined.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+
+\section*{\underline{PDE's}}
+\item \underline{$u_t(x,t) + \phi_x(x,t) = f(x,t)$}\\
+$\frac{d}{dt} \int_a^b u(x,t) A dx = A \phi(a,t) - A \phi(b,t) + \int_a^b f(x,t) A dx\\
+\implies \int_a^b u_t(x,t) A dx = \int_a^b [ \phi_x (x,t) + f(x,t)] A dx\\
+\implies u_t(x,t) = - \phi_x(x,t) + f(x,t)\\
+\therefore u_t(x,t) + \phi_x(x,t) = f(x,t)$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Advection:} $\phi=cu \implies u_t + cu_x=0\\
+u(x,t) = F(x-ct)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Advection/decay:} $\phi=cu,\,\, f= - \lambda u\\
+\implies u_t + cu_x = - \lambda u\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{diffusion:} (i) the movement is from higher concentrations to lower concentrations\\
+(ii) the steeper the concentration gradient the greater the flux\\
+$\implies \phi = - D u_x\\
+\implies u_t - D u_{xx} = 0$ (Diffusion equation)
+Want to solve $u_t = k u_{xx} ( -\infty < x < \infty,\,\, 0 < t < \infty)\\$
+$u(x,0)=\phi(x)\\$
+We solve using a particular solution\\
+and using (d) to find others\\
+search for particular with\\
+$Q(x,0) = 1,\,\,$ for $x > 0;\,\, Q(x,0)=0$, for $x<0\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$U_{\tau} + a U = F( \xi, \tau)$}\\
+\underline{recall:} $u_t + \phi_x = f(x,t)\\$
+\underline{advection:} $\phi = cu,\,\, \phi_x = c u_x\\$
+\underline{decay:} $f_{tot}(x,t) = - a u + f(x,t)\\
+\implies u_t + c u_x + a u = f(x,t)\\$
+propagates at speed c\\
+$\implies \frac{dx}{dt} = c \implies \xi = x-ct,\,\, \tau = t\\
+u(x,t) = U(x-ct, t) or U(\xi, \tau) = u(\xi + c \tau, \tau)\\
+u_t = U_{\xi} \xi_t + U_{\tau} \tau_t = - c U_{\xi} + U_{\tau}\\
+u_x = U_{\xi} \xi_x + U_{\tau} \tau_x = U_{\xi}\\
+so u_t + c u_x + a u = f(x,t)\\
+-c U_{\xi} + U_{\tau} + c U_{\xi} + a U = F(\xi, \tau)\\
+\implies U_{\tau} + a U = F(\xi, \tau)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{recall:} diffusion, wave, Laplace equation in general we have $A u_{xx} + B u_{xt} + C u_{tt} + F(x,t,u,u_x,u_t)=0\\$
+$D \equiv B^2 - 4 A C\\$
+\underline{Definition:} $D>0 \implies$ hyperbolic (cross terms dominate)\\
+$D<0 \implies$ elliptic;$\,\, D=0$ (Parabolic $\sim$ between hyperbola and ellipse)\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{$Au_{xx} + B u_{xt} + C u_{tt} = (A a^2 + B ab + C b^2 ) U_{\xi \xi} + ( 2 a c A + B ( ad + bc) + 2 C b d) U_{\xi \tau} + ( A c^2 + B cd + C d^2) U_{\tau \tau}$}\\
+Introduce $\xi = a x + b t;\,\, \tau = cx + dt\\$
+and change variables\\
+can choose any coordinates as long as $\begin{pmatrix} \xi \\ \tau \end{pmatrix} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} 
+\begin{pmatrix} x \\ t \end{pmatrix} 
+\begin{pmatrix} a & b \\ c & d \end{pmatrix} \neq 0$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$D>0$ Hyperbolic: choose $a=c=1$ and force $U_{\xi \xi}$ and $U_{\tau \tau}$ coefficients to vanish by choosing
+$b= \frac{-B + \sqrt{D}}{2 C};\,\, d = \frac{-B - \sqrt{D}}{2 C}\\$
+
+$\xi = x + ( \frac{-B + \sqrt{D}}{2C})t;\,\, \tau = x + ( \frac{- B - \sqrt{D}}{2C} ) t\\
+\implies U_{\xi \tau} + G(\xi, \tau, U, U_{\xi} , U_{\tau})=0\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Parabolic $D=0:$ if $a=c=1 \implies b=d$ and transformation invertible\\
+$\implies a= c = 1,\,\, d = -\frac{B}{2C},\,\, b=0\\$
+(to make $U_{\tau \tau}$ and $U_{\xi \tau}$ coefficients to vanish)\\
+$\implies U_{\xi \xi} + H(\xi, \tau, U, U_{\xi}, U_{\tau} ) = 0\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Elliptic, $D<0: d= \bar{b},\,\, a=c = 1\\$
+$\implies \xi= x + bt,\,\, \tau= x + \bar{b} t\\$
+make real transformations\\
+$\alpha = \frac{1}{2}( \xi + \tau);\,\, \beta = \frac{1}{2 i} (\xi - \tau)\\
+U_{\alpha \alpha} + U_{\beta \beta} + K(\alpha, \beta, U, U_{\alpha}, U_{\beta}) =0$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$c \rho u_t + \nabla \cdot \vec{\phi} = f$}\\
+Total amount of heat energy in $B$\\
+$= \int d Q = \int \frac{\Delta Q}{\Delta m \Delta T} \frac{\Delta m}{\Delta V} \Delta T \Delta V = \int_B c \rho T d V\\$
+Rate of heat energy produced in B\\
+$= \int_{\partial B} \vec{\phi} \cdot \hat{n} d A\\
+\implies \frac{d}{dt} \int_B c \rho u d V = - \int_{\partial B} \vec{\phi} \cdot \hat{n} d A + \int_B f d V\\
+\implies \frac{d}{dt} \int_B c \rho u d V = - \int_B \nabla \cdot \vec{\phi} d V + \int_B f d V\\\
+\implies c \rho \frac{\partial u}{\partial t} = - \nabla \cdot \vec{\phi} + f\\
+\therefore c \rho u_t + \nabla \cdot \vec{\phi} = f\\$
+
+
+\item \underline{$u(x,t)=\int_{- \infty}^{\infty} S(x-y,t) \phi(y) dy;\,\, t>0$}\\
+Solves heat equation:\\$
+\begin{cases}
+	u_t = k u_{xx}\,\,(-\infty < x < \infty,\,\, 0 < t < \infty)\\
+	u(x,0)=\phi(x)
+\end{cases}$\\
+\underline{Note:} If $x \rightarrow \sqrt{a} x$ and $t \rightarrow a$ t then\\
+$u(\sqrt{a} x, at)$ still solves the heat equation\\
+This suggests we look for $Q(x,t) = g(p);\,\, p = \frac{x}{\sqrt{4 k t}}\\$
+Since if $x \rightarrow \sqrt{a} x,\,\, t \rightarrow a t\\$
+$\implies p \rightarrow \frac{\sqrt{a} x}{\sqrt{4 k a t}} = p\\$
+with $Q(x,0) = 1,\,\, x > 0,\,\, Q(x,0)=0,\,\, x<0;\\$
+using $Q_t = k Q_{xx},\,\, Q(x,t) = g(p),\,\, p=\frac{x}{\sqrt{4 k t}}\\$
+$\implies g'' + 2 p g' = 0;\,\, I = e^{\int 2 p dp} = e^{p^2}\\
+\implies e^{p^2}g'' + 2 p e^{p^2} g'=0\\
+\implies \frac{d}{dp} (e^{p^2} g') = 0;\,\, \implies e^{p^2} g'=c_1\\
+\implies g(p) = c_1 \int e^{-p^2} dp + c_2 = Q(x,t)\\$
+$x>0 \implies Q(x,0)= 1 = \lim_{t \rightarrow 0} Q(x,t) = c_1 \int_0^{\infty} e^{-p^2} dp + c_2 = c_1 \frac{\sqrt{\pi}}{2} + c_2\\
+x<0 \implies Q(x,0)=0= \lim_{t \rightarrow 0} Q(x,t) = c_1 \int_0^{-\infty} e^{-p^2} dp + c_2 = - c_1 \frac{\sqrt{\pi}}{2} + c_2\\
+\implies c_1 = \frac{1}{\sqrt{\pi}};\,\, c_2 = \frac{1}{2}\\
+\implies Q(x,t) = \frac{1}{2} + \frac{1}{\sqrt{\pi}} \int_0^{\frac{x}{\sqrt{4 k t}}} e^{-p^2} dp\\$
+\underline{Note:} $S= \frac{\partial Q}{\partial x}$ solves the heat equation also\\
+$\implies S(x-y,t)$ solves it $\implies \int_{-\infty}^{\infty} S(x-y,t) c(y) dy$ solves it\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+\item \underline{Theorem:}\\
+$u(x,t) = \int_{-\infty}^{\infty} S(x-y,t) \phi(y) dy,\,\,$ is the unique solution to $u_t = k u_{xx},\,\, u(x,0)=\phi(x),\,\, x \in \mathbb{R},\,\, t>0\\$
+\underline{Proof:}\\
+Lets show $u(x,0) = \phi(x)\\$
+$u(x,t) = \int_{-\infty}^{\infty} S(x-y,t) \phi(y) dy\\
+=\int_{-\infty}^{\infty} \frac{\partial Q}{\partial x}(x-y,t) \phi(y) dy\\
+\frac{\partial (x-y)}{\partial x} \frac{\partial Q}{\partial(x-y)}= \frac{\partial Q}{\partial (x-y)};\,\, \frac{\partial (x-y)}{\partial y} \frac{\partial Q}{\partial(x-y)}=-\frac{\partial Q}{\partial (x-y)}\\
+\implies \frac{\partial Q}{\partial x} = - \frac{\partial Q}{\partial y}\\
+u(x,t) = - \int_{-\infty}^{\infty} \frac{\partial Q}{\partial y} (x-y,t) \phi(y) dy\\
+U=\phi(y);\,\, dv = \frac{\partial Q}{\partial y} dy\\
+\implies -(\phi Q |_{- \infty}^{\infty} + \int_{-\infty}^{\infty} Q \phi'(y) dy = \int_{-\infty}^{\infty} Q \phi'(y) dy\\
+\implies u(x,0) = \int_{-\infty}^{\infty} Q(x-y,0) \phi'(y) dy\\
+\underline{recall:} Q(x-y,0)=1,\,\, x>y;\,\, Q(x-y,0)=0 x<y\\
+\implies u(x,0)=\int_{-\infty}^x Q \phi'(y) dy + \int_x^{\infty} Q \phi'(y) dy\\
+=\int_{-\infty}^x \phi'(y) dy = \phi(x)\\
+S(x,t) = \frac{1}{2 \sqrt{\pi k t}} e^{-x^2/4kt},\,\,t>0\\$
+S is called the source function, Green's function, fundamental solution or propagator of the diffusion equation.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}\\
+
+
+\item \underline{$
+\begin{cases} 
+	u_t-k u_{xx} = f(x,t),\,\, (-\infty < x < \infty, 0 < t < \infty\\
+	u(x,0) = \phi(x)\\
+\end{cases}$}\\
+\item \underline{$\implies u(x,t) = \int_{-\infty}^{\infty} S(x-y,t) \phi(y) dy + \int_0^t \int_{-\infty}^{\infty} S(x-y,t-s) f(y,s) dyds$}\\
+Consider the analogy \\
+$\frac{du}{dt} + A u(t) = f(t);\,\, u(0) = \phi\\$
+If $f(t)=0 \implies \frac{du}{dt} = - A u\\
+\implies \ln u = - A t \implies u(t) = K e^{-At} = \phi e^{-At}$\\
+or $u(t) = S(t) \phi$ is the solution without as source, If $f(t) \neq 0\\
+\implies I = S(-t)\\
+\implies u(t) = S(t) \phi + \int_0^t S(t-s) f(s) ds\\$
+Now, let's solve the PDE analogously. First solve $u_t = k u_{xx};\,\, u(x,0) = \phi(x).\\$
+We've already solved this\\
+$\implies u(x,t) = (\mathcal{S}(t) \phi)(x),\,\,$ (without source) $\mathcal{S}(t) \sim$ source operator\\
+$\implies u(x,t) = (\mathcal{S}(t) \phi)(x) + \int_0^t \mathcal{S} (t-s) f(s) ds$ (with source)\\
+$\therefore u(x,t) = \int_{-\infty}^{\infty} S(x-y,t) \phi(y) dy + \int_0^t \int_{-\infty}^{\infty} S(x-y,t-s) f(y,s) dy ds\\$
+\underline{Proof:}\\
+(We will focus on the 2nd part since we already proved the first part)\\
+\underline{recall:} $\frac{\partial}{\partial t} \int_0^t f(x,b(t)) dx = \frac{\partial}{\partial t} g(x,t,b(t))\\
+= \frac{\partial g}{\partial t} + \frac{d b}{dt} \frac{\partial g}{\partial b} = f(t,b(t)) + b'(t) \int_0^t \frac{\partial f}{\partial b} dx\\
+\implies \frac{\partial u}{\partial t} = \lim_{s \rightarrow t} \int_{-\infty}^{\infty} S(x-y,t-s) f(y,s) dy + \int_0^t \int_{-\infty}^{\infty} \frac{\partial S}{\partial t} (x-y,t-s) f(y,s) dy ds\\$
+lim is because $S$ has singularity at $t-s = 0\\$
+\underline{recall:} $\frac{\partial S}{\partial t} = k \frac{\partial^2}{\partial x^2} S\\
+\implies \frac{\partial u}{\partial t} = \lim_{\epsilon \rightarrow 0} \int_{- \infty}^{\infty} S(x-y,\epsilon) f(y,s) dy + k \frac{\partial^2}{\partial x^2} \int_0^t \int_{-\infty}^{\infty} S(x-y,t-s) f(y,s) dy ds\\
+=k \frac{\partial^2 u}{\partial x^2} + f$ using initial condition for S?
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}\\
+
+
+\item \underline{$u_{tt} - c^2 u_{xx} = 0 \implies u(x,t) = F(x-ct) + G(x+ct)$}\\
+$\xi = x - ct,\,\, \tau = x + c t\\
+\frac{\partial u}{\partial t} = \frac{\partial \tau}{\partial t} \frac{\partial U( \xi, \tau)}{\partial \tau} + \frac{\partial \xi}{\partial t} \frac{\partial U}{\partial \xi} = c U_{\tau} - c U_{\xi}\\
+\frac{\partial^2 u}{\partial t^2} = c \frac{\partial U_{\tau}}{\partial t} - c \frac{\partial U_{\xi}}{\partial t} = c( \frac{\partial \tau}{\partial t} U_{\tau \tau} + \frac{\partial \xi}{\partial t} U_{\tau \xi})- c( \frac{\partial \tau}{\partial t} U_{\xi \tau} + \frac{\partial \xi}{\partial t} U_{\xi \xi} )\\
+= c(c U_{\tau \tau} - c U_{\tau \xi}) - c( c U_{\xi \tau} - c U_{\xi \xi})\\
+=c^2 (U_{\tau \tau} + U_{\xi \xi}) - 2 c^2 U_{\tau \xi}\\
+\frac{\partial u}{\partial x} = \frac{\partial \tau}{\partial x} U_{\tau} + \frac{\partial \xi}{\partial x} U_{\xi} = U_{\tau} + U_{\xi}\\
+\frac{\partial^2 u}{\partial x^2} = ( \frac{\partial \tau}{\partial x} U_{\tau \tau} + \frac{\partial \xi}{\partial x} U_{\tau \xi} + \frac{\partial \tau}{\partial x} U_{\xi \tau} + \frac{\partial x\i}{\partial x} U_{\xi \xi})= U_{\tau \tau} + U_{\xi \xi} + 2 U_{\tau \xi}\\
+\implies u_{tt} - c^2 u_{xx} = c^2 ( U_{\tau \tau} +U_{\xi \xi}) - 2 c^2 U_{\tau \xi} -c^2(U_{\tau \tau} + U_{\xi \xi}) - 2 c^2 U_{\tau \xi}=0\\
+\implies U_{\tau \xi} = 0 = \frac{\partial^2 U}{\partial \xi \partial \tau} = 0 \implies \frac{\partial U}{\partial \tau} = g(\tau)\\
+\implies U(\xi, \tau) = \int g(\tau) d \tau + F(\xi) = F(\xi) + G(\tau)\\
+\therefore u(x,t) = F(x-ct) + G(x+ct)$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}\\
+
+$\star$
+\item \underline{$u(x,t) = \frac{1}{2}(f(x-ct) + f(x+ct) ) + \frac{1}{2c} \int_{x-ct}^{x+ct} g(s)ds$}\\
+\underline{recall:} $u_{tt} = c^2 u_{xx},\,\, u(x,t) = F(x-ct) + G(x+ct)\\$
+for $u(x,0) = f(x),\,\, u_t(x,0) = g(x),\,\, x \in \mathbb{R}$ (infinite domain, no boundary condition)\\
+$\implies u(x,0) = F(x) + G(x) = f(x)\\
+u_t (x,t) = - c F'(x-ct) + c G'(x+ct)\\
+\implies u_t(x,0) = c G'(x) - c F'(x) = g(x)\\
+\implies c[G(x) - G(x_0)] - c [ F(x) - F(x_0)] = \int_{x_0}^x g(s) ds\\$
+solve 
+$
+\begin{cases}
+	G(x) -  F(x) = \frac{1}{c} \int_{x_0}^x g(s) ds + G(x_0) - F(x_0)\\
+ 	G(x) + F(x) = f(x)
+\end{cases} \\
+\implies 
+\begin{cases}
+	G(x) = \frac{1}{2}f(x) + \frac{1}{2} \frac{1}{c} \int_{x_0}^x g(s) ds + \frac{1}{2}(G(x_0) - F(x_0)) \\
+	F(x) = \frac{1}{2} f(x) - \frac{1}{2c} \int_{x_0}^x g(s) ds - \frac{1}{2}(G(x_0) - F(x_0))
+\end{cases}\\$
+replace $x$ with $x+ct$ on $G(x)$ and $x-ct\\$
+for $F(x)$ \\
+$\implies u(x,t) = \frac{1}{2}(f(x-ct) + f(x+ct)) + \frac{1}{2c} \int_{x-ct}^{x+ct} g(s) ds$
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}\\
+
+
+(variation of parameters)\\
+Want to find $y_p(x)$ of $y^{(n)} + \sum^{n-1}_{i=1} p_{i-1}(x) y^{(i-1)} = f(x)$\\
+assuming $y_c = \sum_{i=1}^n c_i y_i$ \\
+Spose $y_p(x) = \sum_{i=1}^n u_i(x) y_i(x)$\\
+Lets do it for $n=2$\\
+$\implies y'' + P(x) y' + Q(x) y = f(x)\\
+\implies y_c(x) = c_1 y_1(x) + c_2y_2(x)\\
+y_p(x) = u_1(x) y_1(x) + u_2(x) y_2(x)\\
+\implies y_p'(x) = ( u_1 y_1' + u_2 y_2') + ( u_1' y_1 + u_2' y_2)\\$
+we don't want $u''_1 , u''_2$ to show up so force $u_1' y_1 + u_2' y_2 = 0$\\
+$\implies y_p'(x) = u_1 y_1' + u_2 y_2'\\
+\implies y_p''(x) = (u_1 y_1'' + u_2 y_2'') + ( u_1' y_1' + u_2' y_2')$\\
+but $y'' + P y' + Q y = 0\\
+\implies y_i'' = - P y_i ' - Q y_i\\
+\implies y_p'' = (u_1(- P y_1' - Q y_1) + u_2(-P y_2' - Q y_2) + u_1' y_1' + u_2' y_2')\\$
+but $y_p' = u_1 y_1' + u_2 y_2',\,\, y_p = u_1 y_1 + u_2 y_2\\
+\implies y_p'' = u_1' y_1' + u_2' y_2' - P y_p' - Q y_p\\
+\implies L[y_p] \equiv y_p'' + P y_p' + Q y_p = u_1' y_1' + u_2' y_2'$\\
+$L[y_p] = f(x)\\
+\implies u'_1 + y'_1 + u'_2 y'_2 = f(x)\\
+\implies 
+\begin{cases}
+	u'_1 y_1 + u'_2 y_2 = 0\\
+	u'_1 y'_1 + u'_2 y'_2 = f(x)
+\end{cases}\\
+\implies 
+\begin{pmatrix}
+	y_1 & y_2 \\ y'_1 & y'_2
+\end{pmatrix} 
+\begin{pmatrix}
+	u'_1\\u'_2
+\end{pmatrix} = \begin{pmatrix} 0 \\ f(x) \end{pmatrix}\\
+\implies 
+\begin{cases}
+	u'_1 = \frac{y_2 f(x)}{y_2 y'_1 - y_1 y'_2}\\
+	u'_2 = \frac{y_1 f(x)}{y_1 y'_2 -y_2 y'_1}
+\end{cases}\\
+\implies 
+\begin{cases}
+	u_1 = \int \frac{y_2 f(x)}{y_2 y_1' - y_1 y_2'} dx\\
+	u_2 = \int \frac{y_1 f(x)}{y_1 y_2' - y_2 y_1'} dx\\
+\end{cases}\\
+\therefore y_p(x) = u_1 y_1 + u_2 y_2 = y_1 \int \frac{y_2 f(x)}{y_2 y_1' -y_1 y_2'} dx + y_2 \int \frac{y_1 f(x)}{y_1 y_2' - y_2 y_1'} dx\\$
+but $W(x) = \begin{vmatrix} y_1 & y_2 \\ y_1' & y_2' \end{vmatrix} = y_1 y_2' - y_2 y_1'\\
+\implies y_p(x) = -y_1 \int \frac{y_2 f(x)}{W(x)} dx + y_2 \int \frac{y_1 f(x)}{W(x)} dx$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Shortened:} Set $u_1' y_1 + u_2' y_2 = 0$ then plug $y_p(x)$ into the ODE and eliminate second derivatives in $y_i(x)$ using $ y_i'' = - P y_i ' - Q y_i$ to obtain a second equation $u'_1 y'_1 + u'_2 y'_2 = f(x)$
+Solve the system,\\
+$
+\begin{cases}
+	u'_1 y_1 + u'_2 y_2 = 0\\
+	u'_1 y'_1 + u'_2 y'_2 = f(x)
+\end{cases}\\
+$
+for $u_1$ and $u_2$ to obtain particular
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{
+$\begin{cases}
+	u_{tt} - c^2 u_{xx} = f(x,t)\\
+	u(x,0)=\phi(x)\\
+	u_t(x,0)=\psi(x)
+\end{cases}
+\implies u(x,t) = \frac{1}{2}[\phi(x+ct) + \phi(x-ct) + \frac{1}{2c} \int_{x-ct}^{c+ct} \psi + \frac{1}{2c} \iint_{\Delta} f
+$}\\
+\underline{Note:} $\Delta$ is the characteristic triangle.\\
+We will use the operator method.\\
+analogous ODE\\
+$\frac{d^2 u}{dt^2} + A^2 u(t) = f(t),\,\,,u(0)=\phi,\,\, \frac{du}{dt}(0) = \psi\\
+\implies r^2 + A^2 = 0 \implies r = \pm Ai\\
+\implies u_{hom} = c_1 \cos At + c_2 \sin At\\$
+\underline{recall:} $y'' + P(x) y' + Q(x) y = f(x);\,\, y_c(x) = c_1 y_1(x) + c_2 y_2(x)\\
+\implies y_p(x) = - y_1(x) \int \frac{y_2(x) f(x)}{W(x)} dx + y_2(x) \int \frac{y_1(x) f(x)}{W(x)} dx\\$
+Analogously $u''(t) + A^2 u(t) = f(t)\\$
+complementary $r^2 = - A^2 \implies r= \pm A i\\$
+$\implies u_c(t) = c_1 \cos A t + c_2 \sin At;\,\, W (x ) =
+ \begin{vmatrix} 
+ 	\cos A t & \sin A t\\
+	- A \sin A t & A \cos A t
+\end{vmatrix}=A\\
+\implies u_p(t) = - \cos A t \int_0^t \frac{\sin A t' f(t')}{A} d t ' + \sin A t \int_0 ^t \frac{cos A t' f(t')}{A} dt'\\
+= \frac{1}{A} \int_0^t f(t') ( \cos A t' \sin A t - \cos A t \sin A t') dt'\\$
+\underline{recall:} $\sin (\alpha - \beta) = \sin \alpha \cos \beta - \cos \alpha \sin \beta\\
+\implies u_p(t) = \frac{1}{A} \int_0^t \sin (A(t-t')) f(t') dt'\\$
+\underline{Note:} $u_p(0) = \frac{du_p}{dt}(0) = 0\\$
+apply initial conditions to $u_c(t)$\\
+$u_c(0) = \phi;\,\, \frac{d u_c}{dt}(0) = \psi\\
+\implies c_1 = \phi;\,\, c_2 A = \psi \implies c_2 = \frac{\psi}{A}\\
+\implies u(t) = \phi \cos t A + \frac{\psi}{A} \sin A t + \frac{1}{A} \int_0 ^t \sin ( A (t-t')) f(t') dt'\\$
+define $S(t) = A^{-1} \sin At \implies S'(t) = \cos A t\\$
+$u(t) = S'(t) \phi + S(t) \psi + \int_0^t S(t-s) f(s) ds\\$
+Now lets solve\\
+$u_{tt} - c^2 u_{xx} = f(x,t),\,\, u(x,0) = \phi(x),\,\, u_t(x,0) = \psi(x)\\
+\implies u(x,t) = \frac{\partial}{\partial t} \mathcal{S}(t)\phi + \mathcal{S}(t) \psi + \int_0^t \mathcal{S}(t-s) f(x,s) ds\\$\underline{recall:} $u_{tt} = c^2 u_{xx},\,\, - \infty < x < \infty\\
+u(x,0) = \phi(x),\,\, u_t(x,0) = \psi(x)\\
+\implies u_{hom}(x,t) = \frac{1}{2}[\phi(x+ ct) + \phi(x-ct)] + \frac{1}{2c} \int_{x-ct}^{x+ct} \psi(s) ds\\
+=\frac{1}{2c} \int_{x-ct}^{x+ct} \psi(y) dy +  \frac{1}{2c} \int_{x-ct}^{x+ct} \psi(s) ds\\
+= \frac{\partial}{\partial t}(\mathcal{S} \phi) + \mathcal{S}(t) \psi\\
+\frac{1}{2c} \int_{x-ct}^{x+ct} \psi(s) ds$ suggests $\mathcal{S}(t) = \frac{1}{2c} \int_{x-ct}^{x+ct} () ds\\
+\mathcal{S}(t) \psi = \frac{1}{2c} \int_{x-ct}^{x+ct} \psi(y) dy\\
+\frac{\partial}{\partial t}(\mathcal{S} \phi) = \frac{\partial}{\partial t} \frac{1}{2c} \int_{x-ct}^{x+ct} \phi(y) dy\\
+= \frac{1}{2c} [ c \phi(x+ct) - (-c) \phi(x-ct)] = \frac{1}{2}[\phi(x+ct) + \phi(x-ct)]\\
+\mathcal{S}(t-s) = \frac{1}{2c} \int_{x-c(t-s)}^{x+c(t-s)} f(y,s) dy\\
+\implies \int_0^t \mathcal{S}(t-s) f(x,s) ds = \frac{1}{2c} \int_0^t[\int_{x-c(t-s)}^{x+c(t-s)} f(y,s) dy]ds\\
+= \frac{1}{2c} \iint_{\Delta} f dx dt\\
+\therefore u(x,t) = \frac{1}{2} [ \phi(x+ct) + \phi(x-ct)] + \frac{1}{2c} \int_{x-ct}^{x+ct} \psi(s) ds + \frac{1}{2c } \iint_{\Delta} f dx dt$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\section*{Linear Algebra}
+\underline{Theorem 4.7.3} elementary row ops do not change null space of matrix\\
+\underline{Theorem 4.7.4} Elementary row ops do not change row space\\
+\underline{thoerem 4.7.6} If a matrix R is in row echelon form then row vectors with leading 1's form basis for row space of R and column vectors with leading 1's of row vectors form basis for column space of R\\
+\underline{Theorem 4.7.6} (Picture)
+Elementary row ops do not change null space\\
+\underline{Proof:} Elementary row ops $A \rightarrow EA\\$
+spose $\vec{x} \in$ Null space $\implies A \vec{x} = 0\\$
+$\implies E A \vec{x} = E(A \vec{x}) = 0 \implies E$ does not change rowspace\\
+\item \underline{Theorem 4.7.4} Elementary row ops do not change the row space\\
+\underline{Proof:} For example, if $A = \begin{pmatrix} \vec{r}_1 \\ \vec{r}_2 \end{pmatrix} and \vec{x} \in$ row space\\
+$\implies \vec{x} = c_1 \vec{r}_1 + c_2 \vec{r}_2 if EA = \begin{pmatrix} \vec{r}_1 + a \vec{r}_2 \\ \vec{r}_2 \end{pmatrix}\\
+\implies \vec{x} \in EA$ row space\\
+$\implies \vec{x} = c_1 \vec{r}_1 + c_2 \vec{r}_2 = k_2(\vec{r}_1 + a \vec{r}_2) + k_2 \vec{r}_2\\
+= k_1 \vec{r}_1 + (k_1 a+ k_2) \vec{r}_2$ take $k_1 = c_1 and k_1 a + k_1 = c_2$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Chapter 7}\\
+\underline{Definition 1} $A^* = \bar{A}^T$ (conjugate transpose)\\
+\underline{Definition 2} $A^{-1} = A^*$ (unitary);$\,\, A^* = A$ (Hermitian)\\
+\item \underline{Theorem 7.5.2} \\
+\underline{Proof}
+$A^* = A  A \vec{x} = \lambda \vec{x} \\
+\vec{x}^T A^* = \lambda^* \vec{x}^T = (A \vec{x})^* = \lambda \vec{x}^T\\
+A \vec{x} = (\vec{x}^T A^*)^*\\
+(A\vec{x})^* = (\lambda \vec{x})^* = (A* \vec{x})^* = \lambda \vec{x}^T = \lambda^* \vec{x}^* \implies \lambda = \lambda^*\\$
+\item \underline{Theorem 7.5.3}\\
+$\lambda_1 (\vec{v}_2 \cdot \vec{v}_1) = (\lambda_1 \vec{v}_1)^* \vec{v}_2 = (A \vec{v}_1)^* \vec{v}_2 = \vec{v}_1^* A^* \vec{v}_2 = \vec{v}_1^* A \vec{v}_2\\
+= \lambda_2 \vec{v}_1^* \vec{v}_2 = \lambda_2 \vec{v}_2 \cdot \vec{v}_1 \implies \vec{v}_2 \cdot \vec{v}_1 = 0\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem 7.5.4}\\
+$A, n \times n a_{ij} \in \mathbb{C},\,\,$ following are equivalent\\
+(a) $A$ unitary\\
+(b) $||A \vec{x} || = || \vec{x} || \forall \vec{x} \in \mathbb{C}^n\\$
+(c) $A \vec{x} \cdot A \vec{y} = \vec{x} \cdot \vec{y}\,\, \forall \vec{x}, \vec{y} \in \mathbb{C}^n\\$
+(d) column vectors are orthonormal set in $\mathbb{C}^n\\$
+(e) row vectors orthonormal\\
+\underline{Proof:}\\
+(a) $\rightarrow (b) || A \vec{x} ||^2 = (A \vec{x}) \cdot (A \vec{x}) = (A \vec{x})^* (A \vec{x})\\
+= \vec{x}^* A^* A \vec{x} = \vec{x}^* A^{-1} A \vec{x} = || \vec{x}||^2\\
+\implies || A \vec{x}|| = || \vec{x} ||\\$
+(a) $\rightarrow (c) A \vec{x} \cdot A \vec{y} = ( A \vec{y})^*(A \vec{x} ) = \vec{y}^* A^* A \vec{x}\\
+= \vec{y}^* \vec{x} = \vec{x} \cdot \vec{y}\\$
+(b) $\rightarrow (a) || A \vec{x}||^2= ||\vec{x}||^2 \rightarrow (A \vec{x}) \cdot ( A \vec{x}) = ( A \vec{x})^* (A \vec{x}) = \vec{x}^* A^* A \vec{x}\\
+= \vec{x} \cdot \vec{x} = \vec{x}^* \vec{x} \implies \vec{x}^* \vec{x} = \vec{x}^*(A^* A \vec{x}) \implies \vec{x} = I \vec{x} = A^* A \vec{x}\\
+\implies A^*A= I \implies A^{-1} = A^*$\\
+(a) $\iff (d) A^* = A^{-1} \implies A^* A = I\\
+A = [ \vec{c}_1, \dots, \vec{c}_n] \implies A^* = \begin{pmatrix} \vec{c}_1^* \\ \vdots \\ \vec{c}_n \end{pmatrix}\\
+\implies ( A^* A)_{ij} = ( \begin{pmatrix} \vec{c}_1^* \\ \vdots \\ \vec{c}_n^* \end{pmatrix} \begin{pmatrix} \vec{c}_1 \cdots \vec{c}_n \end{pmatrix})_{ij}\\
+= \vec{c}_i^* \vec{c}_j = I_{ij} = \delta_{ij} \implies \vec{c}_i \cdot \vec{c}_j = \delta_{ij}\\
+(a) \iff (e) A= \begin{pmatrix} \vec{r}_1 \\ \vdots \\ \vec{r}_n \end{pmatrix} \implies A^*( = [ \vec{r}_1 ^* \cdots \vec{r}_n^*]\\
+\implies (A A^*)_{ij} = ( \begin{pmatrix} \vec{r}_1 \\ \vdots \vec{r}_n \end{pmatrix} [ \vec{r}_1^* \cdots \vec{r}_n^* ] ) = \vec{r}_i \vec{r}_j^* = \delta_{ij}\\
+(c) \rightarrow (a) A \vec{x} \cdot A \vec{y} = \vec{x} \cdot \vec{y} \implies (A \vec{y})^* A \vec{x}\\
+= \vec{y} ^* A^* A \vec{x} = \vec{y}^* \cdot \vec{x} \implies A^* A = I\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition 3} Unitarily diagonalizable $P^* A P = D,\,\, P$ unitary matrix\\
+\item \underline{Theorem 7.5.5}\\
+\underline{Unitarily Diagonalizing a Hermitian Matrix}\\
+
+\section{6.3 Gram-Schmidt Process}
+\item \underline{Theorem: 6.3.5} Every nonzero finite-dimensional inner product space has an orthonormal basis\\
+\underline{Proof:} (we won't normalize since this is trivial)\\
+We find orthogonal basis $\{ \vec{v}_i \}$ given \\
+1. $\vec{v}_1 = \vec{u}_1\\$
+2. $\vec{u}_2 = \vec{u}_2^{\perp} + \vec{u}_2^{\parallel},\,\, \vec{u}_2 \cdot \vec{v}_1 = || \vec{u}_2 || || \vec{v}_1 || \cos \theta\\
+\implies \vec{u}_2 - \vec{u}_2^{\parallel} = \vec{u}_2^{\perp} = \vec{v}_2 \implies \frac{\vec{u}_2 \cdot \vec{v}_1}{|| \vec{v}_1 || } \frac{\vec{v}_1}{||\vec{v}_1||} = \vec{u}_2^{\parallel}$\\
+3. $\vec{u}_3 = c_1 \vec{v}_1 + c_2 \vec{v}_2 + \vec{v}_3\\
+\implies \vec{v}_1 \cdot \vec{u}_3 = c_1 || \vec{v}||^2\\
+\implies c_1 = \frac{\vec{v}_1 \cdot \vec{u}_3}{|| \vec{v}_1||^2} = \frac{\langle \vec{v}_1, \vec{u}_3 \rangle}{||\vec{v}_1 ||^2}\\
+c_2 = \frac{\langle \vec{v}_2 \cdot \vec{u}_3 \rangle}{|| \vec{v}_2 ||^2}\\
+\implies \vec{v}_3 = \vec{u}_3 - \frac{\langle \vec{u}_3, \vec{v}_1 \rangle}{|| \vec{v}_1 ||^2} \vec{v}_1 - \frac{\langle \vec{u}_3, \vec{v}_2 \rangle}{|| \vec{v}_2||^2} \vec{v}_2\\$
+\underline{In general}\\
+$\vec{u}_n = \sum_{i=1}^{n-1} c_i \vec{v}_i + \vec{v}_n\\
+\implies \vec{v}_j \cdot \vec{u}_n = \sum_{i=1}^{n-1} c_i \vec{v}_j \cdot \vec{v}_i + \vec{v}_n \cdot \vec{v}_j\\
+j \neq n\\
+\implies \vec{v}_j \cdot \vec{u}_n = \sum_{i=1}^{n-1} c_i || \vec{v}_i ||^2 \delta_{ij} = c_j || \vec{v}_j ||^2\\
+\implies c_j = \frac{\vec{v}_j \cdot \vec{u}_n}{|| \vec{v}_j ||^2}\\
+\therefore \vec{v}_n = \vec{u}_n - \sum_{i=1}^{n-1} \frac{\langle \vec{v}_i, \vec{u}_n \rangle}{|| \vec{v}_i ||^2} \vec{v}_i\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Definition:} $A, B$ similar is P inverse s.t. $B = P^{-1} A P$\\
+\underline{Definition:} diagonalizable: similar to diagonal matrix i.e. $P^{-1} A P$ diagonal $P$, invertible\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}\\
+
+
+\item \underline{Theorem 5.2.1}\\
+If $A n \times n$ matrix the following statements are equivalent\\
+(a) $A$ diagonalizable\\
+(b) $A$ has $n$ linearly independent eigenvectors\\
+\underline{Proof:}\\
+(a) $\implies$ (b)\\
+$P^{-1} A P = D \implies A P = P D\\
+(A P)_{ij} = \sum_k A_{ik} P_{kj} = [ \sum_k A_{ik} P_{k1},\cdots, \sum_k A_{ik} P_{kn}]\\
+\implies A P = [ A \vec{P}_1, \dots , A \vec{p}_n]\\
+(D)_{ij} = \lambda_i \delta_{ij}\\
+\implies (PD)_{ij} = \sum_k P_{ik} D_{kj} = \sum_k P_{ik} \lambda_k \delta_{kj} = \lambda_j P_{ij}\\
+= [ \lambda_1 \vec{p}_1,\dots, \lambda_n \vec{p}_n]\\
+\implies A \vec{p}_1 = \lambda_1 \vec{p}_1, \dots, A \vec{p}_n = \lambda_n \vec{p}_n\\
+P$ invertible $\implies$ column vectors linearly independent\\
+$\implies \vec{p}_1 , \dots, \vec{p}_n$ are eigenvectors of $A$\\
+(b) $\rightarrow$ (a)\\
+$P = [ \vec{p}_1, \vec{p}_2, \dots, \vec{p}_n ]\\
+AP = A [ \vec{p}_1, \vec{p}_2, \dots, \vec{p}_n] = [ A \vec{p}_1, A \vec{p}_2, \dots, A \vec{p}_n]\\
+= [ \lambda_1 \vec{p}_1, \lambda_2 \vec{p}_2, \dots, \lambda_n \vec{p}_n]=[ \vec{p}_1, \vec{p}_2, \dots, \vec{p}_n] \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \vdots \\ \lambda_n \end{pmatrix} = [ \vec{p}_1, \vec{p}_2, \dots, \vec{p}_n] I \begin{pmatrix} \lambda_1 \\ \lambda_2 \\ \vdots \lambda_n \end{pmatrix}= PD\\
+\implies A PDP^{-1} or D = P^{-1} A P$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{$[ \vec{v} ]_B = \begin{pmatrix} a & c \\ b & d \end{pmatrix} [ \vec{v} ]_{B'} = P [ \vec{v} ]_{B'}$}\\
+Known: $\begin{cases} \vec{u}_1' = a \vec{u}_1 + b \vec{u}_2 \\ \vec{u}_2' = c \vec{u}_1 + d \vec{u}_2 \end{cases},\,\, B = \{ \vec{u}_1 , \vec{u}_2 \};\,\, B' = \{ \vec{u}_1' , \vec{u}_2' \}$ ( new)\\
+$\vec{v} = k_1 \vec{u}_1' + k_2 \vec{u}_2' = k_1 ( a \vec{u}_1 + b \vec{u}_2) + k_2 ( c \vec{u}_1 + d \vec{u}_2)\\
+= ( k_1 a + k_2 c) \vec{u}_1 + ( k_1 b + k_2 d) \vec{u}_2\\
+= \begin{pmatrix} k_1 a + k_2 c \\ k_1 b + k_2 d \end{pmatrix} \begin{pmatrix} \vec{u}_1 & \vec{u}_2 \end{pmatrix} = \begin{pmatrix} a & c \\ b & d \end{pmatrix} \begin{pmatrix} k_1 \\ k_2 \end{pmatrix} \begin{pmatrix} \vec{u}_1 & \vec{u}_2 \end{pmatrix}\\
+= \begin{pmatrix} k_1 \\ k_2 \end{pmatrix} \begin{pmatrix} \vec{u}_1' & \vec{u}_2 ' \end{pmatrix}\\
+\implies [ \vec{v} ]_B = \begin{pmatrix} a & c \\ b & d \end{pmatrix} \begin{pmatrix} k_1 \\ k_2 \end{pmatrix} = \begin{pmatrix} a & c \\ b & d \end{pmatrix} [ \vec{v} ]_{B'}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+
+\section*{ODE's}
+\item \underline{Theorem 1} (Existence and Uniqueness of solutions)
+$f(x,y) and D_y f(x,y) = \frac{\partial}{\partial y} f(x,y)$ cts on R (rectangle that contains $(a,b)$ in interior) for some I open w/ $a \in I$\\
+$\frac{dy}{dx} = f(x,y), y(a) =b$\\
+has one and only one solution defined on $I$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{dV}{dt} = -a \sqrt{2 g y} or A(y) \frac{dy}{dt} = - a \sqrt{2 g y}$}\\
+$U_i + K_i = U_f + K_f \implies mgy = \frac{1}{2} m v^2\\
+\implies v= \sqrt{2 g y};\,\, dv = - a dy$ (volume in tank decreases)\\
+$\frac{dv}{dt} = a \frac{dy}{dt} = -a \sqrt{2 gy}, \frac{dy}{dt} < 0\\
+V(y) = \int^y_0 A(\bar{y}) d \bar{y}\\
+\therefore \frac{dV}{dt} = \frac{dy}{dt} \frac{d v}{dy} = - v A(y) = - \sqrt{2 gy} A(y)$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$y(x) = e^{- \int P(x) dx} [ \int (Q(x) e^{\int P(x) dx}) dx + c]$} (linear equations)\\
+\underline{recall:} $y' + P(x) y = Q(x) (Linear ODE)\\
+I y' + I P(x) y = Q(x) I\\$
+want $\frac{d Iy}{dx} = Q(x) I\\
+\implies I' = I P(x) \implies \int \frac{dI}{I} = \int P(x) dx = \ln I \implies e^{\int P(x) d} = I\\
+\implies \frac{d e^{\int P dx} y}{dx} = Q(x) e^{\int P dx}\\
+\implies e^{\int P dx} y = \int Q(x) e^{\int P dx} dx + C\\
+\implies y= e^{- \int P dx} [ \int Q(x) e^{\int P dx} dx + C]\\$
+\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} \frac{dy}{dx} = 0$}\\
+The soln to an ODE can often be written as $f(x,y) = c\\
+\implies \frac{\partial F}{\partial x} + \frac{dy}{dx} \frac{\partial F}{\partial y} = 0\\$
+so if we can identify $\frac{\partial F}{\partial x},\,\, \frac{\partial F}{\partial y}$ in the ODE, we can solve.\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{\partial F}{\partial x} = M;\,\, \frac{\partial F}{\partial y} = N;\,\, \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$} (Conditions for exactness)\\
+$F(x,y(x))=c$ (soln to ODE)\\
+$\implies \frac{dF}{dx} = \frac{\partial F}{\partial x} + \frac{\partial F}{\partial y} \frac{dy}{dx} = 0\\
+\implies M+ N y'=0\\$
+or $M dx + N dy = 0;\,\, M= \frac{\partial F}{\partial x},\,\, N= \frac{\partial F}{\partial y}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{d P}{dt} = ( \beta - \delta) P$}\\
+births: $\beta(t) P(t) \Delta t;\,\, deaths: \delta(t) P(t) \Delta t \,\, | \beta \sim \frac{births}{person/t}\\
+\implies \Delta P = \beta P \Delta t - \delta P \Delta t= ( \beta - \delta ) P \Delta t\\
+\implies \frac{d P}{dt} = ( \beta - \delta) P\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{dP}{dt} = a P - b P^2$} (logistic equation)\\
+\underline{recall:} $\frac{dP}{dt} = ( \b eta - \delta) P;\,\, \beta = \beta_0 - \beta_1 P,\,\, \delta = \delta_0\\
+\implies \frac{dP}{dt} = ( \beta_0 - \beta_1 P - \delta_0) P = (( \beta_0 - \delta_0) - \beta_1 P) P\\
+= a P - b P^2;\,\, a= \beta_0 - \delta_0,\,\, b= \beta_1\\$
+or $\frac{d P}{dt} = b P(\frac{a}{b} - P) = k P (M-P),\,\, k= b,\,\, M= a/b\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+Bifurcation\\
+Set $\frac{dx}{dt}$ and $x \rightarrow c$ the function $c(h)$ is the bifurcation diagram and tells the critical points as a function of the harvesting parameter $h$.
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{$m \frac{dv}{dt} + c \frac{dm}{dt} = - m g - k v$} (rocket propulsion equation)\\
+$\Delta P(rocket) \approx (m + \Delta m) ( v + \Delta v) - m v\\
+= m v + m \Delta v + \
+\Delta m v + \Delta m \Delta v - m v\\\\
+\vec{v}_{gr} = \vec{v}_{rc} + \vec{v}_{gc}\\
+\vec{v}_{gr} = v \hat{y} - c \hat{y}\\$
+$g \sim$ gas(fuel),$\,\, r \sim$ rocket,$\,\, c \sim$ stationary frame\\
+$\implies \vec{v}_{gr} = \vec{v}_{rc} + \vec{v}_{gc}\\
+\implies \vec{v}_{gr} = v \hat{y} - c \hat{y} \implies | \vec{v}_{gr} | = v-c\\
+\Delta P(w/ fuel) = \Delta P(rocket) + ( - \Delta m) | \vec{v}_{gr} |\\
+= mv + m \Delta v + \Delta m v - mv - \Delta m(v-c)\\
+= m \Delta v + \Delta m v - \Delta m v + \Delta m c\\
+= m \Delta v + \Delta m c\\
+\implies F= m \frac{dv}{dt} + c \frac{dm}{dt} = - m g - k v$\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem}\\
+$y_1, y_2$ solve $y'' + P(x) y' + Q(x) y = 0\\$
+(a) $y_1, y_2$ lin dependent $\implies W(x) = 0$ on $I$\\
+(b) $y_1, y_2$ lin independent $\implies W(x) \neq 0 $ on $I$\\
+\underline{Note:} It cant ever " sometimes" be 0 on I if it satisfies the assumptions.
+
+
+
+
+\section{Calculus}
+
+\underline{14.6}\\
+\underline{Definition} $D_{\hat{u}} f(x_0,y_0) = \lim_{h \rightarrow 0} \frac{ f(x_0 + h a, y_0 + hb) - f(x_0,y_0)}{h}\\$
+
+\item \underline{Theorem} $D_{\hat{u}} f(x,y) = f_x(x,y) a + f_y (x,y) b$\\
+\underline{proof:}\\
+$g(h) = f(x_0 + ha, y_0 + hb)\\
+g'(h) = \frac{\partial f}{\partial (x + h a)} \frac{ d(x_0 + a)}{dh} + \frac{\partial f}{\partial (y_0 + bh)} \frac{d(y_0 + hb)}{dh}\\$
+Let $x = x_0 + ha,\,\, y = y_0 + bh\\
+\implies g'(h) = \frac{\partial f}{\partial x} a + \frac{\partial f}{\partial y} b = \lim_{h \rightarrow 0} \frac{g(h) - g(0)}{h}\\
+= \lim_{h \rightarrow 0} \frac{f(x_0 + ha, y_0 + hb) - f(x_0,y_0)}{h}\\$
+now set $h \rightarrow 0\\
+\implies g'(0) = \frac{\partial f}{\partial x_0} a + \frac{\partial f}{\partial y_0} b = \nabla f(x_0, y_0) \cdot \hat{u} = D_{\hat{u}} f(x_0, y_0)$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\nabla f(x_0, y_0, z_0) = \lambda \nabla g(x_0, y_0, z_0)$}\\
+Want to find extremum for $f(x,y,z)$ given constraint $g(x,y,z) = k$\\
+$f$ has extremum at point $P(x_0,y_0,z_0)$ on a surface $S$ with curve $C$ on $S$ that passes through $P(x_0,y_0,z_0)$ given by\\
+$\vec{r}(t) = \langle x(t), y(t), z(t) \rangle, h(t_0)$ is extreme value\\
+$\implies h'(t_0) = \frac{\partial f}{\partial x} x'(t_0) + \frac{\partial f}{\partial y} y'(t_0) + \frac{\partial f}{\partial z} z'(t_0)\\
+= \nabla f(x_0,y_0,z_0) \cdot \vec{r}'(t_0) = 0\\
+\nabla f$ is orthogonal to $\vec{r}$ at $t_0$ for every $C$\\
+Since $\vec{r}$ lies on $S$ which is a level surface of $g(x,y,z)$ then $\nabla g (x_0,y_0,z_0)$ is perpendicular to $\vec{r}(t_0)$ for every curve which means $\Delta g$ and $\Delta f$ must be parallel there\\
+$\therefore \nabla f(x_0,y_0, z_0) = \lambda \nabla g(x_0,y_0,z_0)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\nabla f(x_0, y_0, z_0) = \lambda \nabla g(x_0,y_0) + \mu \nabla h( x_0,y_0,z_0)$}\\
+Spose $g(x,y,z) = k h(x,y,z)=0$\\
+We want to maximize f on the intersection of g and h which is a curve (call it $C$). We know from previous that $\nabla f$ is orthogonal to $C$ at $P$. We also know $\nabla g$ is orthogonal to $g(x,y,z) = k$ and $\nabla h$ is orthogonal to $h(x,y,z) = c$.\\
+So $\nabla f(x_0, y_0, z_0)$ must lie inn the plane determined by $\nabla g(x_0,y_0,z_0)$ and $\nabla h(x_0, y_0, z_0)\\
+\therefore \nabla f(x_0,y_0,z_0) = \lambda \nabla g(x_0,y_0, z_0) + \mu \nabla h(x_0, y_0, z_0)$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{type I}\\
+$D = \{ (x,y) | a \leq x \leq b, g_1 (x) \leq y \leq g_2 (x) \}\\$
+\underline{type II}\\
+$D = \{ (x,y) | c \leq y \leq d, h_1(y) \leq x \leq h_2 (y) \}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$A(s) =  \iint_D \sqrt{[f_x(x,y) ]^2 + [ f_y (x,y) ]^2 + 1 } d A$} (Surface area)\\
+$\vec{a} \Delta x \hat{i} + \Delta z \hat{k}\\
+\approx \Delta x \hat{i} + f_x(x_i,y_i) \Delta x \hat{k}\\
+\vec{b} = \Delta y \hat{j} + f_y (x_i, y_j) \Delta y \hat{k}\\
+\vec{a} \times \vec{b} = \begin{pmatrix} \hat{i} & \hat{j} & \hat{k} \\ \delta x & 0 & f_x(xi,y_j) \Delta x \\ 0 & \Delta y & f_y(x_i, y_j) \Delta y \end{pmatrix} = [ - f_x (x_i,y_j) \hat{i} - f_y (x_i, y_j) \hat{j} + \hat{k}] \Delta a\\
+\implies | \vec{a} \times \vec{b} |_{ij} = \sqrt{[f_x(x_i, y_j)]^2 + [ f_y (x_i , y_j )]^2 + 1} \Delta A\\
+\therefore A(s) = \sum_{i,j} | \vec{a} \times \vec{b}|_{ij} \rightarrow \iint \sqrt{[f_x(x,y)]^2 + [f_y (x,y)]^2 + 1} d A$
+
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$D= \frac{|ax_1 + b y_1 + c z_1 + d|}{\sqrt{a^2 + b^2 + c^2}}$}\\
+$\vec{r} \sim$ point we want to find the distance from plane to.\\
+$\vec{r}_0 \sim a$ point on the plane\\
+$\vec{n} = (a,b,c) \sim$ normal vector to plane (not normalized)\\
+(draw picture)\\
+$D \hat{n} + D^{\parallel} \hat{T} = \vec{r} - \vec{r}_0\\
+\implies D=| \vec{r} \cdot \hat{n} - \vec{r}_0 \cdot \hat{n}| = \frac{|ax + by + cz - (ax_0 + b y_0 + c z_0)|}{\sqrt{a^2 + b^2 + c^2}}\\$
+\underline{recall:} $ax_0 + by_0 + c z_0 + d = 0 (x_0,y_0,z_0)$ in plane\\
+$\implies D= \frac{|ax + by + cz + d|}{\sqrt{a^2 + b^2 + c^2}}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{\partial (x,y)}{\partial (u,v)} = 
+\begin{vmatrix} 
+	\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\end{vmatrix}$}\\
+$dA = | \vec{a} \times \vec{b} |\\
+\vec{a} = \vec{r}(u_0 + \Delta u, v_0) - \vec{r}(u_0, v_0) = \vec{r}_u \Delta u\\
+\vec{b} = \vec{r}(u_0,v_0 + \Delta v) - \vec{r}(u_0, v_0) = \vec{r}_v \Delta v\\
+d A = | \vec{r}_u \times \vec{r}_v| \Delta u \Delta v\\$
+but $| \vec{r}_u \times \vec{r}_v | = \frac{\partial (x,y)}{\partial (u,v)} =$ Jacobian\\
+$\implies dA = \frac{\partial (x,y)}{\partial (u,v)} \Delta u \Delta v$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\int_C \nabla f \cdot d \vec{r} = \int_C \sum_i \frac{\partial f}{\partial x_i} \dot{x}_i dt = \int_a^b \frac{df}{dt} dt = f(\vec{r}(b)) - jf(\vec{r}())$}\\
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{Theorem} $\int_C \vec{F} \cdot d \vec{r}$ Ind of path $D \implies \int_C \vec{F} \cdot d \vec{r} = 0$\\
+for each closed Curve\\
+\underline{Proof}\\
+$\int_C \vec{F} \cdot d \vec{r} = \int_{C_1} \vec{F} \cdot d \vec{r} + \int_{C_2} \vec{F} \cdot d \vec{r} = \int_{C_1} \vec{F} \cdot d \vec{r} - \iint_{- C_2} \vec{F} \cdot d \vec{r} =0\\
+0 = \int_C \vec{f} \cdot d \vec{r} = \int_{C_1} \vec{F} \cdot d \vec{r} - \iint_{C_2} \vec{F} \cdot d \vec{r} = 0\\
+\implies \int_{C_1} \vec{F} \cdot d \vec{r} = \int_{C_2} \vec{F} \cdot d \vec{r}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Theorem 4:} $\int_C \vec{F} \cdot d \vec{r} ind. path \implies \exists f s.t. \nabla f = \vec{F}\\$
+\underline{Proof:}$ f(x,y) = \int_{(a,b)}^{(x,y)} \vec{F} \cdot d \vec{r} = \int_{(a,b)}^{(x,y)} \vec{F} \cdot d \vec{r} + \int_{C_2} \vec{F} \cdot d \vec{r}\\
+\implies \frac{\partial f}{\partial x} = \frac{\partial}{\partial x} \int_{C_2} \vec{F} \cdot d \vec{r};\,\, \vec{F} = P \hat{x} + Q \hat{y}\\
+\implies \int_{C_2} \vec{F} \cdot d \vec{r} = \int_{C_2} P dx + \int_{C_2} Q dy\\$
+$C_2$ ends at $(x,y)$ i.e. const $y \implies dy=0\\$
+$\implies \frac{\partial}{\partial x} f(x,y) = \frac{\partial}{\partial x} \int_{x_1}^{x} P(t,y) d t = P(x,y)\\$
+Similarly $\frac{\partial}{\partial y} f(x,y) = Q(x,y)\\
+\implies \nabla f = \vec{F}\\$
+
+
+\underline{Theorem 5} $\vec{F} = P \hat{x} + Q \hat{y}$ is conservative if $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}\\$
+
+\underline{Proof:}\\
+$\vec{F}$ const. $\implies \vec{F} = \nabla f \implies \frac{\partial f}{\partial x} = P,\,\, \frac{\partial f}{\partial y} = Q\\
+\implies \frac{\partial^2 f}{\partial y \partial x} = \frac{\partial P}{\partial y} -= \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial Q}{\partial x}\\
+\therefore \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Green's Theorem} $\int_C P dx + Q dy -= \iint_D ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}) d A\\$
+\underline{Proof:}\\
+Lets show$ \int_C P dx = - \iint_D \frac{\partial P}{\partial y} d A;\,\, \int_C Q d y = \iint_D \frac{\partial Q}{\partial x} d A\\$
+$D = \{ (x,y) | a \leq x \leq b,\,\, g_1(x) \leq y \leq g_2(x) \}\\
+\implies \iint_D \frac{\partial P}{\partial y} d A = \int_a^d \int_{g_1(x)}^{g_2(x)} \frac{\partial P}{\partial y} (x,y) dy dx = \int_a^b[ P(x,g_2(x)) - P(x,g_1(x))] dx$\\
+$\int_{C_1} P(x,y) dx = \int_a^b P(x,g_1(x)) dx\\
+- C_3 \implies x=x, y=g_2(x),\,\, a \leq x \leq b\\
+\implies \int_{C_3} P(x,y) dx = - \int_{-C_3} P(x,y) dx = - \int_a^b P(x,g_2(x)) dx\\
+\int_{C_2} P(x,y) dx = \int_{C_4} P(x,y) dx = 0\\
+\implies \int_C P(x,y) = \int_a^b P(x,g_1(x)) dx - \int_a^b P(x,g_2(x)) dx\\$
+\underline{recall:} $\int_a^b [P(x,g_2(x)) - P(x,g_1(x)) ] dx = \int_D \frac{\partial P}{\partial y} dA\\
+\implies \int_C P(x,y) dx= - \iint_D \frac{\partial P}{\partial y} dA$
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{Green's theorem:} $\oint \vec{F} \cdot d \vec{r} = \iint_D ( \nabla \times \vec{F}) \cdot \hat{k} d A\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+$\rho \vec{v} \sim$ ( flux of fluid)\\
+$\iint \rho \vec{v} \cdot d \vec{s} = \iint \rho \vec{v} \cdot \hat{n} dS\\
+\hat{n} = \frac{\vec{r}_u \times \vec{r}_v}{| \vec{r}_u \times \vec{r}_v |},\,\, d S = | \vec{r}_u \times \vec{r}_v |\\
+\iint \vec{F} \cdot d \vec{S} = \iint \vec{F} \cdot \hat{n} | \vec{r}_u \times \vec{r}_v | d A\\
+= \iint \vec{F} \cdot ( \vec{r}_u \times \vec{r}_v) d A\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+assume $z=g(x,y) g$ continuous second-order partials \\
+$D \sim$ simple plane region boundary curve $C_1$ corresponding to $C n$ is up $\implies$ positive orientation of $C_1$\\
+$\vec{r} = (x,y, g(x,y)) = (x,y,z)\\
+\iint_C ( \nabla \times \vec{F}) \cdot d \vec{S} = \iint_D [ - ( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}) \frac{\partial z}{\partial x} - ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}) \frac{\partial z}{\partial y} + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} ) ] d A\\
+x = x(t),\,\, y = y(t),\,\, z = g(x(t), y(t)),\,\, a \leq t \leq b\\
+\implies \int_C \vec{F} \cdot d \vec{r} = \int_a^b \vec{F} \cdot \vec{r}'(t) dt\\
+= \int_a^b ( P \frac{dx}{dt} + Q \frac{dy}{dt} + R \frac{dz}{dt}) dt\\
+= \int_a^b [ ( P + R \frac{\partial z}{\partial x}) \frac{dx}{dt} + ( Q + R \frac{\partial z}{\partial y}) \frac{dy}{dt}] dt\\
+\int_{C_1} ( P + R \frac{\partial z}{\partial x}) dx + ( Q + R \frac{\partial z}{\partial y}) dy\\
+= \int_{C_1} [ \int \frac{\partial}{\partial y} ( P + R \frac{\partial z}{\partial x}) dy ] dx + [ \int \frac{\partial}{\partial x} ( Q + R \frac{\partial z}{\partial y}) dx ] dy\\
+\iint_D [ \frac{\partial}{\partial y} ( P + R \frac{\partial z}{\partial x}) + \frac{\partial }{\partial x} ( Q + R \frac{\partial z}{\partial y})] d A\\$
+(missing negative) (supposed to use greens theorem
+
+
+
+$\frac{dx}{dt} = r_i c_i - r_0 c_0\\
+(r_i \frac{L}{s})(c_i \frac{g}{L}) (\Delta t s) = x_{in}\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{dy}{dx} = f(x,y) \implies \frac{dv}{dx} = g(x,v);\,\, v= \alpha(x,y)$}\\
+take v and solve for $y \implies y= \beta(x,v)\\
+\frac{dy}{dx} = \frac{\partial \beta}{\partial x} \frac{dx}{dx} + \frac{\partial \beta}{\partial v} \frac{dv}{dx} = \beta_x + \beta_v \frac{dv}{dx}\\
+\implies (\frac{dy}{dx} - \beta_x ) \frac{1}{\beta_v} = \frac{dv}{dx}\\
+\frac{dy}{dx} = f(x,y) = f(x,\beta(x, v)) = h(x,v)\\
+\implies \frac{dv}{dx} = g(x,v)\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{dy}{dx} = F(\frac{y}{x}) \implies x \frac{dv}{dx} = F(v) - v$} (homogeneous)\\
+$\frac{dy}{dx} = F(\frac{y}{x})\\
+v= \frac{y}{x},\,\, y= vx,\,\, \frac{dy}{dx} = v + x \frac{dv}{dx}\\
+\therefore x \frac{dv}{dx} = F(v) - v\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\item \underline{$\frac{dy}{dx} + P(x)y = Q(x) y^n \implies \frac{dv}{dx} + (1-n) P(x) v = (1-n) Q(x)$}\\
+$\frac{dy}{dx} + P(x) y = Q(x) y^n\\
+v=v(y)\\
+\implies \frac{dy}{dx} + P(x) y = Q(x) y^n\\
+\frac{dv}{dx} = \frac{dy}{dx} \frac{dv}{dy} \implies \frac{\frac{dv}{dx}}{\frac{dv}{dy}} = \frac{v'}{\frac{dv}{dy}} = \frac{dy}{dx}\\
+\implies \frac{v'}{\frac{dv}{dy}} + P(x) y = Q(x) y^n\\
+\implies v' + P(x) y \frac{dv}{dy} = Q(x) y^n \frac{dv}{dy}\\$
+\underline{want:} $y^n \frac{dv}{dy} = 1 \implies \int dv = \int y^{-n} dy = \frac{y^{-n+1}}{1-n}\\
+\implies v= \frac{y^{-n+1}}{1-n} r$ more simply $v= y^{1-n}\\
+\implies \frac{dv}{dx} + P(x) (1-n) y y^{-n} = Q(x)\\
+\implies \frac{dv}{dx} + (1-n ) P(x) v= (1-n) Q(x)\\
+$
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+\underline{$u(x,t) = \int_0^{\infty} [ G(x-y,t) - G(x+y,t)] \phi(y) dy,\,\, x \geq 0$}\\
+(semi-infinite domain)\\
+$u_t = k u_{xx},\,\, x>0,\,\, t>0\\
+u(0,t) = 0,\,\, t>0\\
+u(x,0) = \phi(x),\,\, x>0\\
+\psi(x) = \begin{cases} \phi(x),\,\, x>0\\
+- \phi(-x),\,\, x<0\\
+v_t = k v_{xx},\,\, x \in \mathbb{R} t>0\\
+v(x,0) = \psi(x),\,\, x \in \mathbb{R}\\
+\end{cases}
+\underline{recall:} v(x,t) = \int_{- \infty}^{\infty} G(x-y,t) \psi(y) dy\\
+v(x,t) = \int_{- \infty}^0 G(x-y,t) \psi(y) dy + \int_0^{\infty} G(x-y,t) \psi(y) dy\\
+= - \int_{- \infty}^0 G(x-y,t) \phi(-y) dy + \int_0^{\infty} G(x-y,t) \phi(y) dy\\
+= - \int_0^{\infty} G(x+y,t) \phi(y) dy + \int_0^{\infty} G(x-y,t) \phi(y) dy\\
+= \int_0^{\infty} [ G(x-y,t) - G(x+y,t) ] \phi(y) dy,\,\, x \geq 0\\$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+for $x > ct$,\,\, initial conditions cant affect solution so it is given by d'Alembert formula\\
+another way to see it, is to apply previous methods\\
+$v_{tt} = c^2 v_{xx},\,\, x \in \mathbb{R},\,\, t >0\\
+v(0,t) = 0,\,\, t > 0,\\
+v(x,0) = F(x),\,\, v_t(x,0) = G(x),\,\, x \mathbb{R}\\
+F(x) = \begin{cases} f(x),\,\, x>0\\
+-f(-x),\,\, x<0
+\end{cases}\\
+G(x) = \begin{cases} g(x) x>0\\
+-g(-x) x<0
+\end{cases}\\
+$
+
+
+\hdashrule[0.5ex][c]{\linewidth}{0.5pt}{1.5mm}
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
